@@ -1,12 +1,18 @@
 title: Andrés Camilo Carvajal Suarez # your name (or website title) here
 logo: "/images/profile1.png?raw=true" # your photo (or logo) here
-description: > # your text below (remove <br> elements if you don't need line breaks)
-  I’m an engineer and developer problem solver with academic background in Earth Science and Geotechnical Engineering having experience in Software Development and GIS. 
-  My portfolio includes full stack applications using the state of art for Data Science. I’m very interested in topics such as Natural Language Processing and Computer Vision. 
+description:
+  <p align="center">
+  <a href="pdf/resume.pdf">Resume</a> |
+  <a href="www.linkedin.com/in/andrés-camilo-carvajal-suarez-786a93145">LinkedIn</a> |
+  <a href="https://github.com/andresca94">GitHub</a>
+  </p>
+  
+  <p align="justify">
+   I’m an engineer and developer problem solver with academic background in Earth Science and Geotechnical Engineering having experience in Software Development and GIS. 
+  My portfolio includes full stack applications using the state of art for Data Science. I’m very interested in topics such as Natural Language Processing and Computer Vision.
   <br><br>
   Let’s connect, I would love to know more about you and create amazing applications together!
   <br><br>
-  <a href="www.linkedin.com/in/andrés-camilo-carvajal-suarez-786a93145">View My LinkedIn Profile</a> 
-  
+  </p> 
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
