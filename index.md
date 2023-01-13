@@ -2,11 +2,11 @@
 ---
 ## Natural Language Processing
 
-### Summarization and translation from YouTube videos using mT5 transformers.
+### Summarization and translation from YouTube videos using mT5 multilanguage tranformers architecture.
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)
 
-**Summarization:** Summarization module which summarize texts in Spanish using fine-tuned multilanguage mT5 encoder/decorder architechture.
+**Summarization:** Summarization module which summarize texts in Spanish using fine-tuned multilanguage mT5 encoder/decorder architecture.
 <br>
 [![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1f32gj5IYIyFipoINiC8P3DvKat-WWLUK)
 
