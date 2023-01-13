@@ -6,17 +6,18 @@
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)
 
-**Summarization:** Summarization module which summarize texts in Spanish using fine-tuned multilanguage mT5 encoder/decorder architechture.[![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1f32gj5IYIyFipoINiC8P3DvKat-WWLUK)
+**Summarization:** Summarization module which summarize texts in Spanish using fine-tuned multilanguage mT5 encoder/decorder architechture.
+[![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1f32gj5IYIyFipoINiC8P3DvKat-WWLUK)
 
 
-**Neural Machine Translation:** NMT module which translates texts from Spanish to English multilanguage a fine-tuned mT5 encoder/decorder architechture. ([GitHub](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)).
+**Neural Machine Translation:** NMT module which translates texts from Spanish to English multilanguage a fine-tuned mT5 encoder/decorder architechture. 
+[![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1f32gj5IYIyFipoINiC8P3DvKat-WWLUK)
+
+**Flask End-to-End Deep learning APP:** Front-end and Back-end using the pretrained models and deployed with Flask 
+([GitHub](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)).
 
 
-**Flask End-to-End Deep learning APP:** Front-end and Back-end using the pretrained models and deployed with Flask ([GitHub](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)).
-
-([GitHub](https://github.com/chriskhanhtran/CS224n-NLP-Assignments/tree/master/assignments/a3)).
-
-<center><img src="images/nlp.png"/></center>
+<center><img src="images/t5.png"/></center>
 
 ---
 ### Detect Non-negative Airline Tweets: BERT for Sentiment Analysis
