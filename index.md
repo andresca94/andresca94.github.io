@@ -30,7 +30,7 @@
 
 <center><img src="images/RNN.png"/></center>
 
-<center><img src="images/lstm.png"/><img src="images/gru.png"/></center>
+<center><img src="images/lstm.png" width="200" height="200"/><img src="images/gru.png" width="200" height="200"/></center>
 
 ---
 ### Detect Food Trends from Facebook Posts: Co-occurence Matrix, Lift and PPMI
