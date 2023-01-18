@@ -106,6 +106,6 @@
 ## More about me...
 
 <div style="text-align: justify">Besides Data Science, I also have a great passion for soccer and music. I love to see great games and live concerts as well I try to play soccer very often and play guitar and piano.</div>
-
+<br>
 ---
 <center>© 2023 Andres Carvajal. Powered by Jekyll and the Minimal Theme.</center>
