@@ -22,27 +22,15 @@
 <center><img src="images/t5.png"/></center>
 
 ---
-### MasterCard stock price time series forecasting using LSTM and GRU
 
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)
+### Simple-Movie-Recommender from IMDB movies dataset
 
-<div style="text-align: justify">RNN remembers past inputs due to an internal memory which is useful for predicting stock prices, generating text, transcriptions, and machine translation. In this notebook I'll use LSTM and GRU that are an advanced type of RNN. RNN simple structure suffers from short memory, where it struggles to retain previous time step information in larger sequential data. These problems can easily be solved by long short term memory (LSTM) and gated recurrent unit (GRU), as they are capable of remembering long periods of information. In this notebook I will show you a preprocessed dataset from May-25-2006 to Oct-11-202 and how to built machine learning models to predict the stock price using both LSTM and GRU.</div>
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Simple-Movie-Recommender)
 
-<center><img src="images/RNN.png"/></center>
-
-<center><img src="images/Merged_document.png"/></center>
-
-<center><img src="images/Merged_document (1).png"/></center>
-
----
-### Detect Food Trends from Facebook Posts: Co-occurence Matrix, Lift and PPMI
-
-[![Open Notebook](https://img.shields.io/badge/Jupyter-Open_Notebook-blue?logo=Jupyter)](projects/detect-food-trends-facebook.html)
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/chriskhanhtran/facebook-detect-food-trends)
-
-<div style="text-align: justify">First I build co-occurence matrices of ingredients from Facebook posts from 2011 to 2015. Then, to identify interesting and rare ingredient combinations that occur more than by chance, I calculate Lift and PPMI metrics. Lastly, I plot time-series data of identified trends to validate my findings. Interesting food trends have emerged from this analysis.</div>
+<div style="text-align: justify">This project cover 2 approaches, the first simple recommender does the following: Decide on the metric or score to rate movies on. Calculate the score for every movie. Sort the movies based on the score and output the top results. The second approach build a system that recommends movies that are similar to a particular movie to finally create the recommendation based on the following metadata: the 3 top actors, the director, related genres, and the movie plot keywords. Compute pairwise cosine similarity scores for all movies based on their plot descriptions and recommend movies based on that similarity score threshold. Tokenized, vectorized text data using TF-IDF and cosine similarity to get a content based recommender and credits, genres, and keywords based recommender.</div>
 <br>
-<center><img src="images/fb-food-trends.png"></center>
+<center><img src="images/recom1.PNG"></center>
+<center><img src="images/recomend2.PNG"></center>
 <br>
 
 ---
@@ -58,6 +46,20 @@
 
 ---
 ## Data Science
+
+### MasterCard stock price time series forecasting using LSTM and GRU
+
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)
+
+<div style="text-align: justify">RNN remembers past inputs due to an internal memory which is useful for predicting stock prices, generating text, transcriptions, and machine translation. In this notebook I'll use LSTM and GRU that are an advanced type of RNN. RNN simple structure suffers from short memory, where it struggles to retain previous time step information in larger sequential data. These problems can easily be solved by long short term memory (LSTM) and gated recurrent unit (GRU), as they are capable of remembering long periods of information. In this notebook I will show you a preprocessed dataset from May-25-2006 to Oct-11-202 and how to built machine learning models to predict the stock price using both LSTM and GRU.</div>
+
+<center><img src="images/RNN.png"/></center>
+
+<center><img src="images/Merged_document.png"/></center>
+
+<center><img src="images/Merged_document (1).png"/></center>
+
+---
 
 ### Credit Risk Prediction Web App
 
