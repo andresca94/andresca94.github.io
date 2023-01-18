@@ -88,6 +88,7 @@
 <div style="text-align: justify">A program was developed in Matlab to show the relationship between the probability of occurrence of landslide and the size of the landslide from slope statistics obtained from digital elevation models (DEM) with spatial resolution of (30x30m) of two zones with different geological and geomorphology origins. The program must consider all the possible neighbors or clusters of an elevation matrix as input, and as output the statistics of the related clusters, to conclude if the topography is organized in a fractal way or invariant with the scale and being a characteristic of the size of landslides.</div>
 <br>
 <center><img src="images/GIF3.gif"/></center>
+<center><img src="images/SLOPECARTAGOgif.gif"/></center>
 <br>
 ---
 ## More about me...
