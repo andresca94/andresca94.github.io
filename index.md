@@ -23,7 +23,7 @@
 
 ---
 
-### Simple-Movie-Recommender from IMDB movies dataset
+### Simple-Movie-Recommender and Content Based-Recommender from IMDB movies dataset
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Simple-Movie-Recommender)
 
