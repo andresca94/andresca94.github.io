@@ -40,8 +40,6 @@
 
 <div style="text-align: justify">Converting categorical variables to numerical, Iterating through all the text and using regular expression to clean the data, train-test splitting, model creation and prediction using Multinomial Naïve Bayes, confusion matrix, vectorizer and inverse transform to get the language prediction. Deployed using Flask, HTML and CSS.</div>
 <br>
-<center><img src="images/detect-spam-nlp.png"/></center>
-<br>
 
 ---
 ## Data Science
