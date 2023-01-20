@@ -36,7 +36,7 @@
 <br>
 
 ---
-### NLP-Flask App
+### NLP-Language Detection- Flask App
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/NLP-Flask-App)
 
