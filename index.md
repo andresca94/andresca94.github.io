@@ -9,13 +9,13 @@
 **Summarization:**
 <div style="text-align: justify">In this notebook I'll use the HuggingFace's transformers library to fine-tune a pretrained summarization module which summarize texts in Spanish using the fine-tuned multilanguage mT5 encoder/decorder architecture.</div>
 <br>
-[![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1f32gj5IYIyFipoINiC8P3DvKat-WWLUK)
+[![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/11jG-rhploTYvfrE8P5cUd6LSOTKZcyNX#scrollTo=ZGXDBmcwcxQL)
 
 
 **Neural Machine Translation:** 
 <div style="text-align: justify">In this notebook I’ll use the HuggingFace’s transformers library to fine-tune a pretrained NMT module which translates texts from Spanish to English using the multilanguage mT5 encoder/decorder architechture.</div>
 <br>
-[![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1f32gj5IYIyFipoINiC8P3DvKat-WWLUK)
+[![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1zv8HhlMvo3TOFDeirbnccAjYIM4hKvxR#scrollTo=DTSQrDCV0yHK)
 
 **Flask End-to-End Deep learning APP:** Front-end and Back-end using the pretrained models and deployed with Flask 
 ([GitHub](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)).
