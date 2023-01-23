@@ -40,7 +40,7 @@
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/NLP-Flask-App)
 
-<div style="text-align: justify">Converting categorical variables to numerical, Iterating through all the text and using regular expression to clean the data, train-test splitting, model creation and prediction using Multinomial Naïve Bayes, confusion matrix, vectorizer and inverse transform to get the language prediction. •	Deployed using Flask, Ngrok and Google Colab to run the virtual environment from Google on a server to use the power of GPU.</div>
+<div style="text-align: justify">Converting categorical variables to numerical, Iterating through all the text and using regular expression to clean the data, train-test splitting, model creation and prediction using Multinomial Naïve Bayes, confusion matrix, vectorizer and inverse transform to get the language prediction. Deployed using Flask, Ngrok and Google Colab to run the virtual environment from Google on a server to use the power of GPU.</div>
 <center><img src="images/langapp.gif"></center>
 <br>
 
