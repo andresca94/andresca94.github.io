@@ -17,7 +17,8 @@
 <br>
 [![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1zv8HhlMvo3TOFDeirbnccAjYIM4hKvxR#scrollTo=DTSQrDCV0yHK)
 
-**Flask End-to-End Deep learning APP:** Front-end and Back-end using the pretrained models and deployed with Flask 
+**Flask End-to-End Deep learning APP:** Front-end and Back-end using the pretrained models and deployed with Flask
+<br>
 [![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1nTsgWxsjUmw2Xiq1PLEfHPY8ZQ0DzPw-?authuser=1#scrollTo=QramYSC3lpa7)
 
 
