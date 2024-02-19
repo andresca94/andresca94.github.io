@@ -58,9 +58,9 @@ Trabook is a travel platform designed to kickstart your journey with a splash of
 <div style="text-align: justify">
 The Fuzzy Wuzzy Matching Project harnesses the power of Python's FuzzyWuzzy library to link records from two distinct datasets, BASE A and BASE B, without the necessity for exact matches. This technique, rooted in the Levenshtein Distance, is pivotal for data reconciliation where discrepancies and inconsistencies across datasets are a common challenge. By employing fuzzy string matching, the project addresses the inherent variability in naming conventions, typographical errors, and incomplete data records to identify potential matches. Throughout this notebook, we detail the processes of importing, cleaning, standardizing, and transforming the data to facilitate the fuzzy matching process. The methodology adopted not only demonstrates the application of fuzzy matching at scale but also lays the groundwork for more advanced data integration tasks. The project's success is underscored by the identification of over 1,600 high-quality matches, signifying a substantial step forward in data consolidation efforts. The insights and techniques presented herein are invaluable for data scientists and analysts dealing with similar data matching challenges.
 </div>
+
 ### Code Snippets
 Here's an example of the data cleaning and transformation step:
-
 ```python
 def limpiar_dataframe(df):
     for columna in df.columns:
