@@ -49,20 +49,68 @@ Trabook is a travel platform designed to kickstart your journey with a splash of
 <br>
 
 ---
+## Databases
+
+### Fuzzy Wuzzy Matching Project
+
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Fuzzy_wuzzy_matching)
+
+<div style="text-align: justify">
+The Fuzzy Wuzzy Matching Project harnesses the power of Python's FuzzyWuzzy library to link records from two distinct datasets, BASE A and BASE B, without the necessity for exact matches. This technique, rooted in the Levenshtein Distance, is pivotal for data reconciliation where discrepancies and inconsistencies across datasets are a common challenge. By employing fuzzy string matching, the project addresses the inherent variability in naming conventions, typographical errors, and incomplete data records to identify potential matches. Throughout this notebook, we detail the processes of importing, cleaning, standardizing, and transforming the data to facilitate the fuzzy matching process. The methodology adopted not only demonstrates the application of fuzzy matching at scale but also lays the groundwork for more advanced data integration tasks. The project's success is underscored by the identification of over 1,600 high-quality matches, signifying a substantial step forward in data consolidation efforts. The insights and techniques presented herein are invaluable for data scientists and analysts dealing with similar data matching challenges.
+</div>
+### Code Snippets
+Here's an example of the data cleaning and transformation step:
+
+```python
+def limpiar_dataframe(df):
+    for columna in df.columns:
+        if df[columna].dtype == 'object':
+            df[columna] = df[columna].astype(str).lower().strip()
+            df[columna] = df[columna].astype("string")
+    return df
+
+base_a_cleaned = limpiar_dataframe(base_a.copy())
+base_b_cleaned = limpiar_dataframe(base_b.copy())
+```
+<center><img src="images/result2.jpg"/></center>
+
+Here's an example of effectively solves the problem of matching two databases.
+```python
+def enhanced_fuzzy_match(row):
+    best_match = None
+    best_score = 0
+    
+    for _, match_row in base_b_df.iterrows():
+        score1 = fuzz.ratio(row['NombreEstablecimiento'], match_row['NombreEstablecimiento'])
+        score2 = fuzz.ratio(row['Ciudad'], match_row['Ciudad'])
+        score3 = fuzz.ratio(row['Direccion'], match_row['Direccion'])
+        
+        weighted_score = (score1 + score2 + score3) / 3.0  # Updated the average calculation
+
+        if weighted_score > best_score:
+            best_score = weighted_score
+            best_match = match_row['ID']
+            
+    if best_score >= 85:
+        return best_match  
+    return None
+```
+This function effectively solves the problem of matching two databases.
+
+<center><img src="images/result1.jpg"/></center>
+
+
 ## Data Science
 
 ### MasterCard stock price time series forecasting using LSTM and GRU
 
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/MasterCard-Stock-Price-Prediction-Using-LSTM-and-GRU)
 
 <div style="text-align: justify">RNN remembers past inputs due to an internal memory which is useful for predicting stock prices, generating text, transcriptions, and machine translation. In this notebook I'll use LSTM and GRU that are an advanced type of RNN. RNN simple structure suffers from short memory, where it struggles to retain previous time step information in larger sequential data. These problems can easily be solved by long short term memory (LSTM) and gated recurrent unit (GRU), as they are capable of remembering long periods of information. In this notebook I will show you a preprocessed dataset from May-25-2006 to Oct-11-2022 and how to built machine learning models to predict the stock price using both LSTM and GRU.The model consists of either a single hidden layer of LSTM or GRU and an output layer. LSTM units to 125, tanh as activation, the model will train on 50 epochs with 32 batch sizes. GRU model got 5.95 rmse on the test dataset, which is an improvement from the LSTM model with rmse of 6.47.</div>
 
 <center><img src="images/RNN.png"/></center>
 
 <center><img src="images/Merged_document.png"/></center>
-
-<center><img src="images/Merged_document (1).png"/></center>
-
 ---
 
 ### Multiclass prediction and clustering for music genre
