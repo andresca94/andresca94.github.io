@@ -1,5 +1,18 @@
 # Portfolio
 ---
+## AI / Machine Learning
+### Trabook - Your Travel Companion - Vue.js && FastAPI
+
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Peaku)
+
+<div style="text-align: justify">
+Trabook is a travel platform designed to kickstart your journey with a splash of fun. The app features destination exploration, professional travel advice, and a comprehensive tour planning toolkit. It's built using Vue.js to ensure a responsive and user-friendly interface, coupled with a FastAPI backend for high performance and scalability. PostgreSQL is used for efficient data storage, and Docker containers help with seamless deployment. Dive into the world of Trabook and let your travel dreams take flight.
+</div>
+<center><img src="images/Trabook.gif"></center>
+<br>
+
+
+---
 ## Natural Language Processing
 
 ### Summarization and translation from YouTube videos using mT5 multilanguage tranformers architecture.
@@ -25,7 +38,6 @@
 <center><img src="images/ngrok.PNG"/></center>
 
 ---
-
 ### Simple-Movie-Recommender and Content Based-Recommender from IMDB movies dataset
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Simple-Movie-Recommender)
@@ -34,18 +46,6 @@
 <br>
 <center><img src="images/recom1.PNG" width = 400px height = 400px></center>
 <center><img src="images/TWORECO.png"></center>
-<br>
-
----
-## Full Stack Development
-### Trabook - Your Travel Companion - Vue.js && FastAPI
-
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Peaku)
-
-<div style="text-align: justify">
-Trabook is a travel platform designed to kickstart your journey with a splash of fun. The app features destination exploration, professional travel advice, and a comprehensive tour planning toolkit. It's built using Vue.js to ensure a responsive and user-friendly interface, coupled with a FastAPI backend for high performance and scalability. PostgreSQL is used for efficient data storage, and Docker containers help with seamless deployment. Dive into the world of Trabook and let your travel dreams take flight.
-</div>
-<center><img src="images/Trabook.gif"></center>
 <br>
 
 ---
@@ -103,7 +103,7 @@ connection.close()
 ```
 The enhanced fuzzy matching function is applied with a progress bar, and the DataFrame is saved back to a new SQL table. Finally, the database connection is closed to ensure that all changes are finalized.
 <center><img src="images/result1.jpg"/></center>
-
+---
 
 ## Data Science
 
@@ -134,7 +134,6 @@ The enhanced fuzzy matching function is applied with a progress bar, and the Dat
 <br>
 
 ## GIS
-
 ---
 ### Motor-Colission-App-Streamlit
 
@@ -174,7 +173,6 @@ Slopes, distance to recreation places and distance to existing schools are obtai
 <br>
 
 ---
-
 ## STEM MSc Civil Engineering Thesis 
 [http://hdl.handle.net/1992/52990](https://repositorio.uniandes.edu.co/bitstream/handle/1992/52990/25247.pdf?sequence=1)
 <div style="text-align: justify">A program was developed in MATLAB to show the relationship between the probability of occurrence of landslide and the size of the landslide from slope statistics obtained from digital elevation models (DEM) with spatial resolution of (30x30m) of two zones with different geological and geomorphology origins. The program must consider all the possible neighbors or clusters of an elevation matrix as input using image processing tools, and as output the statistics of the related clusters, to conclude if the topography is organized in a fractal way or invariant with the scale and being a characteristic of the size of landslides.</div>
