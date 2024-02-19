@@ -37,13 +37,29 @@
 <br>
 
 ---
-### NLP-Language Detection- Flask App
+### Trabook - Your Travel Companion - Vue.js && FastAPI
 
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/NLP-Flask-App)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Trabook-Vue-App)
 
-<div style="text-align: justify">Converting categorical variables to numerical, Iterating through all the text and using regular expression to clean the data, train-test splitting, model creation and prediction using Multinomial Naïve Bayes, confusion matrix, vectorizer and inverse transform to get the language prediction. Deployed using Flask, Ngrok and Google Colab to run the virtual environment from Google on a server to use the power of GPU.</div>
-<center><img src="images/langapp.gif"></center>
+<div style="text-align: justify">
+Trabook is a travel platform designed to kickstart your journey with a splash of fun. The app features destination exploration, professional travel advice, and a comprehensive tour planning toolkit. It's built using Vue.js to ensure a responsive and user-friendly interface, coupled with a FastAPI backend for high performance and scalability. PostgreSQL is used for efficient data storage, and Docker containers help with seamless deployment. Dive into the world of Trabook and let your travel dreams take flight.
+</div>
+<center><img src="images/Trabook.gif"></center>
 <br>
+
+## Features
+
+- **Discover Destinations**: Users can explore a variety of destinations and find the one that suits their adventure spirit.
+- **Expert Advice**: A team of seasoned tourism professionals is available to provide personalized travel tips and advice.
+- **User-Friendly Design**: A clear, responsive layout ensures a great user experience on any device, powered by Vue.js.
+- **Interactive Elements**: Users can interact with various elements on the platform, like booking tours and reading travel blogs.
+
+## Technologies Used
+
+- **Front-End**: Vue.js for a dynamic and responsive user interface.
+- **Back-End**: FastAPI for a high-performance, scalable API.
+- **Database**: PostgreSQL for reliable and efficient data storage.
+- **Deployment**: Docker containers for easy deployment and scalability.
 
 ---
 ## Data Science
