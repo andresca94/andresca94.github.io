@@ -133,6 +133,8 @@ The enhanced fuzzy matching function is applied with a progress bar, and the Dat
 <center><img src="images/K-MEANS.gif"/></center>
 <br>
 
+## GIS
+
 ---
 ### Motor-Colission-App-Streamlit
 
@@ -144,7 +146,35 @@ The enhanced fuzzy matching function is applied with a progress bar, and the Dat
 
 <br>
 
+### Motor-Colission-App-Streamlit
+
+
+<div style="text-align: justify">
+The map presented corresponds to the territory of Colombia, the base map was obtained from the 1:1,000,000 base cartography of the Colombian Institute Agustin Codazzi. The station data was obtained from the Colombian Institute of Meteorology and Hydrology IDEAM, and these shapefiles were mounted on the base cartography. Then, a join table was made to join the attributes based on the department, after which a color map was created showing the number of stations normalized by area of the form. The unit of area used was per 1000 km². No meta data was used.
+</div>
+
+By specifying the unit of area as per 1000 km², it allows for a consistent and standardized measurement that can be easily compared and analyzed, making it a vital statistic for geographic and demographic studies.
+
+<center><img src="images/ezgif.com-gif-maker.gif"/></center>
+
+<br>
+
+### Motor-Colission-App-Streamlit
+
+<div style="text-align: justify">
+The city of Stowe, Vermont, USA, experienced a large increase in population. Demographic data suggest that this increase is due to families with children moving to the region and taking advantage of the large number of recreation facilities located nearby. It was decided to build a new school to ease the pressure on the existing schools and as a planner you were tasked with finding the potential site. The data used comes from ESRI, included in the Arcmap CD, contains data from (Elevation, Land Use, Roads, Rec_sites, Schools, Destination). 
+
+A suitability map is created to help find the best location for a new school. By deriving distance and slope datasets, the datasets are reclassified to a common scale, then the ones that are most important to consider are weighed and combined to find the most suitable locations. Finally, the sweet spot is located with the ArcMap selection tools. The input datasets for this exercise are: landuse, elevation, rec_sites, and schools. 
+
+Slopes, distance to recreation places and distance to existing schools are obtained, reclassifying these derived datasets on a common scale of 1 to 10; They are weighted together with the landuse dataset based on a percentage of influence and you will combine them to produce a map showing the appropriate locations for the new school. The optimal location for the new school among the alternatives is then defined based on the reclassified scale.
+</div>
+<br>
+<center><img src="images/ezgif.com-gif-maker.gif"/></center>
+
+<br>
+
 ---
+
 ## STEM MSc Civil Engineering Thesis 
 [http://hdl.handle.net/1992/52990](https://repositorio.uniandes.edu.co/bitstream/handle/1992/52990/25247.pdf?sequence=1)
 <div style="text-align: justify">A program was developed in MATLAB to show the relationship between the probability of occurrence of landslide and the size of the landslide from slope statistics obtained from digital elevation models (DEM) with spatial resolution of (30x30m) of two zones with different geological and geomorphology origins. The program must consider all the possible neighbors or clusters of an elevation matrix as input using image processing tools, and as output the statistics of the related clusters, to conclude if the topography is organized in a fractal way or invariant with the scale and being a characteristic of the size of landslides.</div>
