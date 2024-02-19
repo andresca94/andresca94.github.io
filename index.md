@@ -40,7 +40,7 @@
 ## Full Stack Development / Machine Learning
 ### Trabook - Your Travel Companion - Vue.js && FastAPI
 
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Trabook-Vue-App)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Peaku)
 
 <div style="text-align: justify">
 Trabook is a travel platform designed to kickstart your journey with a splash of fun. The app features destination exploration, professional travel advice, and a comprehensive tour planning toolkit. It's built using Vue.js to ensure a responsive and user-friendly interface, coupled with a FastAPI backend for high performance and scalability. PostgreSQL is used for efficient data storage, and Docker containers help with seamless deployment. Dive into the world of Trabook and let your travel dreams take flight.
