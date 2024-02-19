@@ -76,8 +76,8 @@ Trabook is a travel platform designed to kickstart your journey with a splash of
 <br>
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/K-means-clustering-for-music-genre-prediction/blob/main/K-means-clustering%20for%20music%20genre%20prediction.ipynb)
 <br>
-<center><img src="images/MC.gif"/></center>
-<center><img src="images/KM.gif"/></center>
+<center><img src="images/MULTI.gif"/></center>
+<center><img src="images/K-MEANS.gif"/></center>
 <br>
 
 ---
