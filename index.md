@@ -59,9 +59,9 @@ Trabook is a travel platform designed to kickstart your journey with a splash of
 
 <center><img src="images/RNN.png"/></center>
 
-<center><img src="images/Merged_document.png"/></center>
+<center><img src="images/MC.gif"/></center>
 
-<center><img src="images/Merged_document (1).png"/></center>
+<center><img src="images/KM.gif"/></center>
 
 ---
 
