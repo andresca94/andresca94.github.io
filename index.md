@@ -155,7 +155,7 @@ The map presented corresponds to the territory of Colombia, the base map was obt
 
 By specifying the unit of area as per 1000 km², it allows for a consistent and standardized measurement that can be easily compared and analyzed, making it a vital statistic for geographic and demographic studies.
 
-<center><img src="images/linmi.png"/></center>
+<center><img src="images/linmi.jpeg"/></center>
 
 <br>
 
@@ -169,7 +169,7 @@ A suitability map is created to help find the best location for a new school. By
 Slopes, distance to recreation places and distance to existing schools are obtained, reclassifying these derived datasets on a common scale of 1 to 10; They are weighted together with the landuse dataset based on a percentage of influence and you will combine them to produce a map showing the appropriate locations for the new school. The optimal location for the new school among the alternatives is then defined based on the reclassified scale.
 </div>
 <br>
-<center><img src="images/spatial.png"/></center>
+<center><img src="images/spatial.jpeg"/></center>
 
 <br>
 
