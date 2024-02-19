@@ -140,7 +140,7 @@ The enhanced fuzzy matching function is applied with a progress bar, and the Dat
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Motor-Colission-App-Streamlit)
 
-<div style="text-align: justify">I loaded and cleaned the Motor Collision in New York City dataset. Creation of a 3D map and data visualization to respond the questions “Where are the most people injured in NYC?” and “How many collisions occur during a given time of day”. Breakdown by minute and affected type Pedrestrians, Cyclist, Motorist. Front end using Streamlit.</div>
+<div style="text-align: justify">Loaded and cleaned the Motor Collision in New York City dataset. Creation of a 3D map and data visualization to respond the questions “Where are the most people injured in NYC?” and “How many collisions occur during a given time of day”. Breakdown by minute and affected type Pedrestrians, Cyclist, Motorist. Front end using Streamlit.</div>
 <br>
 <center><img src="images/ezgif.com-gif-maker.gif"/></center>
 
