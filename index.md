@@ -59,9 +59,17 @@ Trabook is a travel platform designed to kickstart your journey with a splash of
 
 <center><img src="images/RNN.png"/></center>
 
-<center><img src="images/MC.gif"/></center>
+### MasterCard stock price time series forecasting using LSTM and GRU
 
-<center><img src="images/KM.gif"/></center>
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)
+
+<div style="text-align: justify">RNN remembers past inputs due to an internal memory which is useful for predicting stock prices, generating text, transcriptions, and machine translation. In this notebook I'll use LSTM and GRU that are an advanced type of RNN. RNN simple structure suffers from short memory, where it struggles to retain previous time step information in larger sequential data. These problems can easily be solved by long short term memory (LSTM) and gated recurrent unit (GRU), as they are capable of remembering long periods of information. In this notebook I will show you a preprocessed dataset from May-25-2006 to Oct-11-2022 and how to built machine learning models to predict the stock price using both LSTM and GRU.The model consists of either a single hidden layer of LSTM or GRU and an output layer. LSTM units to 125, tanh as activation, the model will train on 50 epochs with 32 batch sizes. GRU model got 5.95 rmse on the test dataset, which is an improvement from the LSTM model with rmse of 6.47.</div>
+
+<center><img src="images/RNN.png"/></center>
+
+<center><img src="images/Merged_document.png"/></center>
+
+<center><img src="images/Merged_document (1).png"/></center>
 
 ---
 
@@ -76,8 +84,8 @@ Trabook is a travel platform designed to kickstart your journey with a splash of
 <br>
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/K-means-clustering-for-music-genre-prediction/blob/main/K-means-clustering%20for%20music%20genre%20prediction.ipynb)
 <br>
-<center><img src="images/Merged_document (3).png"/></center>
-<center><img src="images/Merged_document (3).png"/></center>
+<center><img src="images/MC.gif"/></center>
+<center><img src="images/KM.gif"/></center>
 <br>
 
 ---
