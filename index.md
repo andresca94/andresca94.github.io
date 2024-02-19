@@ -146,7 +146,7 @@ The enhanced fuzzy matching function is applied with a progress bar, and the Dat
 
 <br>
 
-### Cartographic Spatial Analysis of Linimgraph Stations in Colombia
+### Cartographic Analysis of Linimgraph Stations in Colombia
 
 
 <div style="text-align: justify">
@@ -159,7 +159,7 @@ By specifying the unit of area as per 1000 km², it allows for a consistent and 
 
 <br>
 
-### GIS Analysis for School Location in Stowe, Vermont
+### GIS Spatial Analysis for School Location in Stowe, Vermont
 
 <div style="text-align: justify">
 The city of Stowe, Vermont, USA, experienced a large increase in population. Demographic data suggest that this increase is due to families with children moving to the region and taking advantage of the large number of recreation facilities located nearby. It was decided to build a new school to ease the pressure on the existing schools and as a planner you were tasked with finding the potential site. The data used comes from ESRI, included in the Arcmap CD, contains data from (Elevation, Land Use, Roads, Rec_sites, Schools, Destination). 
