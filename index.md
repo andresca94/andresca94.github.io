@@ -37,7 +37,7 @@
 <br>
 
 ---
-## Full Stack Development / Machine Learning
+## Full Stack Development
 ### Trabook - Your Travel Companion - Vue.js && FastAPI
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Peaku)
