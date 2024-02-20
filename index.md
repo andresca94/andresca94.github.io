@@ -1,14 +1,14 @@
 # Portfolio
 ---
 ## AI / Machine Learning
-### Trabook - Your Travel Companion - Vue.js && FastAPI
+### Interior Design Generator - Vue.js & FastAPI
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Peaku)
 
 <div style="text-align: justify">
-Trabook is a travel platform designed to kickstart your journey with a splash of fun. The app features destination exploration, professional travel advice, and a comprehensive tour planning toolkit. It's built using Vue.js to ensure a responsive and user-friendly interface, coupled with a FastAPI backend for high performance and scalability. PostgreSQL is used for efficient data storage, and Docker containers help with seamless deployment. Dive into the world of Trabook and let your travel dreams take flight.
+The Interior Design Generator is a cutting-edge platform that brings text-based design concepts to life. Utilizing AI technologies like Stable Diffusion, ControlNet, and the Segment Anything model for detailed inpainting, it creates vivid, accurate interior designs. Built on Vue.js for a smooth user experience and FastAPI for dependable backend operations, this tool allows for personalized design customization. It's designed for both professional designers and enthusiasts, offering a new way to visualize and refine interior spaces. Discover the potential of merging technology with design through this innovative application.
 </div>
-<center><img src="images/Trabook.gif"></center>
+<center><img src="images/interiord.gif"></center>
 <br>
 
 
