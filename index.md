@@ -182,7 +182,8 @@ Slopes, distance to recreation places and distance to existing schools are obtai
 ---
 ## More about me...
 
-<div style="text-align: justify">Besides Data Science, I also have a great passion for soccer and music. I love to watch great games and live concerts as well I try to play soccer very often and play guitar and piano.</div>
+<div style="text-align: justify">
+Besides Data Science, I also have a great passion for soccer and music. I love to watch great games and live concerts, as well as try to play soccer very often, and play the guitar and piano.</div>
 <br>
 ---
 <br>
