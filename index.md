@@ -29,9 +29,9 @@ The Interior Design Generator streamlines the creative process with its innovati
 ## Natural Language Processing
 
 ### Summarization and translation from YouTube videos using mT5 multilanguage tranformers architecture.
-<center><img src="images/Multilanguage mT5 Summarization and translation APP.gif"/></center>
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Summarization-and-translation-from-YouTube-videos-using-mT5-multilanguage-tranformers-architecture.)
 <center><img src="images/MultilanguagemT5SummarizationandtranslationAPPonline-video-cutter.com-ezgif.com-video-to-gif-converter.gif"/></center>
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Summarization-and-translation-from-YouTube-videos-using-mT5-multilanguage-tranformers-architecture.)
+<center></center>
 **Summarization:**
 <div style="text-align: justify">In this notebook I'll use the HuggingFace's transformers library to fine-tune a pretrained summarization module which summarize texts in Spanish using the fine-tuned multilanguage mT5 encoder/decorder architecture.</div>
 <br>
