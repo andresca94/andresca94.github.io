@@ -17,7 +17,7 @@ Built with FastAPI and designed for both local and cloud deployment, Prose Gener
 <br>
 
 ### Interior Design Generator - Vue.js & FastAPI
-#### Code: [[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/InteriorDesign-Vue-Fast)
+#### Code: [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/InteriorDesign-Vue-Fast)
 
 <div style="text-align: justify">
 The Interior Design Generator streamlines the creative process with its innovative use of AI, transforming textual descriptions into precise and vivid interior designs. Featuring advanced technologies such as Stable Diffusion, ControlNet, and the Segment Anything model for inpainting, this platform allows for the meticulous editing and refinement of interiors. A notable feature includes a drawable box tool, empowering users to define areas for targeted modification through inpainting, seamlessly integrating or altering elements within a space. With two key functionalities—'Generate' for creating or modifying the overall design and 'Inpaint' for precise adjustments within selected areas—users have unparalleled control over the design process. Built on Vue.js for an engaging user experience and FastAPI for robust backend support, this tool caters to both seasoned designers and hobbyists eager to explore the fusion of technology and interior design. Embrace this modern approach to design visualization and customization.
