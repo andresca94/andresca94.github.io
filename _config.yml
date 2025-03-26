@@ -7,11 +7,13 @@ description:
   <a href="https://github.com/andresca94">GitHub</a>
   </p>
   
-  <p align="justify">
-   I’m an engineer and developer with academic background in Earth Science and Geotechnical Engineering having experience in Software Development and GIS. 
-  My portfolio includes full stack applications using the state of art for Data Science. I’m very interested in topics such as Natural Language Processing and Computer Vision.
+<p align="justify">
+  I’m a Machine Learning Engineer and developer with a multidisciplinary background in <strong>Earth Science</strong>, <strong>Geotechnical Engineering</strong>, <strong>GIS</strong>, and <strong>Full Stack Software Development</strong>. My work spans <strong>AI/ML applications</strong> for creative media, data science, and geospatial analysis. I specialize in building advanced tools for <strong>generative AI</strong>, <strong>natural language processing</strong>, and <strong>computer vision</strong>, including projects that leverage <strong>Stable Diffusion</strong>, <strong>LoRA fine-tuning</strong>, <strong>FastAPI</strong>, and <strong>semantic search with LLMs</strong>. 
   <br><br>
+  My portfolio features a wide variety of hands-on projects such as a <strong>Prose Generator</strong> using GPT-4 and Pinecone, an <strong>Interior Design Generator</strong> with Stable Diffusion and ControlNet, <strong>multilingual summarization and translation</strong> using mT5 transformers, <strong>recommendation systems</strong>, <strong>fuzzy matching for databases</strong>, and <strong>stock prediction using LSTM/GRU</strong>. I also explore <strong>spatial analysis</strong> through GIS projects and my civil engineering research on <strong>landslide prediction</strong> using MATLAB and DEMs.
   <br><br>
-  </p> 
+  To explore all of my work — including diffusion models, vision-based tools, data pipelines, and full-stack AI systems — I invite you to visit my <a href="https://andresca94.github.io/academicpages/" target="_blank"><strong>project portfolio</strong></a>.
+</p>
+
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
