@@ -11,7 +11,7 @@ Powered by OpenAI's GPT-4 and semantic search via Pinecone, the backend retrieve
 
 Built with FastAPI and designed for both local and cloud deployment, Prose Generator exposes a clean RESTful endpoint for integration into creative pipelines. Its output can be customized by adjusting parameters like desired word count, character metadata, or writing style. Ideal for drafting novels, storyboarding, or content prototyping, this tool empowers storytelling at scale with the precision of AI.
 </div>  
-<center><img src="images/prosegenerator.gif"></center>  
+<center><img src="images/3.png"></center>  
 <br>
 
 
