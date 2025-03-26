@@ -1,8 +1,22 @@
 # Portfolio
 ---
 ## AI / Machine Learning
+### Prose Generator - FastAPI, GPT-4, Pinecone & CrossEncoder  
+#### Code: [GitHub](https://github.com/andresca94/ProseGenerator)
+
+<div style="text-align: justify">
+The Prose Generator is a full-stack AI storytelling engine that turns structured story beats into compelling narrative prose of ~1500 words. Designed for creative writers, narrative designers, and content studios, it combines large language models, semantic search, and reranking to generate richly detailed fiction with coherence and style.
+
+Powered by OpenAI's GPT-4 and semantic search via Pinecone, the backend retrieves thematically relevant excerpts from a pre-embedded vector database. These examples help shape both tone and context through few-shot prompting. A CrossEncoder model is used to re-rank results, ensuring the most relevant passages inform the output. The system also dynamically generates a narrative overview that fuses beats, genre, setting, and style, making the final prompt robust and personalized.
+
+Built with FastAPI and designed for both local and cloud deployment, Prose Generator exposes a clean RESTful endpoint for integration into creative pipelines. Its output can be customized by adjusting parameters like desired word count, character metadata, or writing style. Ideal for drafting novels, storyboarding, or content prototyping, this tool empowers storytelling at scale with the precision of AI.
+</div>  
+<center><img src="images/prosegenerator.gif"></center>  
+<br>
+
+
 ### Interior Design Generator - Vue.js & FastAPI
-#### Code: Coming Soon!
+#### Code: [GitHub](https://github.com/andresca94/InteriorDesign-Vue-Fast)
 
 <div style="text-align: justify">
 The Interior Design Generator streamlines the creative process with its innovative use of AI, transforming textual descriptions into precise and vivid interior designs. Featuring advanced technologies such as Stable Diffusion, ControlNet, and the Segment Anything model for inpainting, this platform allows for the meticulous editing and refinement of interiors. A notable feature includes a drawable box tool, empowering users to define areas for targeted modification through inpainting, seamlessly integrating or altering elements within a space. With two key functionalities—'Generate' for creating or modifying the overall design and 'Inpaint' for precise adjustments within selected areas—users have unparalleled control over the design process. Built on Vue.js for an engaging user experience and FastAPI for robust backend support, this tool caters to both seasoned designers and hobbyists eager to explore the fusion of technology and interior design. Embrace this modern approach to design visualization and customization.
