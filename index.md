@@ -4,7 +4,7 @@
 ## AI / Machine Learning
 
 ### Prose Generator - FastAPI, GPT-4, Pinecone & CrossEncoder  
-#### Code: [GitHub](https://github.com/andresca94/ProseGenerator)
+#### Code: [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/ProseGenerator)
 
 <div style="text-align: justify">
 The Prose Generator is a full-stack AI storytelling engine that turns structured story beats into compelling narrative prose of ~1500 words. Designed for creative writers, narrative designers, and content studios, it combines large language models, semantic search, and reranking to generate richly detailed fiction with coherence and style.
