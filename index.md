@@ -29,23 +29,21 @@ The Interior Design Generator streamlines the creative process with its innovati
 ## Natural Language Processing
 
 ### Summarization and translation from YouTube videos using mT5 multilanguage tranformers architecture.
+#### Code: [GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Summarization-and-translation-from-YouTube-videos-using-mT5-multilanguage-tranformers-architecture.)
 <center><img src="images/MultilanguagemT5SummarizationandtranslationAPPonline-video-cutter.com-ezgif.com-video-to-gif-converter.gif"/></center>
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Summarization-and-translation-from-YouTube-videos-using-mT5-multilanguage-tranformers-architecture.)
 <center><img src="images/t5.png"/></center>
+
 **Summarization:**
 <div style="text-align: justify">In this notebook I'll use the HuggingFace's transformers library to fine-tune a pretrained summarization module which summarize texts in Spanish using the fine-tuned multilanguage mT5 encoder/decorder architecture.</div>
 <br>
-[![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/11jG-rhploTYvfrE8P5cUd6LSOTKZcyNX#scrollTo=ZGXDBmcwcxQL)
 
 
 **Neural Machine Translation:** 
 <div style="text-align: justify">In this notebook I’ll use the HuggingFace’s transformers library to fine-tune a pretrained NMT module which translates texts from Spanish to English using the multilanguage mT5 encoder/decorder architechture.</div>
 <br>
-[![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1RbtfwyhdZx8aTWruQMgmuVNXfN0UsQq6?authuser=1)
 
 **Flask End-to-End Deep learning APP:** Front-end and Back-end using the pretrained models and deployed with Flask
 <br>
-[![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1nTsgWxsjUmw2Xiq1PLEfHPY8ZQ0DzPw-?authuser=1#scrollTo=QramYSC3lpa7)
 
 
 <center><img src="images/ngrok.PNG"/></center>
