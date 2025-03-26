@@ -34,12 +34,12 @@ The Interior Design Generator streamlines the creative process with its innovati
 <center><img src="images/t5.png"/></center>
 
 **Summarization:**
-<div style="text-align: justify">In this notebook I'll use the HuggingFace's transformers library to fine-tune a pretrained summarization module which summarize texts in Spanish using the fine-tuned multilanguage mT5 encoder/decorder architecture.</div>
+<div style="text-align: justify">Used HuggingFace's transformers library to fine-tune a pretrained summarization module which summarize texts in Spanish using the fine-tuned multilanguage mT5 encoder/decorder architecture.</div>
 <br>
 
 
 **Neural Machine Translation:** 
-<div style="text-align: justify">In this notebook I’ll use the HuggingFace’s transformers library to fine-tune a pretrained NMT module which translates texts from Spanish to English using the multilanguage mT5 encoder/decorder architechture.</div>
+<div style="text-align: justify">Used HuggingFace’s transformers library to fine-tune a pretrained NMT module which translates texts from Spanish to English using the multilanguage mT5 encoder/decorder architechture.</div>
 <br>
 
 **Flask End-to-End Deep learning APP:** Front-end and Back-end using the pretrained models and deployed with Flask
