@@ -179,7 +179,7 @@ A suitability map is created to help find the best location for a new school. By
 Slopes, distance to recreation places and distance to existing schools are obtained, reclassifying these derived datasets on a common scale of 1 to 10; They are weighted together with the landuse dataset based on a percentage of influence and you will combine them to produce a map showing the appropriate locations for the new school. The optimal location for the new school among the alternatives is then defined based on the reclassified scale.
 </div>
 <br>
-<center><img src="images/spatial1.jpeg"/></center>
+<center><img src="images/spatial2.jpeg"/></center>
 
 <br>
 
