@@ -3,17 +3,15 @@
 
 ## AI / Machine Learning
 
-### Prose Generator - FastAPI, GPT-4, Pinecone & CrossEncoder  
+### FastAPI · GPT-4o · Pinecone · CrossEncoder · LangGraph Agents - Evaluation 
 #### Code: [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/ProseGenerator)
 
 <div style="text-align: justify">
-The Prose Generator is a full-stack AI storytelling engine that turns structured story beats into compelling narrative prose of ~1500 words. Designed for creative writers, narrative designers, and content studios, it combines large language models, semantic search, and reranking to generate richly detailed fiction with coherence and style.
+The Prose Generator is a full-stack AI storytelling engine that transforms structured story beats into ~1500 words of compelling narrative prose. Powered by a modular LangGraph agent, it combines GPT-4o, semantic search with Pinecone, and CrossEncoder re-ranking to retrieve and filter thematically relevant excerpts from a pre-embedded corpus. These references, along with curated few-shot examples, condition the language model to produce fiction that is coherent, richly detailed, and stylistically grounded. Designed with FastAPI for scalable deployment, the system exposes a RESTful API for seamless integration into creative workflows, enabling rapid prototyping for writers, game designers, and content studios.
 
-Powered by OpenAI's GPT-4 and semantic search via Pinecone, the backend retrieves thematically relevant excerpts from a pre-embedded vector database. These examples help shape both tone and context through few-shot prompting. A CrossEncoder model is used to re-rank results, ensuring the most relevant passages inform the output. The system also dynamically generates a narrative overview that fuses beats, genre, setting, and style, making the final prompt robust and personalized.
-
-Built with FastAPI and designed for both local and cloud deployment, Prose Generator exposes a clean RESTful endpoint for integration into creative pipelines. Its output can be customized by adjusting parameters like desired word count, character metadata, or writing style. Ideal for drafting novels, storyboarding, or content prototyping, this tool empowers storytelling at scale with the precision of AI.
+In addition to text generation, the updated pipeline supports optional AI-generated cover art using OpenAI’s image model, guided by a narrative-aware prompt composed from beats, genre, setting, and user input. Both prose and cover outputs are evaluated using Judgeval, a dual scoring system that monitors content relevancy and visual fidelity. This ensures high-quality, on-theme storytelling across modalities. From storyboarding to content production, the Prose Generator brings scalable, feedback-driven storytelling to life with the precision of AI.
 </div>  
-<center><img src="images/ezgif.com-crop.gif"></center>  
+<center><img src="images/prose-art.gif"></center>  
 <br>
 
 ### Interior Design Generator - Vue.js & FastAPI
