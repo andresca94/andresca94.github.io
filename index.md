@@ -4,7 +4,7 @@
 ## AI / Machine Learning
 
 ### FastAPI · GPT-4o · Pinecone · CrossEncoder · LangGraph Agents - Evaluation 
-#### Code: [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/ProseGenerator)
+#### Code: [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/andresca94/Prose-Art-Agent)
 
 <div style="text-align: justify">
 The Prose Generator is a full-stack AI storytelling engine that transforms structured story beats into ~1500 words of compelling narrative prose. Powered by a modular LangGraph agent, it combines GPT-4o, semantic search with Pinecone, and CrossEncoder re-ranking to retrieve and filter thematically relevant excerpts from a pre-embedded corpus. These references, along with curated few-shot examples, condition the language model to produce fiction that is coherent, richly detailed, and stylistically grounded. Designed with FastAPI for scalable deployment, the system exposes a RESTful API for seamless integration into creative workflows, enabling rapid prototyping for writers, game designers, and content studios.
