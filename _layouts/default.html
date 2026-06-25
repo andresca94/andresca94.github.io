@@ -21,7 +21,48 @@
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <div class="profile-copy">{{ site.description | default: site.github.project_tagline }}</div>
+        <div class="profile-actions">
+          <button
+            class="profile-stats-toggle"
+            type="button"
+            data-profile-stats-toggle
+            aria-expanded="false"
+            aria-controls="profile-stats-panel"
+          >
+            Statistics
+          </button>
+        </div>
+        <div class="profile-stats" id="profile-stats-panel" data-profile-stats-panel hidden>
+          <svg class="profile-radar" viewBox="0 0 240 224" role="img" aria-label="Radar chart of Andrés Carvajal's skill profile">
+            <polygon points="120,36 184,73 184,147 120,184 56,147 56,73" />
+            <polygon points="120,54 169,82 169,138 120,166 71,138 71,82" />
+            <polygon points="120,72 154,91 154,129 120,148 86,129 86,91" />
+            <polygon points="120,90 139,100 139,120 120,130 101,120 101,100" />
+            <polyline points="120,36 120,184" />
+            <polyline points="56,73 184,147" />
+            <polyline points="56,147 184,73" />
+            <polygon class="profile-radar__shape" points="120,44 176,78 165,142 120,176 64,145 64,79" />
+            <text x="120" y="18">ML</text>
+            <text x="190" y="68">LLM / RAG</text>
+            <text x="194" y="154">Vision</text>
+            <text x="120" y="210">Backend</text>
+            <text x="18" y="154">Product</text>
+            <text x="22" y="68">Cloud</text>
+          </svg>
+          <div class="profile-keywords" aria-label="Representative keywords">
+            <span class="profile-keyword">Entity resolution</span>
+            <span class="profile-keyword">TF-IDF</span>
+            <span class="profile-keyword">Recommenders</span>
+            <span class="profile-keyword">SQL</span>
+            <span class="profile-keyword">Data cleaning</span>
+            <span class="profile-keyword">Agentic</span>
+            <span class="profile-keyword">RAG</span>
+            <span class="profile-keyword">Frontend</span>
+            <span class="profile-keyword">Infrastructure</span>
+            <span class="profile-keyword">Product</span>
+          </div>
+        </div>
 
         {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>

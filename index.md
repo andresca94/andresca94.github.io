@@ -3,6 +3,7 @@
 
 <div class="portfolio-shell">
   <div class="portfolio-controls" data-portfolio-controls></div>
+  <div class="portfolio-subfilters" data-portfolio-subfilters></div>
 
   <div class="portfolio-context">
     <div>

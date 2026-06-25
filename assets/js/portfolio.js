@@ -19,109 +19,187 @@ const categories = [
   }
 ];
 
+const filterGroups = [
+  {
+    id: "industry",
+    label: "Industry",
+    allLabel: "All industries",
+    projectKey: "industries",
+    labels: {
+      advertising: "Advertising",
+      commerce: "Commerce",
+      design: "Design",
+      education: "Education",
+      finance: "Finance",
+      geospatial: "Geospatial",
+      healthcare: "Healthcare",
+      legal: "Legal",
+      media: "Media",
+      operations: "Operations",
+      research: "Research",
+      safety: "Safety"
+    },
+    order: [
+      "healthcare",
+      "finance",
+      "media",
+      "legal",
+      "commerce",
+      "operations",
+      "design",
+      "education",
+      "geospatial",
+      "advertising",
+      "safety",
+      "research"
+    ]
+  },
+  {
+    id: "capability",
+    label: "Capability",
+    allLabel: "All capabilities",
+    projectKey: "focuses",
+    labels: {
+      analytics: "Analytics",
+      automation: "Automation",
+      forecasting: "Forecasting",
+      geospatial: "Geospatial",
+      language: "Language",
+      multimodal: "Multimodal",
+      recommenders: "Recommenders",
+      retrieval: "Retrieval",
+      vision: "Vision"
+    },
+    order: [
+      "language",
+      "vision",
+      "multimodal",
+      "retrieval",
+      "automation",
+      "recommenders",
+      "forecasting",
+      "geospatial",
+      "analytics"
+    ]
+  }
+];
+
 const projects = [
   {
     category: "ai-systems",
     year: 2026,
-    short: "TXT",
     title: "Prose Generator",
     label: "Narrative generation and evaluation pipeline",
     summary:
       "Full-stack storytelling engine that turns structured beats into long-form prose, retrieves reference passages with Pinecone, reranks them with a CrossEncoder, and evaluates both writing and cover art with Judgeval.",
+    industries: ["media"],
+    focuses: ["language", "retrieval"],
     tags: ["FastAPI", "LangGraph", "GPT-4o", "Pinecone", "CrossEncoder", "Judgeval"],
     media: {
       type: "image",
       src: "/images/project-media/prose-generator.gif",
-      alt: "Animated preview of the Prose Generator application"
+      alt: "Animated preview of the Prose Generator application",
+      aspect: "16 / 10",
+      background: "linear-gradient(180deg, #f3eadb, #ebe4d7)",
+      classes: ["flush"]
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/Prose-Art-Agent", icon: "github" }]
   },
   {
     category: "ai-systems",
     year: 2024,
-    short: "INT",
     title: "Interior Design Generator",
     label: "Text-to-interior generation with inpainting",
     summary:
       "Vue and FastAPI application for generating and editing interior scenes with Stable Diffusion, ControlNet, and Segment Anything, including targeted inpainting through a user-drawn editing box.",
+    industries: ["design"],
+    focuses: ["vision"],
     tags: ["Vue", "FastAPI", "Stable Diffusion", "ControlNet", "SAM"],
     media: {
       type: "image",
       src: "/images/project-media/interior-design-generator.gif",
-      alt: "Animated preview of the interior design generator"
+      alt: "Animated preview of the interior design generator",
+      aspect: "3 / 2",
+      background: "#f6f3ee",
+      classes: ["flush"]
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/InteriorDesign-Vue-Fast", icon: "github" }]
   },
   {
     category: "ai-systems",
     year: 2026,
-    short: "AGE",
     title: "Age Safety Assessment",
     label: "Renamed client work",
     summary:
       "Safety-first age moderation proof of concept that combines face detection, aligned crops, a MiVOLO-style age estimator, an auxiliary DINOv2 path, calibration, and a policy engine that only returns safe when adult evidence is strong.",
+    industries: ["media", "safety"],
+    focuses: ["vision", "automation"],
     tags: ["Python", "FastAPI", "NestJS", "InsightFace", "DINOv2", "Calibration"],
     media: {
       type: "image",
       src: "/images/project-media/age-safety-architecture.png",
-      alt: "Architecture diagram for the age safety assessment system"
+      alt: "Architecture diagram for the age safety assessment system",
+      aspect: "16 / 9",
+      background: "linear-gradient(180deg, #e9eef1, #dfe8ec)",
+      classes: ["flush"]
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/hygo-assessment", icon: "github" }]
   },
   {
     category: "ai-systems",
     year: 2026,
-    short: "NTR",
     title: "Notar-IA",
     label: "Multimodal legal document automation",
     summary:
       "End-to-end notarial deed generation system that turns heterogeneous legal packets into structured outputs, local-RAG grounded drafts, and final DOCX or PDF deliverables with validation, retries, and traceable artifacts.",
+    industries: ["legal"],
+    focuses: ["language", "multimodal", "automation"],
     tags: ["FastAPI", "React", "OpenAI", "Local RAG", "pdfplumber", "DOCX"],
     media: {
       type: "video",
       src: "/assets/media/notar-ia.mp4",
       poster: "/images/project-media/notar-ia-poster.jpg",
-      title: "Notar-IA product video"
+      title: "Notar-IA product video",
+      aspect: "16 / 9"
     },
     links: []
   },
   {
     category: "ai-systems",
     year: 2026,
-    short: "VCA",
-    title: "Ovidius AI Avatar Training Suite",
-    label: "Private AI avatar and compliance automation",
+    title: "AI Avatar Training Suite",
+    label: "AI avatar and compliance automation",
     summary:
-      "Two-part VCA training automation for a Dutch client: an agentic concept generator that creates multilingual toolbox content and quizzes, plus an avatar video engine that turns approved scripts into branded training videos with voice synthesis, timing logic, captions, and export workflows.",
-    tags: [
-      "Agentic workflows",
-      "Research automation",
-      "AI avatars",
-      "Voice synthesis",
-      "Video composition",
-      "Localization"
-    ],
+      "AI-assisted training-content and avatar video system for a Dutch client that combined concept design using AI, multilingual script drafting, n8n automation, ElevenLabs voice generation, HeyGen avatars, and Supabase-backed review states for compliance-safe exports.",
+    industries: ["education", "media"],
+    focuses: ["language", "multimodal", "automation"],
+    tags: ["n8n automation", "ElevenLabs", "HeyGen", "Supabase", "AI concept design", "Compliance workflows"],
     media: {
       type: "video",
       src: "/assets/media/ovidius-ai-avatar.mp4",
       poster: "/images/project-media/ovidius-ai-avatar-poster.jpg",
-      title: "Ovidius AI avatar training video"
+      title: "AI avatar training video",
+      aspect: "16 / 9"
     },
     links: []
   },
   {
     category: "ai-systems",
     year: 2026,
-    short: "10M",
     title: "Creator Search 10M",
     label: "Whalar creator-brand retrieval system",
     summary:
       "Hybrid recommendation engine and design paper for matching brands with the top-K creators from a 10M profile universe using BM25 plus HNSW candidate generation, cross-encoder reranking, hard constraint parsing, and offline evaluation tooling.",
+    industries: ["media", "advertising"],
+    focuses: ["retrieval", "language"],
     tags: ["OpenSearch", "Transformers", "Python", "Reranking", "HNSW", "Evaluation"],
     media: {
       type: "image",
       src: "/images/project-media/creator-search-paper.png",
-      alt: "Thumbnail of the Creator Search 10M paper"
+      alt: "Thumbnail of the Creator Search 10M paper",
+      aspect: "16 / 10",
+      background: "linear-gradient(180deg, #ebe6e1, #f4eee7)",
+      classes: ["flush"]
     },
     links: [
       { label: "GitHub", url: "https://github.com/andresca94/creator-search-10m", icon: "github" },
@@ -131,16 +209,18 @@ const projects = [
   {
     category: "ai-systems",
     year: 2024,
-    short: "IMG",
     title: "DeepMake Image Generation Platform",
     label: "DeepMake generative media tooling",
     summary:
       "FastAPI plugin for text-to-image and image-to-image generation that integrates Stable Diffusion, ControlNet, and SDXL with LoRA loading, seed control, scheduler selection, and GPU-backed inference for flexible creative workflows.",
+    industries: ["media"],
+    focuses: ["vision"],
     tags: ["FastAPI", "Stable Diffusion", "ControlNet", "SDXL", "LoRA", "ComfyUI"],
     media: {
       type: "youtube",
       id: "FKa7gCUX4pw",
-      title: "DeepMake image generation demo"
+      title: "DeepMake image generation demo",
+      aspect: "16 / 9"
     },
     links: [
       { label: "GitHub", url: "https://github.com/DeepMakeStudio/Diffusers", icon: "github" },
@@ -150,16 +230,18 @@ const projects = [
   {
     category: "ai-systems",
     year: 2024,
-    short: "SEG",
     title: "DeepMake Video Segmentation Engine",
     label: "Promptable segmentation for video frames",
     summary:
       "Semantic and instance segmentation pipeline that pairs Grounding DINO with Segment Anything to identify objects from prompts, generate masks, and run efficiently on both CPU and GPU video workflows.",
+    industries: ["media"],
+    focuses: ["vision"],
     tags: ["PyTorch", "Grounding DINO", "SAM", "Video segmentation", "FastAPI"],
     media: {
       type: "youtube",
       id: "3XQsHEP_foU",
-      title: "DeepMake video segmentation demo"
+      title: "DeepMake video segmentation demo",
+      aspect: "16 / 9"
     },
     links: [
       { label: "GitHub", url: "https://github.com/DeepMakeStudio/GroundingDINO-SAM", icon: "github" },
@@ -169,16 +251,18 @@ const projects = [
   {
     category: "ai-systems",
     year: 2024,
-    short: "SR",
     title: "DeepMake Video Super Resolution",
     label: "Creative media upscaling",
     summary:
       "Image and video super-resolution system using ESRGAN, SwinIR, and BasicVSR with interval-based frame processing so large or low-quality media can be restored without blowing up memory usage.",
+    industries: ["media"],
+    focuses: ["vision"],
     tags: ["ESRGAN", "SwinIR", "BasicVSR", "Video restoration", "PyTorch"],
     media: {
       type: "youtube",
       id: "bNq-GhZ7qSQ",
-      title: "DeepMake video super resolution demo"
+      title: "DeepMake video super resolution demo",
+      aspect: "16 / 9"
     },
     links: [
       { label: "GitHub", url: "https://github.com/DeepMakeStudio/BasicSR/tree/main", icon: "github" },
@@ -188,151 +272,204 @@ const projects = [
   {
     category: "ai-systems",
     year: 2025,
-    short: "RND",
     title: "RandomAI Content Automation",
     label: "Generative AI for print-on-demand commerce",
     summary:
       "AI-native e-commerce platform for print-on-demand brands that turned prompts into product-ready artwork, automated cleanup and campaign asset generation, and connected fulfillment workflows across Shopify, Printful, Replicate, Runpod, Firebase, and GCP.",
+    industries: ["commerce", "media"],
+    focuses: ["vision", "automation"],
     tags: ["Firebase", "GCP", "FLUX", "SDXL", "Shopify", "Runpod"],
     media: {
       type: "video",
       src: "/assets/media/randomai.mp4",
       poster: "/images/project-media/randomai-poster.jpg",
-      title: "RandomAI product video"
+      title: "RandomAI product video",
+      aspect: "16 / 9"
     },
     links: []
   },
   {
     category: "product-builds",
     year: 2026,
-    short: "ED",
     title: "ED Triage Support Assistant",
     label: "Renamed client work",
     summary:
       "React plus FastAPI triage console for overloaded emergency departments that ranks synthetic patients into explainable priority bands, simulates incoming vitals and notes, and layers optional AI assistance on top of deterministic safety logic.",
+    industries: ["healthcare"],
+    focuses: ["language", "analytics"],
     tags: ["React", "FastAPI", "Postgres", "Simulation", "OpenAI"],
     media: {
       type: "image",
       src: "/images/project-media/ed-triage-dashboard.gif",
-      alt: "Animated preview of the ED Triage Support Assistant dashboard"
+      alt: "Animated preview of the ED Triage Support Assistant dashboard",
+      aspect: "3 / 2",
+      background: "#edf4f5",
+      classes: ["flush"]
     },
     links: []
   },
   {
     category: "product-builds",
     year: 2026,
-    short: "OPS",
     title: "Smart Data Crew Hub",
     label: "White-labeled operations app",
     summary:
-      "Attendance and field-operations application prepared for Supabase and Netlify, with scoped crew workflows, admin bootstrap utilities, and optional notification integrations through Firebase and Resend.",
+      "Attendance and field-operations application prepared for Supabase and Netlify, with scoped crew workflows, admin bootstrap utilities, arrival capture, and optional notification integrations through Firebase and Resend.",
+    industries: ["operations"],
+    focuses: ["automation", "analytics"],
     tags: ["Supabase", "Netlify", "JavaScript", "Operations", "Admin tools"],
     media: {
-      type: "image",
-      src: "/images/project-media/smart-data-crew-hub.gif",
-      alt: "Animated preview of the Smart Data Crew Hub application"
+      type: "gallery",
+      aspect: "4 / 3",
+      background: "linear-gradient(135deg, #131f2c, #1f2535 58%, #3d2a36)",
+      frames: [
+        {
+          src: "/images/project-media/smart-data-arrival-station.png",
+          position: "center 14%"
+        },
+        {
+          src: "/images/project-media/smart-data-arrival-station.png",
+          position: "center 46%"
+        },
+        {
+          src: "/images/project-media/smart-data-arrival-station.png",
+          position: "center 80%"
+        }
+      ]
     },
     links: []
   },
   {
     category: "product-builds",
     year: 2026,
-    short: "REM",
     title: "ReMeZa",
     label: "Bilingual remittance experience",
     summary:
       "SwiftUI remittance app for Latin American corridors with bilingual onboarding, recipient management, KYC verification, quote review, payout routing, and transfer tracking across a polished send-money flow.",
+    industries: ["finance"],
+    focuses: [],
     tags: ["SwiftUI", "Localization", "KYC", "Payout routing", "Tracking", "Product design"],
     media: {
       type: "image",
       src: "/images/project-media/remeza.gif",
-      alt: "Animated preview of the ReMeZa remittance application"
+      alt: "Animated preview of the ReMeZa remittance application",
+      aspect: "16 / 10",
+      background: "linear-gradient(180deg, #fff5eb, #f1e8dd)",
+      deviceWidth: "48%",
+      classes: ["phone"]
     },
     links: []
   },
   {
     category: "product-builds",
     year: 2023,
-    short: "mT5",
-    title: "YouTube Summarization and Translation",
-    label: "Multilingual NLP application",
-    summary:
-      "mT5-based workflow that summarizes Spanish video transcripts, translates them to English, and serves the models through a Flask application centered on YouTube content ingestion.",
-    tags: ["mT5", "Transformers", "Flask", "Summarization", "Translation"],
-    media: {
-      type: "image",
-      src: "/images/project-media/youtube-summarization.gif",
-      alt: "Animated preview of the YouTube summarization application"
-    },
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/andresca94/Summarization-and-translation-from-YouTube-videos-using-mT5-multilanguage-tranformers-architecture.",
-        icon: "github"
-      }
-    ]
-  },
-  {
-    category: "product-builds",
-    year: 2023,
-    short: "NYC",
     title: "Motor Collision Explorer",
     label: "Geospatial Streamlit dashboard",
     summary:
       "Loaded and visualized the NYC motor collision dataset in Streamlit with 3D mapping, time-of-day breakdowns, and injury analysis for pedestrians, cyclists, and motorists.",
+    industries: ["geospatial"],
+    focuses: ["geospatial", "analytics"],
     tags: ["Streamlit", "GIS", "Data viz", "Geospatial", "Python"],
     media: {
       type: "image",
       src: "/images/project-media/motor-collision-explorer.gif",
-      alt: "Animated preview of the motor collision dashboard"
+      alt: "Animated preview of the motor collision dashboard",
+      aspect: "1 / 1",
+      background: "#f7f7f6",
+      classes: ["flush"]
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/Motor-Colission-App-Streamlit", icon: "github" }]
   },
   {
     category: "data-research",
     year: 2023,
-    short: "REC",
     title: "Movie Recommender Stack",
     label: "Ranking plus content-based retrieval",
     summary:
       "Two recommender approaches over IMDB data: a simple score-driven ranker and a content-based similarity system using TF-IDF, cosine similarity, cast, genres, keywords, and plot descriptions.",
+    industries: ["media"],
+    focuses: ["recommenders", "analytics"],
     tags: ["TF-IDF", "Cosine similarity", "Recommenders", "Python", "IMDB"],
     media: {
-      type: "image",
-      src: "/images/project-media/movie-recommender.png",
-      alt: "Movie recommender project snapshot"
+      type: "gallery",
+      aspect: "3 / 2",
+      background: "#eff2f4",
+      frames: [
+        {
+          src: "/images/project-media/movie-recommender.png",
+          position: "12% center"
+        },
+        {
+          src: "/images/project-media/movie-recommender.png",
+          position: "50% center"
+        },
+        {
+          src: "/images/project-media/movie-recommender.png",
+          position: "88% center"
+        }
+      ]
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/Simple-Movie-Recommender", icon: "github" }]
   },
   {
     category: "data-research",
     year: 2023,
-    short: "FZY",
     title: "Fuzzy Wuzzy Matching Project",
     label: "Entity resolution across noisy databases",
     summary:
       "Fuzzy matching workflow for linking records between two imperfect datasets using Levenshtein-style similarity, cleaning, standardization, and weighted field matching to recover high-quality joins at scale.",
+    industries: ["operations"],
+    focuses: ["analytics"],
     tags: ["Entity resolution", "FuzzyWuzzy", "SQL", "Data cleaning", "Python"],
     media: {
-      type: "image",
-      src: "/images/project-media/fuzzy-matching.jpg",
-      alt: "Fuzzy matching project result snapshot"
+      type: "gallery",
+      aspect: "3 / 2",
+      background: "#eef3f7",
+      frames: [
+        {
+          src: "/images/project-media/fuzzy-matching.jpg",
+          position: "12% center"
+        },
+        {
+          src: "/images/project-media/fuzzy-matching.jpg",
+          position: "50% center"
+        },
+        {
+          src: "/images/project-media/fuzzy-matching.jpg",
+          position: "88% center"
+        }
+      ]
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/Fuzzy_wuzzy_matching", icon: "github" }]
   },
   {
     category: "data-research",
     year: 2022,
-    short: "LSTM",
     title: "Mastercard Stock Forecasting",
     label: "Time-series modeling with recurrent networks",
     summary:
       "LSTM and GRU forecasting study over Mastercard market data, with preprocessing, recurrent sequence modeling, and comparative evaluation of forecasting error across architectures.",
+    industries: ["finance"],
+    focuses: ["forecasting", "analytics"],
     tags: ["LSTM", "GRU", "Time series", "Forecasting", "TensorFlow"],
     media: {
-      type: "image",
-      src: "/images/project-media/mastercard-forecasting.png",
-      alt: "Mastercard forecasting project visualization"
+      type: "gallery",
+      aspect: "3 / 2",
+      background: "#edf1f3",
+      frames: [
+        {
+          src: "/images/project-media/mastercard-forecasting.png",
+          position: "14% 50%"
+        },
+        {
+          src: "/images/project-media/mastercard-forecasting.png",
+          position: "50% 50%"
+        },
+        {
+          src: "/images/project-media/mastercard-forecasting.png",
+          position: "86% 50%"
+        }
+      ]
     },
     links: [
       {
@@ -345,16 +482,20 @@ const projects = [
   {
     category: "data-research",
     year: 2022,
-    short: "MUS",
     title: "Music Genre Modeling",
     label: "Classification plus clustering",
     summary:
       "Feature engineering, explainability, and unsupervised exploration for music genre prediction using Random Forest, Logistic Regression, XGBoost, K-means, PCA, ROC analysis, and SHAP values.",
+    industries: ["media"],
+    focuses: ["analytics"],
     tags: ["XGBoost", "Random Forest", "K-means", "SHAP", "PCA"],
     media: {
       type: "image",
       src: "/images/project-media/music-genre-modeling.gif",
-      alt: "Animated preview of the music genre modeling project"
+      alt: "Animated preview of the music genre modeling project",
+      aspect: "1 / 1",
+      background: "#f1f0f5",
+      classes: ["flush"]
     },
     links: [
       {
@@ -372,48 +513,60 @@ const projects = [
   {
     category: "data-research",
     year: 2021,
-    short: "MAP",
     title: "Cartographic Analysis of Limnigraph Stations",
     label: "GIS analysis for Colombia",
     summary:
       "Cartographic workflow using IDEAM station data and IGAC base maps to normalize station counts by area, visualize distribution by department, and produce interpretable geographic summaries for hydrologic infrastructure.",
+    industries: ["geospatial", "research"],
+    focuses: ["geospatial", "analytics"],
     tags: ["GIS", "Cartography", "Spatial joins", "Colombia", "ArcMap"],
     media: {
       type: "image",
       src: "/images/project-media/limnigraph-stations.jpeg",
-      alt: "Cartographic analysis of limnigraph stations in Colombia"
+      alt: "Cartographic analysis of limnigraph stations in Colombia",
+      aspect: "4 / 5",
+      background: "#f7f2e8",
+      classes: ["flush"]
     },
     links: []
   },
   {
     category: "data-research",
     year: 2021,
-    short: "SITE",
     title: "School Location Spatial Analysis",
     label: "Suitability modeling in Stowe, Vermont",
     summary:
       "Spatial suitability analysis that combined land use, elevation, slope, recreation distance, and school proximity to identify the best location for a new school under weighted planning criteria.",
+    industries: ["geospatial"],
+    focuses: ["geospatial", "analytics"],
     tags: ["Spatial analysis", "Suitability model", "ArcMap", "Planning", "Raster analysis"],
     media: {
       type: "image",
       src: "/images/project-media/school-location-spatial-analysis.jpg",
-      alt: "School location spatial analysis map"
+      alt: "School location spatial analysis map",
+      aspect: "4 / 3",
+      background: "#f4f2ec",
+      classes: ["flush"]
     },
     links: []
   },
   {
     category: "data-research",
     year: 2021,
-    short: "MSc",
     title: "Civil Engineering MSc Thesis",
     label: "Landslide probability and fractal slope statistics",
     summary:
       "MATLAB-based research on the relationship between landslide probability and landslide size using DEM-derived slope statistics, image-processing-style neighborhood analysis, and scale-invariant terrain behavior.",
+    industries: ["research"],
+    focuses: ["analytics"],
     tags: ["MATLAB", "Earth science", "Landslides", "DEM", "Research"],
     media: {
       type: "image",
       src: "/images/project-media/civil-engineering-thesis.gif",
-      alt: "Animated visualization from the civil engineering thesis"
+      alt: "Animated visualization from the civil engineering thesis",
+      aspect: "16 / 10",
+      background: "#ece7df",
+      classes: ["flush"]
     },
     links: [
       {
@@ -468,25 +621,88 @@ function renderIcon(icon) {
   }
 }
 
+function renderMediaShellStyle(media) {
+  const styles = [];
+
+  if (media.aspect) {
+    styles.push(`--media-aspect:${media.aspect}`);
+  }
+
+  if (media.background) {
+    styles.push(`--media-bg:${media.background}`);
+  }
+
+  if (media.deviceWidth) {
+    styles.push(`--media-device-width:${media.deviceWidth}`);
+  }
+
+  return styles.length ? ` style="${escapeHtml(styles.join(";"))}"` : "";
+}
+
+function renderObjectStyle(options = {}) {
+  const styles = [];
+
+  if (options.fit) {
+    styles.push(`object-fit:${options.fit}`);
+  }
+
+  if (options.position) {
+    styles.push(`object-position:${options.position}`);
+  }
+
+  return styles.length ? ` style="${escapeHtml(styles.join(";"))}"` : "";
+}
+
+function renderGalleryFrame(frame, index, frameCount) {
+  const cycleStep = 4.5;
+  const duration = Math.max(frameCount * cycleStep, 12);
+  const frameStyle = [
+    `animation-duration:${duration}s`,
+    `animation-delay:${index * -cycleStep}s`,
+    `--frame-fit:${frame.fit || "cover"}`,
+    `--frame-position:${frame.position || "center center"}`
+  ];
+
+  return `
+    <span class="project-card__gallery-frame" style="${escapeHtml(frameStyle.join(";"))}">
+      <img src="${escapeHtml(frame.src)}" alt="" loading="lazy">
+    </span>
+  `;
+}
+
 function renderMedia(media, title) {
   if (!media) {
     return "";
   }
 
-  const fitClass = media.fit === "cover" ? "project-card__media--fit-cover" : "";
+  const classes = ["project-card__media", `project-card__media--${media.type}`];
+
+  if (media.fit === "cover") {
+    classes.push("project-card__media--fit-cover");
+  }
+
+  if (media.type === "gallery") {
+    classes.push("project-card__media--flush");
+  }
+
+  for (const mediaClass of media.classes || []) {
+    classes.push(`project-card__media--${mediaClass}`);
+  }
+
+  const shellStyle = renderMediaShellStyle(media);
 
   if (media.type === "image") {
     return `
-      <div class="project-card__media project-card__media--image ${fitClass}">
-        <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || title)}" loading="lazy">
+      <div class="${classes.join(" ")}"${shellStyle}>
+        <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || title)}" loading="lazy"${renderObjectStyle(media)}>
       </div>
     `;
   }
 
   if (media.type === "video") {
     return `
-      <div class="project-card__media project-card__media--video ${fitClass}">
-        <video controls playsinline preload="metadata" poster="${escapeHtml(media.poster || "")}" aria-label="${escapeHtml(media.title || title)}">
+      <div class="${classes.join(" ")}"${shellStyle}>
+        <video controls playsinline preload="metadata" poster="${escapeHtml(media.poster || "")}" aria-label="${escapeHtml(media.title || title)}"${renderObjectStyle(media)}>
           <source src="${escapeHtml(media.src)}" type="video/mp4">
         </video>
       </div>
@@ -495,7 +711,7 @@ function renderMedia(media, title) {
 
   if (media.type === "youtube") {
     return `
-      <div class="project-card__media project-card__media--embed">
+      <div class="${classes.join(" ")}"${shellStyle}>
         <iframe
           src="https://www.youtube-nocookie.com/embed/${escapeHtml(media.id)}"
           title="${escapeHtml(media.title || title)}"
@@ -503,6 +719,16 @@ function renderMedia(media, title) {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+      </div>
+    `;
+  }
+
+  if (media.type === "gallery") {
+    const frames = media.frames || [];
+
+    return `
+      <div class="${classes.join(" ")}"${shellStyle}>
+        ${frames.map((frame, index) => renderGalleryFrame(frame, index, frames.length)).join("")}
       </div>
     `;
   }
@@ -552,14 +778,52 @@ function renderProject(project, categoryLabel) {
   `;
 }
 
+function matchesFilter(project, group, value) {
+  if (value === "all") {
+    return true;
+  }
+
+  return (project[group.projectKey] || []).includes(value);
+}
+
+function sortProjects(list) {
+  return [...list].sort((left, right) => right.year - left.year || left.title.localeCompare(right.title));
+}
+
+function sortFilterOptions(group, options) {
+  const orderMap = new Map(group.order.map((id, index) => [id, index]));
+
+  return [...options].sort((left, right) => {
+    const leftRank = orderMap.has(left.id) ? orderMap.get(left.id) : Number.MAX_SAFE_INTEGER;
+    const rightRank = orderMap.has(right.id) ? orderMap.get(right.id) : Number.MAX_SAFE_INTEGER;
+
+    if (leftRank !== rightRank) {
+      return leftRank - rightRank;
+    }
+
+    if (right.count !== left.count) {
+      return right.count - left.count;
+    }
+
+    return left.label.localeCompare(right.label);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const controls = document.querySelector("[data-portfolio-controls]");
+  const subfilters = document.querySelector("[data-portfolio-subfilters]");
   const grid = document.querySelector("[data-projects-grid]");
+  const context = document.querySelector(".portfolio-context");
   const contextTitle = document.querySelector("[data-portfolio-context-title]");
   const contextCopy = document.querySelector("[data-portfolio-context-copy]");
   const count = document.querySelector("[data-portfolio-count]");
+  const closing = document.querySelector(".portfolio-closing");
+  const header = document.querySelector("header");
+  const section = document.querySelector("section");
+  const statsToggle = document.querySelector("[data-profile-stats-toggle]");
+  const statsPanel = document.querySelector("[data-profile-stats-panel]");
 
-  if (!controls || !grid || !contextTitle || !contextCopy || !count) {
+  if (!controls || !subfilters || !grid || !contextTitle || !contextCopy || !count) {
     return;
   }
 
@@ -569,6 +833,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }, {});
 
   let activeCategory = categories[0].id;
+  let activeFilters = Object.fromEntries(filterGroups.map((group) => [group.id, "all"]));
+
+  function getActiveCategory() {
+    return categories.find((item) => item.id === activeCategory);
+  }
+
+  function getCategoryProjects() {
+    return projects.filter((project) => project.category === activeCategory);
+  }
+
+  function getVisibleProjects() {
+    return sortProjects(
+      getCategoryProjects().filter((project) =>
+        filterGroups.every((group) => matchesFilter(project, group, activeFilters[group.id]))
+      )
+    );
+  }
+
+  function getGroupScopeProjects(groupId) {
+    return getCategoryProjects().filter((project) =>
+      filterGroups.every((group) => {
+        if (group.id === groupId) {
+          return true;
+        }
+
+        return matchesFilter(project, group, activeFilters[group.id]);
+      })
+    );
+  }
 
   function renderButtons() {
     controls.innerHTML = categories
@@ -583,17 +876,120 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
   }
 
+  function renderSubfilters() {
+    subfilters.innerHTML = filterGroups
+      .map((group) => {
+        const scopeProjects = getGroupScopeProjects(group.id);
+        const optionCounts = scopeProjects.reduce((accumulator, project) => {
+          for (const option of project[group.projectKey] || []) {
+            accumulator[option] = (accumulator[option] || 0) + 1;
+          }
+
+          return accumulator;
+        }, {});
+
+        const options = sortFilterOptions(
+          group,
+          Object.entries(optionCounts).map(([id, optionCount]) => ({
+            id,
+            count: optionCount,
+            label: group.labels[id] || id
+          }))
+        );
+
+        if (!options.length) {
+          return "";
+        }
+
+        const allClasses =
+          activeFilters[group.id] === "all"
+            ? "portfolio-subfilter-button is-active"
+            : "portfolio-subfilter-button";
+
+        return `
+          <section class="portfolio-subfilter-group" aria-label="${escapeHtml(group.label)}">
+            <p class="portfolio-subfilter-label">${escapeHtml(group.label)}</p>
+            <div class="portfolio-subfilter-buttons">
+              <button
+                class="${allClasses}"
+                type="button"
+                data-filter-group="${escapeHtml(group.id)}"
+                data-filter-value="all"
+              >
+                ${escapeHtml(group.allLabel)} (${escapeHtml(scopeProjects.length)})
+              </button>
+              ${options
+                .map((option) => {
+                  const classes =
+                    activeFilters[group.id] === option.id
+                      ? "portfolio-subfilter-button is-active"
+                      : "portfolio-subfilter-button";
+
+                  return `
+                    <button
+                      class="${classes}"
+                      type="button"
+                      data-filter-group="${escapeHtml(group.id)}"
+                      data-filter-value="${escapeHtml(option.id)}"
+                    >
+                      ${escapeHtml(option.label)} (${escapeHtml(option.count)})
+                    </button>
+                  `;
+                })
+                .join("")}
+            </div>
+          </section>
+        `;
+      })
+      .join("");
+  }
+
+  function resetDesktopExpansion() {
+    grid.style.marginLeft = "";
+    grid.style.width = "";
+    grid.style.marginTop = "";
+
+    if (closing) {
+      closing.style.marginLeft = "";
+      closing.style.width = "";
+    }
+  }
+
+  function syncDesktopExpansion() {
+    if (!header || !section || !context || !closing || window.innerWidth <= 1180) {
+      resetDesktopExpansion();
+      return;
+    }
+
+    const sectionRect = section.getBoundingClientRect();
+    const headerRect = header.getBoundingClientRect();
+    const controlsRect = controls.getBoundingClientRect();
+    const contextRect = context.getBoundingClientRect();
+    const horizontalShift = Math.max(sectionRect.left - headerRect.left, 0);
+    const stackedHeight = Math.max(contextRect.bottom - controlsRect.top, 0);
+    const topOffset = Math.max(headerRect.height - stackedHeight - 12, 0);
+
+    for (const element of [grid, closing]) {
+      element.style.marginLeft = `${-horizontalShift}px`;
+      element.style.width = `calc(100% + ${horizontalShift}px)`;
+    }
+
+    grid.style.marginTop = `${topOffset}px`;
+  }
+
   function renderCategory() {
-    const category = categories.find((item) => item.id === activeCategory);
-    const visibleProjects = projects
-      .filter((project) => project.category === activeCategory)
-      .sort((left, right) => right.year - left.year || left.title.localeCompare(right.title));
+    const category = getActiveCategory();
+    const visibleProjects = getVisibleProjects();
 
     contextTitle.textContent = category.label;
     contextCopy.textContent = category.description;
-    count.textContent = `${visibleProjects.length} projects`;
+    count.textContent = `${visibleProjects.length} ${visibleProjects.length === 1 ? "project" : "projects"}`;
 
-    grid.innerHTML = visibleProjects.map((project) => renderProject(project, category.label)).join("");
+    grid.innerHTML = visibleProjects.length
+      ? visibleProjects.map((project) => renderProject(project, category.label)).join("")
+      : `<div class="portfolio-empty">No projects match that combination yet. Try another industry or capability.</div>`;
+
+    syncDesktopExpansion();
   }
 
   controls.addEventListener("click", (event) => {
@@ -603,10 +999,46 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     activeCategory = button.getAttribute("data-category");
+    activeFilters = Object.fromEntries(filterGroups.map((group) => [group.id, "all"]));
     renderButtons();
+    renderSubfilters();
     renderCategory();
   });
 
+  subfilters.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-filter-group][data-filter-value]");
+    if (!button) {
+      return;
+    }
+
+    const groupId = button.getAttribute("data-filter-group");
+    const value = button.getAttribute("data-filter-value");
+
+    activeFilters = {
+      ...activeFilters,
+      [groupId]: value
+    };
+
+    renderSubfilters();
+    renderCategory();
+  });
+
+  if (statsToggle && statsPanel) {
+    statsToggle.addEventListener("click", () => {
+      const expanded = statsToggle.getAttribute("aria-expanded") === "true";
+      const nextExpanded = !expanded;
+
+      statsToggle.setAttribute("aria-expanded", String(nextExpanded));
+      statsToggle.textContent = nextExpanded ? "Hide statistics" : "Statistics";
+      statsPanel.hidden = !nextExpanded;
+      syncDesktopExpansion();
+    });
+  }
+
+  window.addEventListener("resize", syncDesktopExpansion);
+  window.addEventListener("load", syncDesktopExpansion);
+
   renderButtons();
+  renderSubfilters();
   renderCategory();
 });
