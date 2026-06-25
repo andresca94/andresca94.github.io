@@ -160,6 +160,14 @@ header p a {
   text-anchor: middle;
 }
 
+.profile-radar .profile-radar__label--left {
+  text-anchor: start;
+}
+
+.profile-radar .profile-radar__label--right {
+  text-anchor: end;
+}
+
 .profile-keywords {
   display: flex;
   flex-wrap: wrap;
