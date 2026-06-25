@@ -26,11 +26,11 @@ body {
 }
 
 .wrapper {
-  width: min(1440px, 95vw);
+  width: min(1520px, 96vw);
   display: grid;
-  grid-template-columns: 310px minmax(0, 1fr);
+  grid-template-columns: 290px minmax(0, 1fr);
   align-items: start;
-  gap: 42px;
+  gap: 34px;
   padding: 32px 0 56px;
 }
 

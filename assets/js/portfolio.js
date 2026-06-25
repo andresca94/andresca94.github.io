@@ -813,13 +813,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const controls = document.querySelector("[data-portfolio-controls]");
   const subfilters = document.querySelector("[data-portfolio-subfilters]");
   const grid = document.querySelector("[data-projects-grid]");
-  const context = document.querySelector(".portfolio-context");
   const contextTitle = document.querySelector("[data-portfolio-context-title]");
   const contextCopy = document.querySelector("[data-portfolio-context-copy]");
   const count = document.querySelector("[data-portfolio-count]");
-  const closing = document.querySelector(".portfolio-closing");
-  const header = document.querySelector("header");
-  const section = document.querySelector("section");
   const statsToggle = document.querySelector("[data-profile-stats-toggle]");
   const statsPanel = document.querySelector("[data-profile-stats-panel]");
 
@@ -944,39 +940,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
   }
 
-  function resetDesktopExpansion() {
-    grid.style.marginLeft = "";
-    grid.style.width = "";
-    grid.style.marginTop = "";
-
-    if (closing) {
-      closing.style.marginLeft = "";
-      closing.style.width = "";
-    }
-  }
-
-  function syncDesktopExpansion() {
-    if (!header || !section || !context || !closing || window.innerWidth <= 1180) {
-      resetDesktopExpansion();
-      return;
-    }
-
-    const sectionRect = section.getBoundingClientRect();
-    const headerRect = header.getBoundingClientRect();
-    const controlsRect = controls.getBoundingClientRect();
-    const contextRect = context.getBoundingClientRect();
-    const horizontalShift = Math.max(sectionRect.left - headerRect.left, 0);
-    const stackedHeight = Math.max(contextRect.bottom - controlsRect.top, 0);
-    const topOffset = Math.max(headerRect.height - stackedHeight - 12, 0);
-
-    for (const element of [grid, closing]) {
-      element.style.marginLeft = `${-horizontalShift}px`;
-      element.style.width = `calc(100% + ${horizontalShift}px)`;
-    }
-
-    grid.style.marginTop = `${topOffset}px`;
-  }
-
   function renderCategory() {
     const category = getActiveCategory();
     const visibleProjects = getVisibleProjects();
@@ -988,8 +951,6 @@ document.addEventListener("DOMContentLoaded", () => {
     grid.innerHTML = visibleProjects.length
       ? visibleProjects.map((project) => renderProject(project, category.label)).join("")
       : `<div class="portfolio-empty">No projects match that combination yet. Try another industry or capability.</div>`;
-
-    syncDesktopExpansion();
   }
 
   controls.addEventListener("click", (event) => {
@@ -1031,12 +992,8 @@ document.addEventListener("DOMContentLoaded", () => {
       statsToggle.setAttribute("aria-expanded", String(nextExpanded));
       statsToggle.textContent = nextExpanded ? "Hide statistics" : "Statistics";
       statsPanel.hidden = !nextExpanded;
-      syncDesktopExpansion();
     });
   }
-
-  window.addEventListener("resize", syncDesktopExpansion);
-  window.addEventListener("load", syncDesktopExpansion);
 
   renderButtons();
   renderSubfilters();
