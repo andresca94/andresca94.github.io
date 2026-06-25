@@ -2,13 +2,13 @@ title: "Andrés Carvajal" # your name (or website title) here
 logo: "/images/EAE1049D-E1D0-4A77-B2E5-4BBE3CBFE61D.jpeg?raw=true" # your photo (or logo) here
 
 description: >
-  <p align="center">
-  <a href="pdf/RESUME-AC-2024.pdf">Resume</a> |
+  <p class="sidebar-links">
+  <a href="pdf/Andres-Carvajal-Resume-2026.pdf">Resume</a> |
   <a href="https://www.linkedin.com/in/andresca94/">LinkedIn</a> |
   <a href="https://github.com/andresca94">GitHub</a> |
   <a href="https://andresca94.github.io/academicpages/">Website</a>
   </p>
-  <p align="justify">
+  <p class="sidebar-copy">
   I’m a Machine Learning Engineer and developer with a multidisciplinary background in <strong>Earth Science</strong>, <strong>Data Science/Machine Learning</strong>  and <strong>Full Stack Software Development</strong>. My work spans <strong>AI/ML applications</strong> for creative media, data science, and geospatial analysis. I specialize in building advanced tools for <strong>generative AI</strong>, <strong>natural language processing</strong>, and <strong>computer vision</strong>.
   
   To explore all of my work — including diffusion models, vision-based tools, data pipelines, and full-stack AI systems — I invite you to visit my <a href="https://andresca94.github.io/academicpages/" target="_blank"><strong>website</strong></a>.
