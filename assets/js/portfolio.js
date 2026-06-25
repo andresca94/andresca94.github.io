@@ -311,37 +311,6 @@ const projects = [
   {
     category: "product-builds",
     year: 2026,
-    title: "Smart Data Crew Hub",
-    label: "White-labeled operations app",
-    summary:
-      "Attendance and field-operations application prepared for Supabase and Netlify, with scoped crew workflows, admin bootstrap utilities, arrival capture, and optional notification integrations through Firebase and Resend.",
-    industries: ["operations"],
-    focuses: ["automation", "analytics"],
-    tags: ["Supabase", "Netlify", "JavaScript", "Operations", "Admin tools"],
-    media: {
-      type: "gallery",
-      aspect: "4 / 3",
-      background: "linear-gradient(135deg, #131f2c, #1f2535 58%, #3d2a36)",
-      frames: [
-        {
-          src: "/images/project-media/smart-data-arrival-station.png",
-          position: "center 14%"
-        },
-        {
-          src: "/images/project-media/smart-data-arrival-station.png",
-          position: "center 46%"
-        },
-        {
-          src: "/images/project-media/smart-data-arrival-station.png",
-          position: "center 80%"
-        }
-      ]
-    },
-    links: []
-  },
-  {
-    category: "product-builds",
-    year: 2026,
     title: "ReMeZa",
     label: "Bilingual remittance experience",
     summary:
