@@ -130,7 +130,7 @@ const projects = [
   },
   {
     category: "ai-systems",
-    year: 2025,
+    year: 2024,
     short: "IMG",
     title: "DeepMake Image Generation Platform",
     label: "DeepMake generative media tooling",
@@ -149,7 +149,7 @@ const projects = [
   },
   {
     category: "ai-systems",
-    year: 2025,
+    year: 2024,
     short: "SEG",
     title: "DeepMake Video Segmentation Engine",
     label: "Promptable segmentation for video frames",
@@ -168,7 +168,7 @@ const projects = [
   },
   {
     category: "ai-systems",
-    year: 2025,
+    year: 2024,
     short: "SR",
     title: "DeepMake Video Super Resolution",
     label: "Creative media upscaling",
@@ -192,7 +192,7 @@ const projects = [
     title: "RandomAI Content Automation",
     label: "Generative AI for print-on-demand commerce",
     summary:
-      "Generative-commerce platform for print-on-demand operations that transformed prompts into product-ready visuals, automated image prep and campaign asset generation, and synced fulfillment workflows across Shopify, Printful, Replicate, Runpod, Firebase, and GCP.",
+      "AI-native e-commerce platform for print-on-demand brands that turned prompts into product-ready artwork, automated cleanup and campaign asset generation, and connected fulfillment workflows across Shopify, Printful, Replicate, Runpod, Firebase, and GCP.",
     tags: ["Firebase", "GCP", "FLUX", "SDXL", "Shopify", "Runpod"],
     media: {
       type: "video",
@@ -213,8 +213,8 @@ const projects = [
     tags: ["React", "FastAPI", "Postgres", "Simulation", "OpenAI"],
     media: {
       type: "image",
-      src: "/images/project-media/ed-triage-dashboard.png",
-      alt: "ED Triage Support Assistant dashboard screenshot"
+      src: "/images/project-media/ed-triage-dashboard.gif",
+      alt: "Animated preview of the ED Triage Support Assistant dashboard"
     },
     links: []
   },
@@ -229,8 +229,8 @@ const projects = [
     tags: ["Supabase", "Netlify", "JavaScript", "Operations", "Admin tools"],
     media: {
       type: "image",
-      src: "/images/project-media/smart-data-arrival-station.png",
-      alt: "Smart Data Crew Hub arrival station screen"
+      src: "/images/project-media/smart-data-crew-hub.gif",
+      alt: "Animated preview of the Smart Data Crew Hub application"
     },
     links: []
   },
@@ -241,8 +241,13 @@ const projects = [
     title: "ReMeZa",
     label: "Bilingual remittance experience",
     summary:
-      "SwiftUI remittance app with bilingual onboarding, recipient management, KYC verification, transfer setup, payout routing, and tracking flows designed around a cleaner send-money experience for Latin American corridors.",
+      "SwiftUI remittance app for Latin American corridors with bilingual onboarding, recipient management, KYC verification, quote review, payout routing, and transfer tracking across a polished send-money flow.",
     tags: ["SwiftUI", "Localization", "KYC", "Payout routing", "Tracking", "Product design"],
+    media: {
+      type: "image",
+      src: "/images/project-media/remeza.gif",
+      alt: "Animated preview of the ReMeZa remittance application"
+    },
     links: []
   },
   {
@@ -468,9 +473,11 @@ function renderMedia(media, title) {
     return "";
   }
 
+  const fitClass = media.fit === "cover" ? "project-card__media--fit-cover" : "";
+
   if (media.type === "image") {
     return `
-      <div class="project-card__media project-card__media--image">
+      <div class="project-card__media project-card__media--image ${fitClass}">
         <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || title)}" loading="lazy">
       </div>
     `;
@@ -478,7 +485,7 @@ function renderMedia(media, title) {
 
   if (media.type === "video") {
     return `
-      <div class="project-card__media project-card__media--video">
+      <div class="project-card__media project-card__media--video ${fitClass}">
         <video controls playsinline preload="metadata" poster="${escapeHtml(media.poster || "")}" aria-label="${escapeHtml(media.title || title)}">
           <source src="${escapeHtml(media.src)}" type="video/mp4">
         </video>
@@ -528,7 +535,6 @@ function renderProject(project, categoryLabel) {
   return `
     <article class="project-card ${escapeHtml(project.category)}">
       <div class="project-card__hero">
-        <div class="project-card__mark">${escapeHtml(project.short)}</div>
         <div class="project-card__hero-copy">
           <span class="project-card__category">${escapeHtml(categoryLabel)}</span>
           <span class="project-card__year">${escapeHtml(project.year)}</span>

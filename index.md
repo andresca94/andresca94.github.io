@@ -2,14 +2,6 @@
 ---
 
 <div class="portfolio-shell">
-  <div class="portfolio-hero">
-    <p class="portfolio-eyebrow">AI Engineer · Generative AI · Applied ML</p>
-    <h1 class="portfolio-title">Selected work across retrieval systems, AI products, and shipping-focused prototypes.</h1>
-    <p class="portfolio-intro">
-      This portfolio now groups projects into three focused views so the page feels easier to scan. The newer client-facing work includes renamed entries where confidentiality matters, plus links to public code, papers, and shareable briefs where available.
-    </p>
-  </div>
-
   <div class="portfolio-controls" data-portfolio-controls></div>
 
   <div class="portfolio-context">
@@ -24,7 +16,7 @@
 
   <div class="portfolio-closing">
     <p>
-      Outside of code, I am still the same person behind the earlier GIS, forecasting, and research work: I like building systems that are practical, explainable, and useful to real people. The newer AI projects simply show that same instinct at a larger product and deployment scale.
+      I am most energized by work that sits between research, engineering, and product: turning messy real-world problems into systems that feel clear, useful, and dependable. Whether the starting point is AI, automation, data, or domain-specific workflows, I enjoy building tools that people can actually use, trust, and grow with.
     </p>
   </div>
 </div>
