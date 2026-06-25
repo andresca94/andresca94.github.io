@@ -29,6 +29,7 @@ body {
   width: min(1440px, 95vw);
   display: grid;
   grid-template-columns: 310px minmax(0, 1fr);
+  align-items: start;
   gap: 42px;
   padding: 32px 0 56px;
 }
@@ -36,6 +37,7 @@ body {
 header {
   position: sticky;
   top: 24px;
+  align-self: start;
   width: auto;
   float: none;
   padding: 28px;
