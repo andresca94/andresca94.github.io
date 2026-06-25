@@ -87,7 +87,9 @@ header p[align="center"] {
 
 .sidebar-copy,
 header p[align="justify"] {
-  text-align: left !important;
+  text-align: justify !important;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 section,
@@ -227,6 +229,37 @@ footer {
   box-shadow: var(--shadow);
 }
 
+.project-card__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background:
+    linear-gradient(180deg, rgba(24, 39, 52, 0.04), rgba(24, 39, 52, 0.1)),
+    #dfe7ec;
+}
+
+.project-card__media img,
+.project-card__media video,
+.project-card__media iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.project-card__media img,
+.project-card__media video {
+  object-fit: cover;
+}
+
+.project-card__media--video {
+  background: #08121b;
+}
+
+.project-card__media--embed iframe {
+  background: #08121b;
+}
+
 .project-card__hero {
   display: flex;
   justify-content: space-between;
@@ -305,6 +338,8 @@ footer {
   font-size: 0.97rem;
   line-height: 1.78;
   color: var(--muted);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .project-card__tags {
@@ -345,6 +380,18 @@ footer {
   font-weight: 700;
   text-decoration: none;
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.project-card__link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card__link-icon svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
 }
 
 .project-card__links a:hover {
@@ -443,5 +490,10 @@ footer {
 
   .project-card__title {
     font-size: 1.5rem;
+  }
+
+  .sidebar-copy,
+  header p[align="justify"] {
+    text-align: left !important;
   }
 }
