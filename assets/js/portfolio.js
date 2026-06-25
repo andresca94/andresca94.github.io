@@ -816,11 +816,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const contextTitle = document.querySelector("[data-portfolio-context-title]");
   const contextCopy = document.querySelector("[data-portfolio-context-copy]");
   const count = document.querySelector("[data-portfolio-count]");
+  const closing = document.querySelector(".portfolio-closing");
   const statsToggle = document.querySelector("[data-profile-stats-toggle]");
   const statsPanel = document.querySelector("[data-profile-stats-panel]");
 
   if (!controls || !subfilters || !grid || !contextTitle || !contextCopy || !count) {
     return;
+  }
+
+  // Clear inline layout offsets left by older cached versions of the portfolio script.
+  grid.style.marginLeft = "";
+  grid.style.width = "";
+  grid.style.marginTop = "";
+
+  if (closing) {
+    closing.style.marginLeft = "";
+    closing.style.width = "";
   }
 
   const countsByCategory = categories.reduce((accumulator, category) => {

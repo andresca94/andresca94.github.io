@@ -22,4 +22,10 @@
   </div>
 </div>
 
-<script src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+{% if site.github.build_revision %}
+  {% assign portfolio_asset_version = site.github.build_revision %}
+{% else %}
+  {% assign portfolio_asset_version = site.time | date: "%s" %}
+{% endif %}
+
+<script src="{{ '/assets/js/portfolio.js' | relative_url }}?v={{ portfolio_asset_version }}"></script>
