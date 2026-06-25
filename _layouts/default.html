@@ -34,22 +34,81 @@
           </button>
         </div>
         <div class="profile-stats" id="profile-stats-panel" data-profile-stats-panel hidden>
-          <svg class="profile-radar" viewBox="0 0 240 224" role="img" aria-label="Radar chart of Andrés Carvajal's skill profile">
-            <polygon points="120,36 184,73 184,147 120,184 56,147 56,73" />
-            <polygon points="120,54 169,82 169,138 120,166 71,138 71,82" />
-            <polygon points="120,72 154,91 154,129 120,148 86,129 86,91" />
-            <polygon points="120,90 139,100 139,120 120,130 101,120 101,100" />
-            <polyline points="120,36 120,184" />
-            <polyline points="56,73 184,147" />
-            <polyline points="56,147 184,73" />
-            <polygon class="profile-radar__shape" points="120,44 176,78 165,142 120,176 64,145 64,79" />
-            <text class="profile-radar__label--top" x="120" y="18">ML</text>
-            <text class="profile-radar__label--right" x="222" y="68" text-anchor="end">LLM / RAG</text>
-            <text class="profile-radar__label--right" x="216" y="154" text-anchor="end">Vision</text>
-            <text class="profile-radar__label--bottom" x="120" y="210">Backend</text>
-            <text class="profile-radar__label--left" x="18" y="154" text-anchor="start">Product</text>
-            <text class="profile-radar__label--left" x="24" y="68" text-anchor="start">Cloud</text>
-          </svg>
+          <div class="profile-stats__viewport">
+            <figure class="profile-chart is-active" data-profile-chart="0">
+              <svg class="profile-radar" viewBox="0 0 240 224" role="img" aria-label="Radar chart showing machine learning, language, vision, backend, product, and cloud strengths">
+                <polygon points="120,36 184,73 184,147 120,184 56,147 56,73" />
+                <polygon points="120,54 169,82 169,138 120,166 71,138 71,82" />
+                <polygon points="120,72 154,91 154,129 120,148 86,129 86,91" />
+                <polygon points="120,90 139,100 139,120 120,130 101,120 101,100" />
+                <polyline points="120,36 120,184" />
+                <polyline points="56,73 184,147" />
+                <polyline points="56,147 184,73" />
+                <polygon class="profile-radar__shape" points="120,44 176,78 165,142 120,176 64,145 64,79" />
+                <text class="profile-radar__label--top" x="120" y="18">ML</text>
+                <text class="profile-radar__label--right" x="222" y="68" text-anchor="end">LLM / RAG</text>
+                <text class="profile-radar__label--right" x="216" y="154" text-anchor="end">Vision</text>
+                <text class="profile-radar__label--bottom" x="120" y="210">Backend</text>
+                <text class="profile-radar__label--left" x="18" y="154" text-anchor="start">Product</text>
+                <text class="profile-radar__label--left" x="24" y="68" text-anchor="start">Cloud</text>
+              </svg>
+              <figcaption class="profile-chart__caption">
+                <strong>AI Systems Mix</strong>
+                <span>Balance across machine learning, language systems, vision, backend delivery, product thinking, and cloud deployment.</span>
+              </figcaption>
+            </figure>
+
+            <figure class="profile-chart" data-profile-chart="1" hidden>
+              <svg class="profile-radar" viewBox="0 0 240 224" role="img" aria-label="Radar chart showing research, data, platform, delivery, frontend, and product strengths">
+                <polygon points="120,36 184,73 184,147 120,184 56,147 56,73" />
+                <polygon points="120,54 169,82 169,138 120,166 71,138 71,82" />
+                <polygon points="120,72 154,91 154,129 120,148 86,129 86,91" />
+                <polygon points="120,90 139,100 139,120 120,130 101,120 101,100" />
+                <polyline points="120,36 120,184" />
+                <polyline points="56,73 184,147" />
+                <polyline points="56,147 184,73" />
+                <polygon class="profile-radar__shape" points="120,52 170,86 160,136 120,174 74,138 78,88" />
+                <text class="profile-radar__label--top" x="120" y="18">Research</text>
+                <text class="profile-radar__label--right" x="220" y="68" text-anchor="end">Platform</text>
+                <text class="profile-radar__label--right" x="214" y="154" text-anchor="end">Delivery</text>
+                <text class="profile-radar__label--bottom" x="120" y="210">Frontend</text>
+                <text class="profile-radar__label--left" x="12" y="154" text-anchor="start">Product</text>
+                <text class="profile-radar__label--left" x="26" y="68" text-anchor="start">Data</text>
+              </svg>
+              <figcaption class="profile-chart__caption">
+                <strong>Build Spectrum</strong>
+                <span>How research, data work, platform engineering, delivery execution, frontend polish, and product framing connect across projects.</span>
+              </figcaption>
+            </figure>
+
+            <figure class="profile-chart" data-profile-chart="2" hidden>
+              <svg class="profile-radar" viewBox="0 0 240 224" role="img" aria-label="Radar chart showing language, retrieval, automation, analytics, geospatial, and vision strengths">
+                <polygon points="120,36 184,73 184,147 120,184 56,147 56,73" />
+                <polygon points="120,54 169,82 169,138 120,166 71,138 71,82" />
+                <polygon points="120,72 154,91 154,129 120,148 86,129 86,91" />
+                <polygon points="120,90 139,100 139,120 120,130 101,120 101,100" />
+                <polyline points="120,36 120,184" />
+                <polyline points="56,73 184,147" />
+                <polyline points="56,147 184,73" />
+                <polygon class="profile-radar__shape" points="120,58 176,84 171,140 120,168 70,149 58,84" />
+                <text class="profile-radar__label--top" x="120" y="18">Language</text>
+                <text class="profile-radar__label--right" x="220" y="68" text-anchor="end">Retrieval</text>
+                <text class="profile-radar__label--right" x="212" y="154" text-anchor="end">Automation</text>
+                <text class="profile-radar__label--bottom" x="120" y="210">Analytics</text>
+                <text class="profile-radar__label--left" x="12" y="154" text-anchor="start">Geospatial</text>
+                <text class="profile-radar__label--left" x="30" y="68" text-anchor="start">Vision</text>
+              </svg>
+              <figcaption class="profile-chart__caption">
+                <strong>Problem Space Coverage</strong>
+                <span>Coverage across language pipelines, retrieval, automation, analytics, geospatial work, and computer vision systems.</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="profile-stats-nav" aria-label="Statistics views">
+            <button class="profile-stats-dot is-active" type="button" data-profile-chart-dot="0" aria-label="Show AI Systems Mix" aria-pressed="true"></button>
+            <button class="profile-stats-dot" type="button" data-profile-chart-dot="1" aria-label="Show Build Spectrum" aria-pressed="false"></button>
+            <button class="profile-stats-dot" type="button" data-profile-chart-dot="2" aria-label="Show Problem Space Coverage" aria-pressed="false"></button>
+          </div>
         </div>
 
         {% if site.github.is_project_page %}

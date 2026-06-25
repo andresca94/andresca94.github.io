@@ -300,9 +300,8 @@ const projects = [
     tags: ["React", "FastAPI", "Postgres", "Simulation", "OpenAI"],
     media: {
       type: "image",
-      src: "/images/project-media/ed-triage-dashboard.gif",
-      alt: "Animated preview of the ED Triage Support Assistant dashboard",
-      aspect: "3 / 2",
+      src: "/images/project-media/generated/ed-triage-clean.png",
+      alt: "Preview of the ED Triage Support Assistant dashboard",
       background: "#edf4f5",
       classes: ["flush"]
     },
@@ -316,16 +315,14 @@ const projects = [
     summary:
       "SwiftUI remittance app for Latin American corridors with bilingual onboarding, recipient management, KYC verification, quote review, payout routing, and transfer tracking across a polished send-money flow.",
     industries: ["finance"],
-    focuses: [],
+    focuses: ["language"],
     tags: ["SwiftUI", "Localization", "KYC", "Payout routing", "Tracking", "Product design"],
     media: {
       type: "image",
-      src: "/images/project-media/remeza.gif",
-      alt: "Animated preview of the ReMeZa remittance application",
-      aspect: "16 / 10",
+      src: "/images/project-media/generated/remeza-triptych.png",
+      alt: "Composite preview of the ReMeZa remittance application",
       background: "linear-gradient(180deg, #fff5eb, #f1e8dd)",
-      deviceWidth: "48%",
-      classes: ["phone"]
+      classes: ["flush"]
     },
     links: []
   },
@@ -340,12 +337,19 @@ const projects = [
     focuses: ["geospatial", "analytics"],
     tags: ["Streamlit", "GIS", "Data viz", "Geospatial", "Python"],
     media: {
-      type: "image",
-      src: "/images/project-media/motor-collision-explorer.gif",
-      alt: "Animated preview of the motor collision dashboard",
-      aspect: "1 / 1",
+      type: "gallery",
       background: "#f7f7f6",
-      classes: ["flush"]
+      frames: [
+        {
+          src: "/images/project-media/generated/motor-collision-01.png"
+        },
+        {
+          src: "/images/project-media/generated/motor-collision-02.png"
+        },
+        {
+          src: "/images/project-media/generated/motor-collision-03.png"
+        }
+      ]
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/Motor-Colission-App-Streamlit", icon: "github" }]
   },
@@ -361,20 +365,16 @@ const projects = [
     tags: ["TF-IDF", "Cosine similarity", "Recommenders", "Python", "IMDB"],
     media: {
       type: "gallery",
-      aspect: "3 / 2",
       background: "#eff2f4",
       frames: [
         {
-          src: "/images/project-media/movie-recommender.png",
-          position: "12% center"
+          src: "/images/project-media/generated/movie-recommender-01.png"
         },
         {
-          src: "/images/project-media/movie-recommender.png",
-          position: "50% center"
+          src: "/images/project-media/generated/movie-recommender-02.png"
         },
         {
-          src: "/images/project-media/movie-recommender.png",
-          position: "88% center"
+          src: "/images/project-media/generated/movie-recommender-03.png"
         }
       ]
     },
@@ -392,20 +392,16 @@ const projects = [
     tags: ["Entity resolution", "FuzzyWuzzy", "SQL", "Data cleaning", "Python"],
     media: {
       type: "gallery",
-      aspect: "3 / 2",
       background: "#eef3f7",
       frames: [
         {
-          src: "/images/project-media/fuzzy-matching.jpg",
-          position: "12% center"
+          src: "/images/project-media/generated/fuzzy-matching-01.png"
         },
         {
-          src: "/images/project-media/fuzzy-matching.jpg",
-          position: "50% center"
+          src: "/images/project-media/generated/fuzzy-matching-02.png"
         },
         {
-          src: "/images/project-media/fuzzy-matching.jpg",
-          position: "88% center"
+          src: "/images/project-media/generated/fuzzy-matching-03.png"
         }
       ]
     },
@@ -423,20 +419,16 @@ const projects = [
     tags: ["LSTM", "GRU", "Time series", "Forecasting", "TensorFlow"],
     media: {
       type: "gallery",
-      aspect: "3 / 2",
       background: "#edf1f3",
       frames: [
         {
-          src: "/images/project-media/mastercard-forecasting.png",
-          position: "14% 50%"
+          src: "/images/project-media/generated/mastercard-01.png"
         },
         {
-          src: "/images/project-media/mastercard-forecasting.png",
-          position: "50% 50%"
+          src: "/images/project-media/generated/mastercard-02.png"
         },
         {
-          src: "/images/project-media/mastercard-forecasting.png",
-          position: "86% 50%"
+          src: "/images/project-media/generated/mastercard-03.png"
         }
       ]
     },
@@ -459,12 +451,19 @@ const projects = [
     focuses: ["analytics"],
     tags: ["XGBoost", "Random Forest", "K-means", "SHAP", "PCA"],
     media: {
-      type: "image",
-      src: "/images/project-media/music-genre-modeling.gif",
-      alt: "Animated preview of the music genre modeling project",
-      aspect: "1 / 1",
+      type: "gallery",
       background: "#f1f0f5",
-      classes: ["flush"]
+      frames: [
+        {
+          src: "/images/project-media/generated/music-genre-01.png"
+        },
+        {
+          src: "/images/project-media/generated/music-genre-02.png"
+        },
+        {
+          src: "/images/project-media/generated/music-genre-03.png"
+        }
+      ]
     },
     links: [
       {
@@ -491,9 +490,8 @@ const projects = [
     tags: ["GIS", "Cartography", "Spatial joins", "Colombia", "ArcMap"],
     media: {
       type: "image",
-      src: "/images/project-media/limnigraph-stations.jpeg",
+      src: "/images/project-media/generated/limnigraph-01.png",
       alt: "Cartographic analysis of limnigraph stations in Colombia",
-      aspect: "4 / 5",
       background: "#f7f2e8",
       classes: ["flush"]
     },
@@ -530,12 +528,19 @@ const projects = [
     focuses: ["analytics"],
     tags: ["MATLAB", "Earth science", "Landslides", "DEM", "Research"],
     media: {
-      type: "image",
-      src: "/images/project-media/civil-engineering-thesis.gif",
-      alt: "Animated visualization from the civil engineering thesis",
-      aspect: "16 / 10",
+      type: "gallery",
       background: "#ece7df",
-      classes: ["flush"]
+      frames: [
+        {
+          src: "/images/project-media/generated/civil-engineering-01.png"
+        },
+        {
+          src: "/images/project-media/generated/civil-engineering-02.png"
+        },
+        {
+          src: "/images/project-media/generated/civil-engineering-03.png"
+        }
+      ]
     },
     links: [
       {
@@ -593,10 +598,6 @@ function renderIcon(icon) {
 function renderMediaShellStyle(media) {
   const styles = [];
 
-  if (media.aspect) {
-    styles.push(`--media-aspect:${media.aspect}`);
-  }
-
   if (media.background) {
     styles.push(`--media-bg:${media.background}`);
   }
@@ -623,8 +624,8 @@ function renderObjectStyle(options = {}) {
 }
 
 function renderGalleryFrame(frame, index, frameCount) {
-  const cycleStep = 4.5;
-  const duration = Math.max(frameCount * cycleStep, 12);
+  const cycleStep = 2.2;
+  const duration = Math.max(frameCount * cycleStep, 6.6);
   const frameStyle = [
     `animation-duration:${duration}s`,
     `animation-delay:${index * -cycleStep}s`,
@@ -779,6 +780,7 @@ function sortFilterOptions(group, options) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const shell = document.querySelector(".portfolio-shell");
   const controls = document.querySelector("[data-portfolio-controls]");
   const subfilters = document.querySelector("[data-portfolio-subfilters]");
   const grid = document.querySelector("[data-projects-grid]");
@@ -788,6 +790,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const closing = document.querySelector(".portfolio-closing");
   const statsToggle = document.querySelector("[data-profile-stats-toggle]");
   const statsPanel = document.querySelector("[data-profile-stats-panel]");
+  const statCharts = [...document.querySelectorAll("[data-profile-chart]")];
+  const statDots = [...document.querySelectorAll("[data-profile-chart-dot]")];
 
   if (!controls || !subfilters || !grid || !contextTitle || !contextCopy || !count) {
     return;
@@ -885,34 +889,36 @@ document.addEventListener("DOMContentLoaded", () => {
         return `
           <section class="portfolio-subfilter-group" aria-label="${escapeHtml(group.label)}">
             <p class="portfolio-subfilter-label">${escapeHtml(group.label)}</p>
-            <div class="portfolio-subfilter-buttons">
-              <button
-                class="${allClasses}"
-                type="button"
-                data-filter-group="${escapeHtml(group.id)}"
-                data-filter-value="all"
-              >
-                ${escapeHtml(group.allLabel)} (${escapeHtml(scopeProjects.length)})
-              </button>
-              ${options
-                .map((option) => {
-                  const classes =
-                    activeFilters[group.id] === option.id
-                      ? "portfolio-subfilter-button is-active"
-                      : "portfolio-subfilter-button";
+            <div class="portfolio-subfilter-surface">
+              <div class="portfolio-subfilter-buttons">
+                <button
+                  class="${allClasses}"
+                  type="button"
+                  data-filter-group="${escapeHtml(group.id)}"
+                  data-filter-value="all"
+                >
+                  ${escapeHtml(group.allLabel)} (${escapeHtml(scopeProjects.length)})
+                </button>
+                ${options
+                  .map((option) => {
+                    const classes =
+                      activeFilters[group.id] === option.id
+                        ? "portfolio-subfilter-button is-active"
+                        : "portfolio-subfilter-button";
 
-                  return `
-                    <button
-                      class="${classes}"
-                      type="button"
-                      data-filter-group="${escapeHtml(group.id)}"
-                      data-filter-value="${escapeHtml(option.id)}"
-                    >
-                      ${escapeHtml(option.label)} (${escapeHtml(option.count)})
-                    </button>
-                  `;
-                })
-                .join("")}
+                    return `
+                      <button
+                        class="${classes}"
+                        type="button"
+                        data-filter-group="${escapeHtml(group.id)}"
+                        data-filter-value="${escapeHtml(option.id)}"
+                      >
+                        ${escapeHtml(option.label)} (${escapeHtml(option.count)})
+                      </button>
+                    `;
+                  })
+                  .join("")}
+              </div>
             </div>
           </section>
         `;
@@ -920,10 +926,17 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
   }
 
+  function syncCategoryTheme() {
+    if (shell) {
+      shell.setAttribute("data-active-category", activeCategory);
+    }
+  }
+
   function renderCategory() {
     const category = getActiveCategory();
     const visibleProjects = getVisibleProjects();
 
+    syncCategoryTheme();
     contextTitle.textContent = category.label;
     contextCopy.textContent = category.description;
     count.textContent = `${visibleProjects.length} ${visibleProjects.length === 1 ? "project" : "projects"}`;
@@ -973,6 +986,30 @@ document.addEventListener("DOMContentLoaded", () => {
       statsToggle.textContent = nextExpanded ? "Hide statistics" : "Statistics";
       statsPanel.hidden = !nextExpanded;
     });
+  }
+
+  if (statCharts.length && statDots.length) {
+    function setActiveChart(index) {
+      for (const chart of statCharts) {
+        const isActive = Number(chart.getAttribute("data-profile-chart")) === index;
+        chart.classList.toggle("is-active", isActive);
+        chart.hidden = !isActive;
+      }
+
+      for (const dot of statDots) {
+        const isActive = Number(dot.getAttribute("data-profile-chart-dot")) === index;
+        dot.classList.toggle("is-active", isActive);
+        dot.setAttribute("aria-pressed", String(isActive));
+      }
+    }
+
+    for (const dot of statDots) {
+      dot.addEventListener("click", () => {
+        setActiveChart(Number(dot.getAttribute("data-profile-chart-dot")));
+      });
+    }
+
+    setActiveChart(0);
   }
 
   renderButtons();
