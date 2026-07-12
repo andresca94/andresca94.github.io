@@ -544,7 +544,7 @@ footer {
   position: absolute;
   inset: 0;
   opacity: 0;
-  animation-name: projectGalleryCycle;
+  animation-name: var(--frame-animation-name, projectGalleryCycle);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-fill-mode: both;
@@ -741,6 +741,18 @@ footer {
   }
 
   31%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes projectGalleryCycleHard {
+  0%,
+  24.9% {
+    opacity: 1;
+  }
+
+  25%,
   100% {
     opacity: 0;
   }

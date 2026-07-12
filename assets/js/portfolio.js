@@ -433,6 +433,7 @@ const projects = [
       fit: "contain",
       framePadding: "18px",
       cycleStep: 1.45,
+      hardCut: true,
       frames: [
         {
           src: "/images/project-media/generated/mastercard-train-test.png"
@@ -635,6 +636,7 @@ function renderGalleryFrame(frame, index, frameCount, media = {}) {
   const frameStyle = [
     `animation-duration:${duration}s`,
     `animation-delay:${index * -cycleStep}s`,
+    `--frame-animation-name:${media.hardCut ? "projectGalleryCycleHard" : "projectGalleryCycle"}`,
     `--frame-fit:${frame.fit || media.fit || "cover"}`,
     `--frame-position:${frame.position || media.position || "center center"}`,
     `--frame-padding:${frame.padding || media.framePadding || "0px"}`
