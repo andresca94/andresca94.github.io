@@ -339,22 +339,11 @@ const projects = [
     focuses: ["geospatial", "analytics"],
     tags: ["Streamlit", "GIS", "Data viz", "Geospatial", "Python"],
     media: {
-      type: "gallery",
+      type: "image",
+      src: "/images/project-media/motor-collision-explorer.gif",
+      alt: "Animated preview of the Motor Collision Explorer dashboard",
       background: "#f7f7f6",
-      fit: "contain",
-      framePadding: "18px",
-      cycleStep: 1.65,
-      frames: [
-        {
-          src: "/images/project-media/generated/motor-collision-01.png"
-        },
-        {
-          src: "/images/project-media/generated/motor-collision-02.png"
-        },
-        {
-          src: "/images/project-media/generated/motor-collision-03.png"
-        }
-      ]
+      position: "top center"
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/Motor-Colission-App-Streamlit", icon: "github" }]
   },
@@ -475,7 +464,7 @@ const projects = [
       src: "/images/project-media/music-genre-modeling.gif",
       alt: "Animated clustering preview for the Music Genre Modeling project",
       background: "#f1f0f5",
-      classes: ["inset-lg"]
+      classes: ["inset-xl"]
     },
     links: [
       {

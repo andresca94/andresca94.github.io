@@ -486,6 +486,11 @@ footer {
   padding: 18px;
 }
 
+.project-card__media--inset-xl img,
+.project-card__media--inset-xl video {
+  padding: 30px;
+}
+
 .project-card__media--flush img,
 .project-card__media--flush video {
   padding: 0;
