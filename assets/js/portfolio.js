@@ -442,16 +442,13 @@ const projects = [
       cycleStep: 1.65,
       frames: [
         {
-          src: "/images/project-media/mastercard-forecasting.png"
+          src: "/images/project-media/generated/mastercard-train-test.png"
         },
         {
-          src: "/images/project-media/generated/mastercard-01.png"
+          src: "/images/project-media/generated/mastercard-lstm-results.png"
         },
         {
-          src: "/images/project-media/generated/mastercard-02.png"
-        },
-        {
-          src: "/images/project-media/generated/mastercard-03.png"
+          src: "/images/project-media/generated/mastercard-gru-results.png"
         }
       ]
     },
