@@ -428,7 +428,7 @@ const projects = [
       background: "#edf1f3",
       fit: "contain",
       framePadding: "18px",
-      cycleStep: 1.65,
+      cycleStep: 1.45,
       frames: [
         {
           src: "/images/project-media/generated/mastercard-train-test.png"
@@ -438,6 +438,15 @@ const projects = [
         },
         {
           src: "/images/project-media/generated/mastercard-gru-results.png"
+        },
+        {
+          src: "/images/project-media/mastercard-forecasting.png"
+        },
+        {
+          src: "/images/lstm.png"
+        },
+        {
+          src: "/images/gru.png"
         }
       ]
     },
