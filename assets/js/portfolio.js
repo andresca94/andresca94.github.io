@@ -323,8 +323,8 @@ const projects = [
       poster: "/images/project-media/remeza-poster.jpg",
       title: "ReMeZa product video",
       background: "linear-gradient(180deg, #fff5eb, #f1e8dd)",
-      deviceWidth: "46%",
-      classes: ["phone"]
+      deviceWidth: "40%",
+      classes: ["phone", "phone-relaxed"]
     },
     links: []
   },
@@ -339,11 +339,22 @@ const projects = [
     focuses: ["geospatial", "analytics"],
     tags: ["Streamlit", "GIS", "Data viz", "Geospatial", "Python"],
     media: {
-      type: "image",
-      src: "/images/project-media/motor-collision-explorer.gif",
-      alt: "Animated preview of the Motor Collision Explorer dashboard",
+      type: "gallery",
       background: "#f7f7f6",
-      classes: ["flush"]
+      fit: "contain",
+      framePadding: "18px",
+      cycleStep: 1.65,
+      frames: [
+        {
+          src: "/images/project-media/generated/motor-collision-01.png"
+        },
+        {
+          src: "/images/project-media/generated/motor-collision-02.png"
+        },
+        {
+          src: "/images/project-media/generated/motor-collision-03.png"
+        }
+      ]
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/Motor-Colission-App-Streamlit", icon: "github" }]
   },
@@ -360,7 +371,13 @@ const projects = [
     media: {
       type: "gallery",
       background: "#eff2f4",
+      fit: "contain",
+      framePadding: "18px",
+      cycleStep: 1.65,
       frames: [
+        {
+          src: "/images/project-media/movie-recommender.png"
+        },
         {
           src: "/images/project-media/generated/movie-recommender-01.png"
         },
@@ -387,7 +404,13 @@ const projects = [
     media: {
       type: "gallery",
       background: "#eef3f7",
+      fit: "contain",
+      framePadding: "18px",
+      cycleStep: 1.65,
       frames: [
+        {
+          src: "/images/project-media/fuzzy-matching.jpg"
+        },
         {
           src: "/images/project-media/generated/fuzzy-matching-01.png"
         },
@@ -414,7 +437,13 @@ const projects = [
     media: {
       type: "gallery",
       background: "#edf1f3",
+      fit: "contain",
+      framePadding: "18px",
+      cycleStep: 1.65,
       frames: [
+        {
+          src: "/images/project-media/mastercard-forecasting.png"
+        },
         {
           src: "/images/project-media/generated/mastercard-01.png"
         },
@@ -449,7 +478,7 @@ const projects = [
       src: "/images/project-media/music-genre-modeling.gif",
       alt: "Animated clustering preview for the Music Genre Modeling project",
       background: "#f1f0f5",
-      classes: ["flush"]
+      classes: ["inset-lg"]
     },
     links: [
       {
@@ -601,14 +630,15 @@ function renderObjectStyle(options = {}) {
   return styles.length ? ` style="${escapeHtml(styles.join(";"))}"` : "";
 }
 
-function renderGalleryFrame(frame, index, frameCount) {
-  const cycleStep = 2.2;
+function renderGalleryFrame(frame, index, frameCount, media = {}) {
+  const cycleStep = media.cycleStep || 2.2;
   const duration = Math.max(frameCount * cycleStep, 6.6);
   const frameStyle = [
     `animation-duration:${duration}s`,
     `animation-delay:${index * -cycleStep}s`,
-    `--frame-fit:${frame.fit || "cover"}`,
-    `--frame-position:${frame.position || "center center"}`
+    `--frame-fit:${frame.fit || media.fit || "cover"}`,
+    `--frame-position:${frame.position || media.position || "center center"}`,
+    `--frame-padding:${frame.padding || media.framePadding || "0px"}`
   ];
 
   return `
@@ -676,7 +706,7 @@ function renderMedia(media, title) {
 
     return `
       <div class="${classes.join(" ")}"${shellStyle}>
-        ${frames.map((frame, index) => renderGalleryFrame(frame, index, frames.length)).join("")}
+        ${frames.map((frame, index) => renderGalleryFrame(frame, index, frames.length, media)).join("")}
       </div>
     `;
   }
