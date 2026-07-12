@@ -339,19 +339,11 @@ const projects = [
     focuses: ["geospatial", "analytics"],
     tags: ["Streamlit", "GIS", "Data viz", "Geospatial", "Python"],
     media: {
-      type: "gallery",
+      type: "image",
+      src: "/images/project-media/motor-collision-explorer.gif",
+      alt: "Animated preview of the Motor Collision Explorer dashboard",
       background: "#f7f7f6",
-      frames: [
-        {
-          src: "/images/project-media/generated/motor-collision-01.png"
-        },
-        {
-          src: "/images/project-media/generated/motor-collision-02.png"
-        },
-        {
-          src: "/images/project-media/generated/motor-collision-03.png"
-        }
-      ]
+      classes: ["flush"]
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/Motor-Colission-App-Streamlit", icon: "github" }]
   },
@@ -453,19 +445,11 @@ const projects = [
     focuses: ["analytics"],
     tags: ["XGBoost", "Random Forest", "K-means", "SHAP", "PCA"],
     media: {
-      type: "gallery",
+      type: "image",
+      src: "/images/project-media/music-genre-modeling.gif",
+      alt: "Animated clustering preview for the Music Genre Modeling project",
       background: "#f1f0f5",
-      frames: [
-        {
-          src: "/images/project-media/generated/music-genre-01.png"
-        },
-        {
-          src: "/images/project-media/generated/music-genre-02.png"
-        },
-        {
-          src: "/images/project-media/generated/music-genre-03.png"
-        }
-      ]
+      classes: ["flush"]
     },
     links: [
       {
@@ -530,19 +514,11 @@ const projects = [
     focuses: ["analytics"],
     tags: ["MATLAB", "Earth science", "Landslides", "DEM", "Research"],
     media: {
-      type: "gallery",
+      type: "image",
+      src: "/images/project-media/civil-engineering-thesis.gif",
+      alt: "Animated preview from the Civil Engineering MSc Thesis",
       background: "#ece7df",
-      frames: [
-        {
-          src: "/images/project-media/generated/civil-engineering-01.png"
-        },
-        {
-          src: "/images/project-media/generated/civil-engineering-02.png"
-        },
-        {
-          src: "/images/project-media/generated/civil-engineering-03.png"
-        }
-      ]
+      classes: ["flush"]
     },
     links: [
       {
