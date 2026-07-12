@@ -491,6 +491,11 @@ footer {
   padding: 30px;
 }
 
+.project-card__media--inset-xxl img,
+.project-card__media--inset-xxl video {
+  padding: 44px;
+}
+
 .project-card__media--flush img,
 .project-card__media--flush video {
   padding: 0;
@@ -515,7 +520,7 @@ footer {
 }
 
 .project-card__media--phone-relaxed {
-  padding: 24px;
+  padding: 32px;
 }
 
 .project-card__media--phone img,

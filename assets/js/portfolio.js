@@ -323,7 +323,11 @@ const projects = [
       poster: "/images/project-media/remeza-poster.jpg",
       title: "ReMeZa product video",
       background: "linear-gradient(180deg, #fff5eb, #f1e8dd)",
-      deviceWidth: "40%",
+      deviceWidth: "34%",
+      autoplay: true,
+      muted: true,
+      loop: true,
+      controls: false,
       classes: ["phone", "phone-relaxed"]
     },
     links: []
@@ -473,7 +477,7 @@ const projects = [
       src: "/images/project-media/music-genre-modeling.gif",
       alt: "Animated clustering preview for the Music Genre Modeling project",
       background: "#f1f0f5",
-      classes: ["inset-xl"]
+      classes: ["inset-xxl"]
     },
     links: [
       {
@@ -673,9 +677,29 @@ function renderMedia(media, title) {
   }
 
   if (media.type === "video") {
+    const videoAttrs = ["playsinline"];
+
+    if (media.controls !== false) {
+      videoAttrs.push("controls");
+    }
+
+    if (media.autoplay) {
+      videoAttrs.push("autoplay");
+    }
+
+    if (media.muted) {
+      videoAttrs.push("muted");
+    }
+
+    if (media.loop) {
+      videoAttrs.push("loop");
+    }
+
+    const preloadMode = media.preload || (media.autoplay ? "auto" : "metadata");
+
     return `
       <div class="${classes.join(" ")}"${shellStyle}>
-        <video controls playsinline preload="metadata" poster="${escapeHtml(media.poster || "")}" aria-label="${escapeHtml(media.title || title)}"${renderObjectStyle(media)}>
+        <video ${videoAttrs.join(" ")} preload="${escapeHtml(preloadMode)}" poster="${escapeHtml(media.poster || "")}" aria-label="${escapeHtml(media.title || title)}"${renderObjectStyle(media)}>
           <source src="${escapeHtml(media.src)}" type="video/mp4">
         </video>
       </div>
