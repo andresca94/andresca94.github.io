@@ -318,11 +318,13 @@ const projects = [
     focuses: ["language"],
     tags: ["SwiftUI", "Localization", "KYC", "Payout routing", "Tracking", "Product design"],
     media: {
-      type: "image",
-      src: "/images/project-media/generated/remeza-triptych.png",
-      alt: "Composite preview of the ReMeZa remittance application",
+      type: "video",
+      src: "/assets/media/remeza.mp4",
+      poster: "/images/project-media/remeza-poster.jpg",
+      title: "ReMeZa product video",
       background: "linear-gradient(180deg, #fff5eb, #f1e8dd)",
-      classes: ["flush"]
+      deviceWidth: "46%",
+      classes: ["phone"]
     },
     links: []
   },
