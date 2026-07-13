@@ -1,13 +1,6 @@
 ---
 ---
 
-<div class="portfolio-mobile-project-selector" data-portfolio-mobile-project-selector>
-  <button type="button" class="portfolio-mobile-project-selector__toggle" data-portfolio-mobile-project-selector-toggle>
-    Projects
-  </button>
-  <div class="portfolio-mobile-project-selector__list" data-portfolio-mobile-project-selector-list hidden></div>
-</div>
-
 <div class="portfolio-shell">
   <div class="portfolio-controls" data-portfolio-controls></div>
   <div class="portfolio-subfilters" data-portfolio-subfilters></div>

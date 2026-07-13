@@ -299,22 +299,11 @@ const projects = [
     focuses: ["language", "analytics"],
     tags: ["React", "FastAPI", "Postgres", "Simulation", "OpenAI"],
     media: {
-      type: "gallery",
+      type: "image",
+      src: "/images/project-media/generated/ed-triage-clean.png",
+      alt: "Preview of the ED Triage Support Assistant dashboard",
       background: "#edf4f5",
-      fit: "contain",
-      framePadding: "12px",
-      cycleStep: 1.8,
-      frames: [
-        {
-          src: "/images/project-media/generated/ed-triage-clean.png"
-        },
-        {
-          src: "/images/project-media/ed-triage-dashboard.png"
-        },
-        {
-          src: "/images/project-media/ed-triage-dashboard.gif"
-        }
-      ]
+      classes: ["flush"]
     },
     links: []
   },
@@ -334,7 +323,7 @@ const projects = [
       poster: "/images/project-media/remeza-poster.jpg",
       title: "ReMeZa product video",
       background: "linear-gradient(180deg, #fff5eb, #f1e8dd)",
-      deviceWidth: "56%",
+      deviceWidth: "34%",
       autoplay: true,
       muted: true,
       loop: true,
@@ -485,25 +474,11 @@ const projects = [
     focuses: ["analytics"],
     tags: ["XGBoost", "Random Forest", "K-means", "SHAP", "PCA"],
     media: {
-      type: "gallery",
+      type: "image",
+      src: "/images/project-media/music-genre-modeling.gif",
+      alt: "Animated clustering preview for the Music Genre Modeling project",
       background: "#f1f0f5",
-      fit: "contain",
-      framePadding: "10px",
-      cycleStep: 1.65,
-      frames: [
-        {
-          src: "/images/project-media/music-genre-modeling.gif"
-        },
-        {
-          src: "/images/project-media/generated/music-genre-01.png"
-        },
-        {
-          src: "/images/project-media/generated/music-genre-02.png"
-        },
-        {
-          src: "/images/project-media/generated/music-genre-03.png"
-        }
-      ]
+      classes: ["inset-xxl"]
     },
     links: [
       {
@@ -584,16 +559,6 @@ const projects = [
   }
 ];
 
-const portfolioProjects = projects.map((project, index) => ({
-  ...project,
-  __id: `${index + 1}-${project.title.toLowerCase().replaceAll(" ", "-").replace(/[^a-z0-9-]/g, "")}`
-}));
-
-const countsByCategory = categories.reduce((accumulator, category) => {
-  accumulator[category.id] = portfolioProjects.filter((project) => project.category === category.id).length;
-  return accumulator;
-}, {});
-
 function escapeHtml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -648,10 +613,6 @@ function renderMediaShellStyle(media) {
     styles.push(`--media-device-width:${media.deviceWidth}`);
   }
 
-  if (media.aspect) {
-    styles.push(`--media-aspect:${media.aspect}`);
-  }
-
   return styles.length ? ` style="${escapeHtml(styles.join(";"))}"` : "";
 }
 
@@ -676,7 +637,7 @@ function renderGalleryFrame(frame, index, frameCount, media = {}) {
     `animation-duration:${duration}s`,
     `animation-delay:${index * -cycleStep}s`,
     `--frame-animation-name:${media.hardCut ? "projectGalleryCycleHard" : "projectGalleryCycle"}`,
-    `--frame-fit:${frame.fit || media.fit || "contain"}`,
+    `--frame-fit:${frame.fit || media.fit || "cover"}`,
     `--frame-position:${frame.position || media.position || "center center"}`,
     `--frame-padding:${frame.padding || media.framePadding || "0px"}`
   ];
@@ -795,16 +756,9 @@ function renderLinks(links) {
   `;
 }
 
-function renderProject(project, categoryLabel, isFocused = false) {
-  const cardState = isFocused ? "project-card--focused" : "project-card--linkable";
+function renderProject(project, categoryLabel) {
   return `
-    <article
-      class="project-card ${escapeHtml(project.category)} ${cardState}"
-      data-project-id="${escapeHtml(project.__id)}"
-      tabindex="0"
-      role="button"
-      aria-label="${escapeHtml(project.title)}"
-    >
+    <article class="project-card ${escapeHtml(project.category)}">
       <div class="project-card__hero">
         <div class="project-card__hero-copy">
           <span class="project-card__category">${escapeHtml(categoryLabel)}</span>
@@ -867,8 +821,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const statsPanel = document.querySelector("[data-profile-stats-panel]");
   const statCharts = [...document.querySelectorAll("[data-profile-chart]")];
   const statDots = [...document.querySelectorAll("[data-profile-chart-dot]")];
-  const projectSelectorToggle = document.querySelector("[data-portfolio-mobile-project-selector-toggle]");
-  const projectSelectorList = document.querySelector("[data-portfolio-mobile-project-selector-list]");
 
   if (!controls || !subfilters || !grid || !contextTitle || !contextCopy || !count) {
     return;
@@ -884,16 +836,20 @@ document.addEventListener("DOMContentLoaded", () => {
     closing.style.width = "";
   }
 
+  const countsByCategory = categories.reduce((accumulator, category) => {
+    accumulator[category.id] = projects.filter((project) => project.category === category.id).length;
+    return accumulator;
+  }, {});
+
   let activeCategory = categories[0].id;
   let activeFilters = Object.fromEntries(filterGroups.map((group) => [group.id, "all"]));
-  let focusedProjectId = null;
 
   function getActiveCategory() {
     return categories.find((item) => item.id === activeCategory);
   }
 
   function getCategoryProjects() {
-    return portfolioProjects.filter((project) => project.category === activeCategory);
+    return projects.filter((project) => project.category === activeCategory);
   }
 
   function getVisibleProjects() {
@@ -927,65 +883,6 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
       })
       .join("");
-  }
-
-  function setProjectSelectorState(isOpen) {
-    if (!projectSelectorToggle || !projectSelectorList) {
-      return;
-    }
-
-    projectSelectorToggle.setAttribute("aria-expanded", String(isOpen));
-    projectSelectorList.hidden = !isOpen;
-  }
-
-  function getProjectById(projectId) {
-    return portfolioProjects.find((project) => project.__id === projectId);
-  }
-
-  function getVisibleProjectTitle(projectId, fallback = "Projects") {
-    const project = getProjectById(projectId);
-    return project ? project.title : fallback;
-  }
-
-  function setProjectFocusMode(enabled) {
-    if (!shell) {
-      return;
-    }
-
-    shell.classList.toggle("is-project-focus", enabled);
-  }
-
-  function renderProjectSelector(projectsInContext) {
-    if (!projectSelectorToggle || !projectSelectorList) {
-      return;
-    }
-
-    if (!projectsInContext.length) {
-      projectSelectorList.innerHTML = "";
-      projectSelectorToggle.textContent = "Projects";
-      projectSelectorToggle.setAttribute("aria-expanded", "false");
-      projectSelectorList.hidden = true;
-      return;
-    }
-
-    projectSelectorList.innerHTML = projectsInContext
-      .map((project) => {
-        const classes =
-          focusedProjectId === project.__id
-            ? "portfolio-mobile-project-selector__item is-active"
-            : "portfolio-mobile-project-selector__item";
-
-        return `
-          <button class="${classes}" type="button" data-project-select="${escapeHtml(project.__id)}">
-            ${escapeHtml(project.title)}
-          </button>
-        `;
-      })
-      .join("");
-
-    projectSelectorToggle.textContent = focusedProjectId
-      ? `Projects · ${getVisibleProjectTitle(focusedProjectId)}`
-      : "Projects";
   }
 
   function renderSubfilters() {
@@ -1072,48 +969,10 @@ document.addEventListener("DOMContentLoaded", () => {
     contextTitle.textContent = category.label;
     contextCopy.textContent = category.description;
     count.textContent = `${visibleProjects.length} ${visibleProjects.length === 1 ? "project" : "projects"}`;
-    renderProjectSelector(visibleProjects);
 
-    if (!visibleProjects.length) {
-      grid.classList.remove("is-single");
-      grid.innerHTML = `<div class="portfolio-empty">No projects match that combination yet. Try another industry or capability.</div>`;
-      return;
-    }
-
-    if (focusedProjectId && !getProjectById(focusedProjectId)) {
-      focusedProjectId = null;
-      history.replaceState({}, "", window.location.pathname + window.location.search);
-    }
-
-    if (focusedProjectId) {
-      const selectedProject = visibleProjects.find((project) => project.__id === focusedProjectId) || visibleProjects[0];
-      focusedProjectId = selectedProject.__id;
-      renderProjectSelector(visibleProjects);
-      setProjectSelectorState(false);
-      setProjectFocusMode(true);
-
-      grid.classList.add("is-single");
-      grid.innerHTML = `
-        <div class="project-card__focus-toolbar">
-          <span>Project detail</span>
-          <button type="button" class="project-card__focus-back" data-project-back>Back to all projects</button>
-        </div>
-        ${renderProject(selectedProject, category.label, true)}
-      `;
-      window.location.replace(`#project-${encodeURIComponent(focusedProjectId)}`);
-      requestAnimationFrame(() => {
-        const focusedCard = grid.querySelector(".project-card__media");
-        if (focusedCard) {
-          focusedCard.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      });
-      return;
-    }
-
-    setProjectFocusMode(false);
-
-    grid.classList.remove("is-single");
-    grid.innerHTML = visibleProjects.map((project) => renderProject(project, category.label)).join("");
+    grid.innerHTML = visibleProjects.length
+      ? visibleProjects.map((project) => renderProject(project, category.label)).join("")
+      : `<div class="portfolio-empty">No projects match that combination yet. Try another industry or capability.</div>`;
   }
 
   controls.addEventListener("click", (event) => {
@@ -1123,13 +982,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     activeCategory = button.getAttribute("data-category");
-    focusedProjectId = null;
     activeFilters = Object.fromEntries(filterGroups.map((group) => [group.id, "all"]));
-    history.replaceState({}, "", window.location.pathname + window.location.search);
-    setProjectFocusMode(false);
     renderButtons();
     renderSubfilters();
-    setProjectSelectorState(false);
     renderCategory();
   });
 
@@ -1147,87 +1002,9 @@ document.addEventListener("DOMContentLoaded", () => {
       [groupId]: value
     };
 
-    focusedProjectId = null;
-    setProjectFocusMode(false);
     renderSubfilters();
     renderCategory();
   });
-
-  if (projectSelectorToggle && projectSelectorList) {
-    projectSelectorToggle.addEventListener("click", () => {
-      const nextOpen = projectSelectorList.hidden;
-      setProjectSelectorState(nextOpen);
-    });
-
-    projectSelectorList.addEventListener("click", (event) => {
-      const button = event.target.closest("[data-project-select]");
-      if (!button) {
-        return;
-      }
-
-      focusedProjectId = button.getAttribute("data-project-select");
-      setProjectFocusMode(true);
-      renderCategory();
-      setProjectSelectorState(false);
-    });
-
-    document.addEventListener("click", (event) => {
-      const wrapper = event.target.closest(".portfolio-mobile-project-selector");
-      if (!wrapper) {
-        setProjectSelectorState(false);
-      }
-    });
-  }
-
-  grid.addEventListener("click", (event) => {
-    const clickedBack = event.target.closest("[data-project-back]");
-    if (clickedBack) {
-      focusedProjectId = null;
-      setProjectFocusMode(false);
-      history.replaceState({}, "", window.location.pathname);
-      renderCategory();
-      return;
-    }
-
-    const projectCard = event.target.closest("[data-project-id]");
-    if (!projectCard || event.target.closest(".project-card__links a")) {
-      return;
-    }
-
-    const nextProjectId = projectCard.getAttribute("data-project-id");
-    focusedProjectId = nextProjectId;
-    setProjectFocusMode(true);
-    renderCategory();
-  });
-
-  grid.addEventListener("keydown", (event) => {
-    const card = event.target.closest("[data-project-id]");
-    if (!card || focusedProjectId === card.getAttribute("data-project-id")) {
-      return;
-    }
-
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      focusedProjectId = card.getAttribute("data-project-id");
-      setProjectFocusMode(true);
-      renderCategory();
-    }
-  });
-
-  const parsedHash = window.location.hash;
-  if (parsedHash && parsedHash.startsWith("#project-")) {
-    const candidateId = decodeURIComponent(parsedHash.replace("#project-", ""));
-    const projectForHash = getProjectById(candidateId);
-
-    if (projectForHash) {
-      focusedProjectId = candidateId;
-      activeCategory = projectForHash.category;
-      activeFilters = Object.fromEntries(filterGroups.map((group) => [group.id, "all"]));
-      setProjectFocusMode(true);
-      renderButtons();
-      renderSubfilters();
-    }
-  }
 
   if (statsToggle && statsPanel) {
     statsToggle.addEventListener("click", () => {
