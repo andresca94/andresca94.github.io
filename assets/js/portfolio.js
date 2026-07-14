@@ -428,32 +428,11 @@ const projects = [
     focuses: ["forecasting", "analytics"],
     tags: ["LSTM", "GRU", "Time series", "Forecasting", "TensorFlow"],
     media: {
-      type: "gallery",
+      type: "image",
+      src: "/images/project-media/mastercard-stock-fit-static.png",
+      alt: "Mastercard stock price prediction fit with real and predicted values",
       background: "#edf1f3",
-      fit: "contain",
-      framePadding: "18px",
-      cycleStep: 1.45,
-      hardCut: true,
-      frames: [
-        {
-          src: "/images/project-media/generated/mastercard-train-test.png"
-        },
-        {
-          src: "/images/project-media/generated/mastercard-lstm-results.png"
-        },
-        {
-          src: "/images/project-media/generated/mastercard-gru-results.png"
-        },
-        {
-          src: "/images/project-media/mastercard-forecasting.png"
-        },
-        {
-          src: "/images/lstm.png"
-        },
-        {
-          src: "/images/gru.png"
-        }
-      ]
+      classes: ["inset-lg"]
     },
     links: [
       {
@@ -475,10 +454,10 @@ const projects = [
     tags: ["XGBoost", "Random Forest", "K-means", "SHAP", "PCA"],
     media: {
       type: "image",
-      src: "/images/project-media/music-genre-modeling.gif",
-      alt: "Animated clustering preview for the Music Genre Modeling project",
+      src: "/images/project-media/music-genre-clustering-static.png",
+      alt: "K-means clustering plot for the Music Genre Modeling project",
       background: "#f1f0f5",
-      classes: ["inset-xxl"]
+      classes: ["inset-lg"]
     },
     links: [
       {
