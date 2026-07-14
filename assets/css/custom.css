@@ -496,6 +496,15 @@ footer {
   padding: 44px;
 }
 
+.project-card__media--plot img {
+  position: absolute;
+  inset: 18px;
+  width: calc(100% - 36px);
+  height: calc(100% - 36px);
+  padding: 0;
+  object-fit: contain;
+}
+
 .project-card__media--flush img,
 .project-card__media--flush video {
   padding: 0;

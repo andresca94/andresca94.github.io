@@ -432,7 +432,7 @@ const projects = [
       src: "/images/project-media/mastercard-stock-fit-static.png",
       alt: "Mastercard stock price prediction fit with real and predicted values",
       background: "#edf1f3",
-      classes: ["inset-lg"]
+      classes: ["plot"]
     },
     links: [
       {
@@ -457,7 +457,7 @@ const projects = [
       src: "/images/project-media/music-genre-clustering-static.png",
       alt: "K-means clustering plot for the Music Genre Modeling project",
       background: "#f1f0f5",
-      classes: ["inset-lg"]
+      classes: ["plot"]
     },
     links: [
       {
