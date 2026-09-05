@@ -172,6 +172,30 @@ const projects = [
           label: "Dispatch planning",
           description: "Crew-to-project planning with dispatch, transport, housing, and schedule context.",
           alt: "CrewMultiplier dispatch planning dashboard"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-attendance.webp",
+          label: "Attendance intelligence",
+          description: "Synthetic live rosters surface on-site, late, scheduled, absent, and off-shift workers before exceptions affect margin.",
+          alt: "CrewMultiplier attendance intelligence dashboard with synthetic workers"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-worker-experience.webp",
+          label: "Worker mobile experience",
+          description: "An admin preview validates worker sign-in and field workflows against assigned synthetic profiles.",
+          alt: "CrewMultiplier worker mobile experience preview with synthetic profiles"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-ai-operations.webp",
+          label: "Evidence-grounded operations assistant",
+          description: "A deterministic assistant answers operational questions from the isolated data record without external model calls.",
+          alt: "CrewMultiplier evidence-grounded AI operations assistant"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-demo-control.webp",
+          label: "Safe simulation controls",
+          description: "Presenter controls pause, reset, or inject synthetic events without touching real operations.",
+          alt: "CrewMultiplier presenter controls for a synthetic operations simulation"
         }
       ]
     },
@@ -228,6 +252,8 @@ const projects = [
       type: "image",
       src: "/images/project-media/interior-design-generator.gif",
       alt: "Animated preview of the interior design generator",
+      caption: "Targeted interior editing",
+      description: "Text generation and box-guided inpainting support precise, localized changes to an interior scene.",
       aspect: "3 / 2",
       background: "#f6f3ee",
       classes: ["flush"]
@@ -248,6 +274,8 @@ const projects = [
       type: "image",
       src: "/images/project-media/age-safety-architecture.png",
       alt: "Architecture diagram for the age safety assessment system",
+      caption: "Safety architecture",
+      description: "Detection, aligned crops, calibrated age evidence, and policy logic remain separated for reviewable decisions.",
       aspect: "16 / 9",
       background: "linear-gradient(180deg, #e9eef1, #dfe8ec)",
       classes: ["flush"]
@@ -258,20 +286,47 @@ const projects = [
     category: "ai-systems",
     year: 2026,
     title: "Notar-IA",
-    label: "Multimodal legal document automation",
+    label: "Traceable multimodal legal automation",
     summary:
-      "End-to-end notarial deed generation system that turns heterogeneous legal packets into structured outputs, local-RAG grounded drafts, and final DOCX or PDF deliverables with validation, retries, and traceable artifacts.",
+      "Production-oriented notarial automation platform that ingests scanned case packets with Mistral OCR, combines hybrid Elastic retrieval with deterministic legal constraints for template selection, orchestrates specialized OpenAI agents, and produces traceable DOCX/PDF deliverables with evidence-backed decision graphs, provenance, review gates, immutable case runs, and blind benchmark evaluation.",
     industries: ["legal"],
-    focuses: ["language", "multimodal", "automation"],
-    tags: ["FastAPI", "React", "OpenAI", "Local RAG", "pdfplumber", "DOCX"],
+    focuses: ["language", "multimodal", "automation", "retrieval"],
+    tags: ["FastAPI", "React", "Mistral OCR", "Elasticsearch", "OpenAI", "Decision provenance"],
     media: {
-      type: "video",
-      src: "/assets/media/notar-ia.mp4",
-      poster: "/images/project-media/notar-ia-poster.jpg",
-      title: "Notar-IA product video",
-      aspect: "16 / 9"
+      type: "gallery",
+      background: "#ede2d5",
+      fit: "cover",
+      frames: [
+        {
+          src: "/images/project-media/notar-ia-intake.webp",
+          label: "Document intake",
+          description: "Operators upload identity scans, deeds, certificates, and case notes before starting an auditable generation run.",
+          alt: "Notar-IA document intake workspace using an empty demonstration case"
+        },
+        {
+          src: "/images/project-media/notar-ia-decision-trace.webp",
+          label: "Review-first diagnosis",
+          description: "Automatic gates stop uncertain demo cases, explain the blocking condition, and request the exact missing evidence.",
+          alt: "Notar-IA anonymized decision trace with an automatic review diagnosis"
+        },
+        {
+          src: "/images/project-media/notar-ia-decision-flow.webp",
+          label: "Decision graph",
+          description: "A stage-by-stage trace exposes inputs, model calls, dependencies, outputs, confidence, and runtime.",
+          alt: "Notar-IA anonymized decision graph for a demonstration case"
+        },
+        {
+          src: "/images/project-media/notar-ia-decision-rules.webp",
+          label: "Reconstructable rules",
+          description: "Deterministic constraints, thresholds, reason codes, and usage metrics make the final decision auditable.",
+          alt: "Notar-IA anonymized deterministic rules and final decision view"
+        }
+      ]
     },
-    links: []
+    links: [
+      { label: "Product video", url: "/assets/media/notar-ia.mp4", icon: "external" },
+      { label: "Case study", url: "/pdf/notar-ia-case-study.pdf", icon: "paper" }
+    ]
   },
   {
     category: "ai-systems",
@@ -288,6 +343,8 @@ const projects = [
       src: "/assets/media/ovidius-ai-avatar.mp4",
       poster: "/images/project-media/ovidius-ai-avatar-poster.jpg",
       title: "AI avatar training video",
+      caption: "Automated training-content workflow",
+      description: "The walkthrough shows multilingual avatar content moving through generation, review, and compliance-safe delivery.",
       aspect: "16 / 9"
     },
     links: []
@@ -306,6 +363,8 @@ const projects = [
       type: "image",
       src: "/images/project-media/creator-search-paper.png",
       alt: "Thumbnail of the Creator Search 10M paper",
+      caption: "Retrieval system design",
+      description: "The design maps hybrid candidate generation, constraints, reranking, and offline evaluation at 10M-profile scale.",
       aspect: "16 / 10",
       background: "linear-gradient(180deg, #ebe6e1, #f4eee7)",
       classes: ["flush"]
@@ -329,6 +388,8 @@ const projects = [
       type: "youtube",
       id: "FKa7gCUX4pw",
       title: "DeepMake image generation demo",
+      caption: "Controllable image generation",
+      description: "Text and image inputs flow through ControlNet, SDXL, LoRA, scheduler, and seed controls for repeatable creative work.",
       aspect: "16 / 9"
     },
     links: [
@@ -350,6 +411,8 @@ const projects = [
       type: "youtube",
       id: "3XQsHEP_foU",
       title: "DeepMake video segmentation demo",
+      caption: "Promptable video segmentation",
+      description: "Grounding DINO proposes objects and Segment Anything turns them into masks across a video workflow.",
       aspect: "16 / 9"
     },
     links: [
@@ -371,6 +434,8 @@ const projects = [
       type: "youtube",
       id: "bNq-GhZ7qSQ",
       title: "DeepMake video super resolution demo",
+      caption: "Memory-aware media restoration",
+      description: "ESRGAN, SwinIR, and BasicVSR restore images and video through interval-based processing on CPU or GPU.",
       aspect: "16 / 9"
     },
     links: [
@@ -393,6 +458,8 @@ const projects = [
       src: "/assets/media/randomai.mp4",
       poster: "/images/project-media/randomai-poster.jpg",
       title: "RandomAI product video",
+      caption: "Prompt-to-product automation",
+      description: "The walkthrough follows artwork generation, cleanup, campaign assets, and connected print-on-demand fulfillment.",
       aspect: "16 / 9"
     },
     links: []
@@ -411,6 +478,8 @@ const projects = [
       type: "image",
       src: "/images/project-media/generated/ed-triage-clean.png",
       alt: "Preview of the ED Triage Support Assistant dashboard",
+      caption: "Explainable triage console",
+      description: "Synthetic vitals and notes are ranked into transparent priority bands with deterministic safety logic.",
       background: "#edf4f5",
       classes: ["flush"]
     },
@@ -431,6 +500,8 @@ const projects = [
       src: "/assets/media/remeza.mp4",
       poster: "/images/project-media/remeza-poster.jpg",
       title: "ReMeZa product video",
+      caption: "Bilingual remittance flow",
+      description: "The mobile walkthrough covers onboarding, recipient setup, KYC, quote review, payout routing, and transfer tracking.",
       background: "linear-gradient(180deg, #fff5eb, #f1e8dd)",
       deviceWidth: "34%",
       autoplay: true,
@@ -440,25 +511,6 @@ const projects = [
       classes: ["phone", "phone-relaxed"]
     },
     links: []
-  },
-  {
-    category: "data-research",
-    year: 2023,
-    title: "Motor Collision Explorer",
-    label: "Geospatial Streamlit dashboard",
-    summary:
-      "Loaded and visualized the NYC motor collision dataset in Streamlit with 3D mapping, time-of-day breakdowns, and injury analysis for pedestrians, cyclists, and motorists.",
-    industries: ["geospatial"],
-    focuses: ["geospatial", "analytics"],
-    tags: ["Streamlit", "GIS", "Data viz", "Geospatial", "Python"],
-    media: {
-      type: "image",
-      src: "/images/project-media/motor-collision-explorer.gif",
-      alt: "Animated preview of the Motor Collision Explorer dashboard",
-      background: "#f7f7f6",
-      position: "top center"
-    },
-    links: [{ label: "GitHub", url: "https://github.com/andresca94/Motor-Colission-App-Streamlit", icon: "github" }]
   },
   {
     category: "data-research",
@@ -477,16 +529,28 @@ const projects = [
       framePadding: "18px",
       frames: [
         {
-          src: "/images/project-media/movie-recommender.png"
+          src: "/images/project-media/movie-recommender.png",
+          label: "Similarity recommendations",
+          description: "Cosine similarity returns neighboring titles for two reference films from the engineered content space.",
+          alt: "Movie recommender output showing similar titles for two reference films"
         },
         {
-          src: "/images/project-media/generated/movie-recommender-01.png"
+          src: "/images/project-media/generated/movie-recommender-01.png",
+          label: "Score-based ranking",
+          description: "A weighted rating ranks high-confidence titles before personalized similarity enters the workflow.",
+          alt: "Movie ranking table with weighted scores and vote counts"
         },
         {
-          src: "/images/project-media/generated/movie-recommender-02.png"
+          src: "/images/project-media/generated/movie-recommender-02.png",
+          label: "Recommendation notebook",
+          description: "Notebook output makes the two content-based retrieval examples directly inspectable.",
+          alt: "Notebook output for two movie similarity queries"
         },
         {
-          src: "/images/project-media/generated/movie-recommender-03.png"
+          src: "/images/project-media/generated/movie-recommender-03.png",
+          label: "Result comparison",
+          description: "Side-by-side result lists make the behavior of the similarity model easy to compare.",
+          alt: "Side-by-side comparison of two movie recommendation result lists"
         }
       ]
     },
@@ -509,16 +573,28 @@ const projects = [
       framePadding: "18px",
       frames: [
         {
-          src: "/images/project-media/fuzzy-matching.jpg"
+          src: "/images/project-media/fuzzy-matching.jpg",
+          label: "Resolved entity table",
+          description: "The final linked table preserves source identifiers alongside cleaned fields and matched record IDs.",
+          alt: "Resolved entity table with source and matched establishment identifiers"
         },
         {
-          src: "/images/project-media/generated/fuzzy-matching-01.png"
+          src: "/images/project-media/generated/fuzzy-matching-01.png",
+          label: "Cross-database identifiers",
+          description: "Survey and establishment keys remain visible so every recovered join can be traced to both sources.",
+          alt: "Close view of survey and establishment identifiers in the matched dataset"
         },
         {
-          src: "/images/project-media/generated/fuzzy-matching-02.png"
+          src: "/images/project-media/generated/fuzzy-matching-02.png",
+          label: "Normalized location fields",
+          description: "Names, addresses, cities, and coordinates are standardized before weighted similarity scoring.",
+          alt: "Normalized names, addresses, cities, and GPS fields for entity resolution"
         },
         {
-          src: "/images/project-media/generated/fuzzy-matching-03.png"
+          src: "/images/project-media/generated/fuzzy-matching-03.png",
+          label: "Recovered matches",
+          description: "Cleaned values and recovered database IDs complete the auditable linkage output.",
+          alt: "Cleaned values and recovered database identifiers in the fuzzy matching output"
         }
       ]
     },
@@ -538,6 +614,8 @@ const projects = [
       type: "image",
       src: "/images/project-media/mastercard-stock-fit-static.png",
       alt: "Mastercard stock price prediction fit with real and predicted values",
+      caption: "Forecast fit comparison",
+      description: "Observed and predicted Mastercard price series make LSTM and GRU error patterns visible over time.",
       background: "#edf1f3",
       classes: ["plot"]
     },
@@ -563,6 +641,8 @@ const projects = [
       type: "image",
       src: "/images/project-media/music-genre-clustering-static.png",
       alt: "K-means clustering plot for the Music Genre Modeling project",
+      caption: "Unsupervised genre structure",
+      description: "K-means and PCA expose cluster separation before supervised model comparison and SHAP analysis.",
       background: "#f1f0f5",
       classes: ["plot"]
     },
@@ -593,6 +673,8 @@ const projects = [
       type: "image",
       src: "/images/project-media/generated/limnigraph-01.png",
       alt: "Cartographic analysis of limnigraph stations in Colombia",
+      caption: "Normalized station coverage",
+      description: "Department-level station counts are adjusted by area to reveal hydrologic coverage patterns.",
       background: "#f7f2e8",
       classes: ["flush"]
     },
@@ -612,6 +694,8 @@ const projects = [
       type: "image",
       src: "/images/project-media/school-location-spatial-analysis.jpg",
       alt: "School location spatial analysis map",
+      caption: "Weighted suitability result",
+      description: "Land use, terrain, recreation distance, and school proximity combine into one planning surface.",
       aspect: "4 / 3",
       background: "#f4f2ec",
       classes: ["flush"]
@@ -632,6 +716,8 @@ const projects = [
       type: "image",
       src: "/images/project-media/civil-engineering-thesis.gif",
       alt: "Animated preview from the Civil Engineering MSc Thesis",
+      caption: "Scale-sensitive landslide analysis",
+      description: "DEM-derived slope neighborhoods connect terrain statistics with landslide probability and size.",
       background: "#ece7df",
       classes: ["flush"]
     },
@@ -788,7 +874,19 @@ function renderExpandButton(title) {
   `;
 }
 
-function renderMedia(media, title, supportingText = "") {
+function renderMediaCaption(media, title, supportingText, captionText) {
+  const label = media.caption || captionText || title;
+  const description = media.description || supportingText;
+
+  return `
+    <figcaption class="project-card__media-caption">
+      <strong>${escapeHtml(label)}</strong>
+      <span>${escapeHtml(description)}</span>
+    </figcaption>
+  `;
+}
+
+function renderMedia(media, title, supportingText = "", captionText = "") {
   if (!media) {
     return "";
   }
@@ -811,17 +909,20 @@ function renderMedia(media, title, supportingText = "") {
 
   if (media.type === "image") {
     return `
-      <div
-        class="${classes.join(" ")}"
-        data-project-image
-        data-project-title="${escapeHtml(title)}"
-        data-image-label="${escapeHtml(media.caption || title)}"
-        data-image-description="${escapeHtml(media.description || supportingText)}"
-        ${shellStyle}
-      >
-        <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || title)}" loading="lazy"${renderObjectStyle(media)}>
-        ${renderExpandButton(title)}
-      </div>
+      <figure class="project-card__media-figure">
+        <div
+          class="${classes.join(" ")}"
+          data-project-image
+          data-project-title="${escapeHtml(title)}"
+          data-image-label="${escapeHtml(media.caption || captionText || title)}"
+          data-image-description="${escapeHtml(media.description || supportingText)}"
+          ${shellStyle}
+        >
+          <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || title)}" loading="lazy"${renderObjectStyle(media)}>
+          ${renderExpandButton(title)}
+        </div>
+        ${renderMediaCaption(media, title, supportingText, captionText)}
+      </figure>
     `;
   }
 
@@ -847,25 +948,31 @@ function renderMedia(media, title, supportingText = "") {
     const preloadMode = media.preload || (media.autoplay ? "auto" : "metadata");
 
     return `
-      <div class="${classes.join(" ")}"${shellStyle}>
-        <video ${videoAttrs.join(" ")} preload="${escapeHtml(preloadMode)}" poster="${escapeHtml(media.poster || "")}" aria-label="${escapeHtml(media.title || title)}"${renderObjectStyle(media)}>
-          <source src="${escapeHtml(media.src)}" type="video/mp4">
-        </video>
-      </div>
+      <figure class="project-card__media-figure">
+        <div class="${classes.join(" ")}"${shellStyle}>
+          <video ${videoAttrs.join(" ")} preload="${escapeHtml(preloadMode)}" poster="${escapeHtml(media.poster || "")}" aria-label="${escapeHtml(media.title || title)}"${renderObjectStyle(media)}>
+            <source src="${escapeHtml(media.src)}" type="video/mp4">
+          </video>
+        </div>
+        ${renderMediaCaption(media, title, supportingText, captionText)}
+      </figure>
     `;
   }
 
   if (media.type === "youtube") {
     return `
-      <div class="${classes.join(" ")}"${shellStyle}>
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/${escapeHtml(media.id)}"
-          title="${escapeHtml(media.title || title)}"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
+      <figure class="project-card__media-figure">
+        <div class="${classes.join(" ")}"${shellStyle}>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/${escapeHtml(media.id)}"
+            title="${escapeHtml(media.title || title)}"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        ${renderMediaCaption(media, title, supportingText, captionText)}
+      </figure>
     `;
   }
 
@@ -922,7 +1029,7 @@ function renderProject(project, categoryLabel) {
           <span class="project-card__year">${escapeHtml(project.year)}</span>
         </div>
       </div>
-      ${renderMedia(project.media, project.title, project.summary)}
+      ${renderMedia(project.media, project.title, project.summary, project.label)}
       <div class="project-card__body">
         <div class="project-card__label">${escapeHtml(project.label)}</div>
         <h3 class="project-card__title">${escapeHtml(project.title)}</h3>
