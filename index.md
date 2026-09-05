@@ -1,4 +1,5 @@
 ---
+title: "Data & AI Engineer"
 ---
 
 <div class="portfolio-shell">
@@ -17,7 +18,7 @@
 
   <div class="portfolio-closing">
     <p>
-      I am most energized by work that sits between research, engineering, and product: turning messy real-world problems into systems that feel clear, useful, and dependable. Whether the starting point is AI, automation, data, or domain-specific workflows, I enjoy building tools that people can actually use, trust, and grow with.
+      I am most energized by work that turns messy operational data into dependable products: pipelines that hold up in production, analytics that make decisions clearer, and AI systems grounded in real workflows. Across data, automation, research, and product engineering, I build tools that people can use, trust, and grow with.
     </p>
   </div>
 </div>

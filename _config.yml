@@ -1,16 +1,25 @@
-title: "Andrés Carvajal" # your name (or website title) here
-logo: "/images/andres-profile-2026.jpg" # your photo (or logo) here
+title: "Andrés Carvajal"
+logo: "/images/andres-profile-2026.jpg"
+description: "Data & AI Engineer building production data pipelines, analytics platforms, backend services, and AI systems."
+url: "https://andresca94.github.io"
 
-description: >
+profile: >
+  <p class="profile-role">Data &amp; AI Engineer</p>
   <p class="sidebar-links">
-  <a href="pdf/Andres-Carvajal-Resume-2026.pdf">Resume</a> |
+  <a href="pdf/Andres-Carvajal-Data-Analytics-Engineer-Resume.pdf">Data Resume</a> |
+  <a href="pdf/Andres-Carvajal-Resume-2026.pdf">AI Resume</a> |
   <a href="https://www.linkedin.com/in/andresca94/">LinkedIn</a> |
   <a href="https://github.com/andresca94">GitHub</a> |
   <a href="https://andresca94.github.io/academicpages/">Website</a>
   </p>
   <p class="sidebar-copy">
-  I’m an <strong>AI Engineer</strong> focused on shipping <strong>LLM systems</strong>, <strong>retrieval pipelines</strong>, <strong>generative media tools</strong>, and <strong>full-stack AI products</strong>. My background spans <strong>machine learning</strong>, <strong>backend engineering</strong>, <strong>computer vision</strong>, and <strong>data-intensive workflows</strong>, with earlier roots in <strong>geospatial analysis</strong>, <strong>forecasting</strong>, and applied research.
+  I build production systems where <strong>data engineering</strong>, <strong>analytics</strong>, and <strong>AI</strong> meet. My work spans Python and SQL pipelines, FastAPI services, PostgreSQL and BigQuery, operational dashboards, LLM/RAG workflows, computer vision, and cloud platforms on AWS and GCP.
   </p>
+  <div class="profile-keywords" aria-label="Core strengths">
+  <span class="profile-keyword">Python + SQL</span>
+  <span class="profile-keyword">Data pipelines</span>
+  <span class="profile-keyword">Analytics</span>
+  <span class="profile-keyword">AI systems</span>
+  </div>
 
 theme: jekyll-theme-minimal
-google_analytics: "UA-000000-0" # your Google Analytics tracking ID here

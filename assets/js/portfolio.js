@@ -1,5 +1,11 @@
 const categories = [
   {
+    id: "data-research",
+    label: "Data & Analytics",
+    description:
+      "Production data platforms, operational analytics, forecasting, GIS, and applied research—from live ingestion to decision-ready reporting."
+  },
+  {
     id: "ai-systems",
     label: "AI Systems",
     description:
@@ -10,12 +16,6 @@ const categories = [
     label: "Product Builds",
     description:
       "User-facing applications and prototypes where product design, UX flow, and implementation all mattered."
-  },
-  {
-    id: "data-research",
-    label: "Data & Research",
-    description:
-      "Earlier data science, forecasting, recommender, GIS, and academic research projects that still show how I think."
   }
 ];
 
@@ -28,6 +28,7 @@ const filterGroups = [
     labels: {
       advertising: "Advertising",
       commerce: "Commerce",
+      construction: "Construction",
       design: "Design",
       education: "Education",
       finance: "Finance",
@@ -37,7 +38,8 @@ const filterGroups = [
       media: "Media",
       operations: "Operations",
       research: "Research",
-      safety: "Safety"
+      safety: "Safety",
+      transportation: "Transportation"
     },
     order: [
       "healthcare",
@@ -46,6 +48,8 @@ const filterGroups = [
       "legal",
       "commerce",
       "operations",
+      "transportation",
+      "construction",
       "design",
       "education",
       "geospatial",
@@ -62,6 +66,7 @@ const filterGroups = [
     labels: {
       analytics: "Analytics",
       automation: "Automation",
+      "data-engineering": "Data Engineering",
       forecasting: "Forecasting",
       geospatial: "Geospatial",
       language: "Language",
@@ -71,20 +76,64 @@ const filterGroups = [
       vision: "Vision"
     },
     order: [
+      "data-engineering",
+      "analytics",
+      "automation",
       "language",
       "vision",
       "multimodal",
       "retrieval",
-      "automation",
       "recommenders",
       "forecasting",
-      "geospatial",
-      "analytics"
+      "geospatial"
     ]
   }
 ];
 
 const projects = [
+  {
+    category: "data-research",
+    year: 2026,
+    title: "COTABA Fleet Analytics",
+    label: "Live telemetry and operational reporting",
+    summary:
+      "Production fleet analytics platform that ingests Howen vehicle telemetry through WebSockets and REST snapshots, then turns it into authenticated 24-hour, weekly, and 30-day views. The data workflow includes quality notes, anomaly tracking, historical backfills, monthly report ingestion, audit logs, and a PostgreSQL-ready production layer.",
+    industries: ["transportation", "operations"],
+    focuses: ["data-engineering", "analytics", "automation"],
+    tags: ["Python", "FastAPI", "PostgreSQL", "WebSockets", "React", "Chart.js"],
+    media: {
+      type: "image",
+      src: "/images/project-media/cotaba-fleet-analytics.png",
+      alt: "COTABA fleet analytics platform mark",
+      background: "linear-gradient(145deg, #0d0d14, #20133b 58%, #6023d8)",
+      classes: ["inset-xxl"]
+    },
+    links: []
+  },
+  {
+    category: "data-research",
+    year: 2026,
+    title: "CrewMultiplier Operations Platform",
+    label: "Workforce operations and analytics",
+    summary:
+      "Bilingual operating system for field contractors that unifies workforce, attendance, compliance, dispatch, housing, production, and reporting in one auditable data model. Built with connected PostgreSQL analytics, real-time simulation, data-quality controls, KPI dashboards, CSV/PDF exports, and offline-safe field workflows.",
+    industries: ["construction", "operations"],
+    focuses: ["data-engineering", "analytics", "automation", "geospatial"],
+    tags: ["PostgreSQL", "Supabase", "TypeScript", "React", "Operational analytics", "Data quality"],
+    media: {
+      type: "gallery",
+      background: "#e9e5dc",
+      fit: "cover",
+      hardCut: true,
+      cycleStep: 2.4,
+      frames: [
+        { src: "/images/project-media/crewmultiplier-overview.webp" },
+        { src: "/images/project-media/crewmultiplier-workforce.webp" },
+        { src: "/images/project-media/crewmultiplier-dispatch.webp" }
+      ]
+    },
+    links: [{ label: "Website", url: "https://crewmultiplier.com", icon: "external" }]
+  },
   {
     category: "ai-systems",
     year: 2026,
@@ -333,7 +382,7 @@ const projects = [
     links: []
   },
   {
-    category: "product-builds",
+    category: "data-research",
     year: 2023,
     title: "Motor Collision Explorer",
     label: "Geospatial Streamlit dashboard",
