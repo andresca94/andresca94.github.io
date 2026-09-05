@@ -109,17 +109,32 @@ const projects = [
         {
           src: "/images/project-media/cotaba-dashboard-24h.png",
           label: "24-hour alert feed",
+          description: "Live safety episodes grouped by severity, recurring pattern, vehicle, and time of day.",
           alt: "COTABA dashboard showing an anonymized 24-hour fleet safety alert feed"
         },
         {
           src: "/images/project-media/cotaba-dashboard-week.png",
           label: "Weekly analytics",
+          description: "Seven-day event volume across the full anonymized fleet, with category and vehicle comparisons.",
           alt: "COTABA dashboard showing anonymized weekly fleet safety analytics"
         },
         {
           src: "/images/project-media/cotaba-dashboard-month.png",
           label: "30-day trends",
+          description: "Thirty-day KPIs connect event severity, mileage coverage, and nocturnal exposure.",
           alt: "COTABA dashboard showing anonymized 30-day fleet safety trends"
+        },
+        {
+          src: "/images/project-media/cotaba-dashboard-vehicles.png",
+          label: "Vehicle comparison",
+          description: "A normalized vehicle ranking combines alert counts, mileage, risk, baseline, and category mix.",
+          alt: "COTABA dashboard showing an anonymized comparison of fleet vehicles"
+        },
+        {
+          src: "/images/project-media/cotaba-dashboard-patterns.png",
+          label: "Behavior patterns",
+          description: "Hourly patterns reveal when fatigue, distraction, and collision-risk signals concentrate.",
+          alt: "COTABA dashboard showing anonymized hourly fleet behavior patterns"
         }
       ]
     },
@@ -143,16 +158,19 @@ const projects = [
         {
           src: "/images/project-media/crewmultiplier-overview.webp",
           label: "Operations overview",
+          description: "Executive view of workforce readiness, field activity, labor cost, and operational risk.",
           alt: "CrewMultiplier operations overview dashboard"
         },
         {
           src: "/images/project-media/crewmultiplier-workforce.webp",
           label: "Workforce management",
+          description: "Worker records, assignments, compliance status, and availability in one operating view.",
           alt: "CrewMultiplier workforce management dashboard"
         },
         {
           src: "/images/project-media/crewmultiplier-dispatch.webp",
           label: "Dispatch planning",
+          description: "Crew-to-project planning with dispatch, transport, housing, and schedule context.",
           alt: "CrewMultiplier dispatch planning dashboard"
         }
       ]
@@ -170,12 +188,29 @@ const projects = [
     focuses: ["language", "retrieval"],
     tags: ["FastAPI", "LangGraph", "GPT-4o", "Pinecone", "CrossEncoder", "Judgeval"],
     media: {
-      type: "image",
-      src: "/images/project-media/prose-generator.gif",
-      alt: "Animated preview of the Prose Generator application",
-      aspect: "16 / 10",
+      type: "gallery",
+      fit: "contain",
       background: "linear-gradient(180deg, #f3eadb, #ebe4d7)",
-      classes: ["flush"]
+      frames: [
+        {
+          src: "/images/project-media/prose-generator-setup.webp",
+          label: "Story setup",
+          description: "The chat workflow collects beats, characters, genre, style, length, and cover-art direction.",
+          alt: "Prose Generator story setup with chat and generation parameters"
+        },
+        {
+          src: "/images/project-media/prose-generator-preview.webp",
+          label: "Generated story",
+          description: "The pipeline returns long-form prose and matching cover art in a split preview workspace.",
+          alt: "Prose Generator showing generated long-form prose and cover art"
+        },
+        {
+          src: "/images/project-media/prose-generator-reading.webp",
+          label: "Reading view",
+          description: "An expanded reading mode presents the completed narrative and generated visual together.",
+          alt: "Prose Generator expanded reading view with completed narrative and cover art"
+        }
+      ]
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/Prose-Art-Agent", icon: "github" }]
   },
@@ -696,6 +731,7 @@ function renderGalleryFrame(frame, index, title, media = {}) {
       class="project-card__gallery-frame${isActive ? " is-active" : ""}"
       data-gallery-frame="${index}"
       data-gallery-label="${escapeHtml(frameLabel)}"
+      data-gallery-description="${escapeHtml(frame.description || media.description || "")}"
       aria-hidden="${String(!isActive)}"
       style="${escapeHtml(frameStyle.join(";"))}"
     >
@@ -715,8 +751,11 @@ function renderGalleryControls(frames, title) {
         <span aria-hidden="true">←</span>
       </button>
       <div class="project-card__gallery-status" aria-live="polite">
-        <span data-gallery-status-label>${escapeHtml(frames[0].label || "Image 1")}</span>
-        <span class="project-card__gallery-count" data-gallery-status-count>1 / ${frames.length}</span>
+        <span class="project-card__gallery-status-line">
+          <span data-gallery-status-label>${escapeHtml(frames[0].label || "Image 1")}</span>
+          <span class="project-card__gallery-count" data-gallery-status-count>1 / ${frames.length}</span>
+        </span>
+        <span class="project-card__gallery-description" data-gallery-status-description${frames[0].description ? "" : " hidden"}>${escapeHtml(frames[0].description || "")}</span>
       </div>
       <div class="project-card__gallery-dots" aria-label="Choose an image">
         ${frames
@@ -740,7 +779,16 @@ function renderGalleryControls(frames, title) {
   `;
 }
 
-function renderMedia(media, title) {
+function renderExpandButton(title) {
+  return `
+    <button class="project-card__media-expand" type="button" data-media-expand aria-label="View ${escapeHtml(title)} image larger">
+      <span aria-hidden="true">↗</span>
+      <span>View larger</span>
+    </button>
+  `;
+}
+
+function renderMedia(media, title, supportingText = "") {
   if (!media) {
     return "";
   }
@@ -763,8 +811,16 @@ function renderMedia(media, title) {
 
   if (media.type === "image") {
     return `
-      <div class="${classes.join(" ")}"${shellStyle}>
+      <div
+        class="${classes.join(" ")}"
+        data-project-image
+        data-project-title="${escapeHtml(title)}"
+        data-image-label="${escapeHtml(media.caption || title)}"
+        data-image-description="${escapeHtml(media.description || supportingText)}"
+        ${shellStyle}
+      >
         <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || title)}" loading="lazy"${renderObjectStyle(media)}>
+        ${renderExpandButton(title)}
       </div>
     `;
   }
@@ -820,12 +876,14 @@ function renderMedia(media, title) {
       <div
         class="${classes.join(" ")}"
         data-project-gallery
+        data-project-title="${escapeHtml(title)}"
         data-gallery-index="0"
         tabindex="0"
         aria-label="${escapeHtml(title)} image gallery"
         ${shellStyle}
       >
         ${frames.map((frame, index) => renderGalleryFrame(frame, index, title, media)).join("")}
+        ${renderExpandButton(title)}
         ${renderGalleryControls(frames, title)}
       </div>
     `;
@@ -864,7 +922,7 @@ function renderProject(project, categoryLabel) {
           <span class="project-card__year">${escapeHtml(project.year)}</span>
         </div>
       </div>
-      ${renderMedia(project.media, project.title)}
+      ${renderMedia(project.media, project.title, project.summary)}
       <div class="project-card__body">
         <div class="project-card__label">${escapeHtml(project.label)}</div>
         <h3 class="project-card__title">${escapeHtml(project.title)}</h3>
@@ -1097,6 +1155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const statusLabel = gallery.querySelector("[data-gallery-status-label]");
     const statusCount = gallery.querySelector("[data-gallery-status-count]");
+    const statusDescription = gallery.querySelector("[data-gallery-status-description]");
 
     if (statusLabel) {
       statusLabel.textContent = frames[nextIndex].getAttribute("data-gallery-label") || `Image ${nextIndex + 1}`;
@@ -1105,6 +1164,141 @@ document.addEventListener("DOMContentLoaded", () => {
     if (statusCount) {
       statusCount.textContent = `${nextIndex + 1} / ${frames.length}`;
     }
+
+    if (statusDescription) {
+      statusDescription.textContent = frames[nextIndex].getAttribute("data-gallery-description") || "";
+      statusDescription.hidden = !statusDescription.textContent;
+    }
+  }
+
+  const lightbox = document.createElement("dialog");
+  lightbox.className = "project-lightbox";
+  lightbox.setAttribute("data-project-lightbox", "");
+  lightbox.setAttribute("aria-labelledby", "project-lightbox-title");
+  lightbox.innerHTML = `
+    <div class="project-lightbox__surface">
+      <div class="project-lightbox__header">
+        <div>
+          <p class="project-lightbox__project" data-lightbox-project></p>
+          <h2 class="project-lightbox__title" id="project-lightbox-title" data-lightbox-title></h2>
+        </div>
+        <button class="project-lightbox__close" type="button" data-lightbox-close aria-label="Close enlarged image">×</button>
+      </div>
+      <div class="project-lightbox__stage">
+        <button class="project-lightbox__arrow project-lightbox__arrow--previous" type="button" data-lightbox-action="previous" aria-label="Previous image">←</button>
+        <img data-lightbox-image src="" alt="">
+        <button class="project-lightbox__arrow project-lightbox__arrow--next" type="button" data-lightbox-action="next" aria-label="Next image">→</button>
+      </div>
+      <div class="project-lightbox__footer">
+        <p data-lightbox-description></p>
+        <span data-lightbox-count></span>
+      </div>
+    </div>
+  `;
+  document.body.append(lightbox);
+
+  const lightboxImage = lightbox.querySelector("[data-lightbox-image]");
+  const lightboxProject = lightbox.querySelector("[data-lightbox-project]");
+  const lightboxTitle = lightbox.querySelector("[data-lightbox-title]");
+  const lightboxDescription = lightbox.querySelector("[data-lightbox-description]");
+  const lightboxCount = lightbox.querySelector("[data-lightbox-count]");
+  const lightboxArrows = [...lightbox.querySelectorAll("[data-lightbox-action]")];
+  let activeLightboxSource = null;
+
+  function getLightboxItem(source) {
+    if (source.matches("[data-project-gallery]")) {
+      const frames = [...source.querySelectorAll("[data-gallery-frame]")];
+      const currentIndex = Number(source.getAttribute("data-gallery-index")) || 0;
+      const frame = frames[currentIndex];
+      const image = frame?.querySelector("img");
+
+      if (!frame || !image) {
+        return null;
+      }
+
+      return {
+        src: image.currentSrc || image.src,
+        alt: image.alt,
+        project: source.getAttribute("data-project-title") || "Project gallery",
+        title: frame.getAttribute("data-gallery-label") || `Image ${currentIndex + 1}`,
+        description: frame.getAttribute("data-gallery-description") || "",
+        index: currentIndex,
+        count: frames.length
+      };
+    }
+
+    const image = source.querySelector("img");
+    if (!image) {
+      return null;
+    }
+
+    return {
+      src: image.currentSrc || image.src,
+      alt: image.alt,
+      project: source.getAttribute("data-project-title") || "Project image",
+      title: source.getAttribute("data-image-label") || source.getAttribute("data-project-title") || "Project image",
+      description: source.getAttribute("data-image-description") || "",
+      index: 0,
+      count: 1
+    };
+  }
+
+  function syncLightbox() {
+    if (!activeLightboxSource) {
+      return;
+    }
+
+    const item = getLightboxItem(activeLightboxSource);
+    if (!item) {
+      return;
+    }
+
+    lightboxImage.src = item.src;
+    lightboxImage.alt = item.alt;
+    lightboxProject.textContent = item.project;
+    lightboxTitle.textContent = item.title;
+    lightboxDescription.textContent = item.description;
+    lightboxDescription.hidden = !item.description;
+    lightboxCount.textContent = item.count > 1 ? `${item.index + 1} / ${item.count}` : "";
+    lightboxArrows.forEach((arrow) => {
+      arrow.hidden = item.count < 2;
+    });
+  }
+
+  function openLightbox(source) {
+    if (!source) {
+      return;
+    }
+
+    activeLightboxSource = source;
+    syncLightbox();
+
+    if (typeof lightbox.showModal === "function") {
+      if (!lightbox.open) {
+        lightbox.showModal();
+      }
+    } else {
+      lightbox.setAttribute("open", "");
+    }
+  }
+
+  function closeLightbox() {
+    if (typeof lightbox.close === "function") {
+      lightbox.close();
+    } else {
+      lightbox.removeAttribute("open");
+      activeLightboxSource = null;
+    }
+  }
+
+  function moveLightbox(direction) {
+    if (!activeLightboxSource?.matches("[data-project-gallery]")) {
+      return;
+    }
+
+    const currentIndex = Number(activeLightboxSource.getAttribute("data-gallery-index")) || 0;
+    setGalleryIndex(activeLightboxSource, currentIndex + direction);
+    syncLightbox();
   }
 
   controls.addEventListener("click", (event) => {
@@ -1139,6 +1333,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   grid.addEventListener("click", (event) => {
+    const expandButton = event.target.closest("[data-media-expand]");
+
+    if (expandButton) {
+      openLightbox(expandButton.closest("[data-project-gallery], [data-project-image]"));
+      return;
+    }
+
     const gallery = event.target.closest("[data-project-gallery]");
     const actionButton = event.target.closest("[data-gallery-action]");
     const dotButton = event.target.closest("[data-gallery-dot]");
@@ -1171,6 +1372,29 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
     const currentIndex = Number(gallery.getAttribute("data-gallery-index")) || 0;
     setGalleryIndex(gallery, currentIndex + (event.key === "ArrowLeft" ? -1 : 1));
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox || event.target.closest("[data-lightbox-close]")) {
+      closeLightbox();
+      return;
+    }
+
+    const actionButton = event.target.closest("[data-lightbox-action]");
+    if (actionButton) {
+      moveLightbox(actionButton.getAttribute("data-lightbox-action") === "previous" ? -1 : 1);
+    }
+  });
+
+  lightbox.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      moveLightbox(event.key === "ArrowLeft" ? -1 : 1);
+    }
+  });
+
+  lightbox.addEventListener("close", () => {
+    activeLightboxSource = null;
   });
 
   if (statsToggle && statsPanel) {
