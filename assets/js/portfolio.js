@@ -102,11 +102,26 @@ const projects = [
     focuses: ["data-engineering", "analytics", "automation"],
     tags: ["Python", "FastAPI", "PostgreSQL", "WebSockets", "React", "Chart.js"],
     media: {
-      type: "image",
-      src: "/images/project-media/cotaba-fleet-analytics.png",
-      alt: "COTABA fleet analytics platform mark",
-      background: "linear-gradient(145deg, #0d0d14, #20133b 58%, #6023d8)",
-      classes: ["inset-xxl"]
+      type: "gallery",
+      background: "#0b1018",
+      fit: "cover",
+      frames: [
+        {
+          src: "/images/project-media/cotaba-dashboard-24h.png",
+          label: "24-hour alert feed",
+          alt: "COTABA dashboard showing an anonymized 24-hour fleet safety alert feed"
+        },
+        {
+          src: "/images/project-media/cotaba-dashboard-week.png",
+          label: "Weekly analytics",
+          alt: "COTABA dashboard showing anonymized weekly fleet safety analytics"
+        },
+        {
+          src: "/images/project-media/cotaba-dashboard-month.png",
+          label: "30-day trends",
+          alt: "COTABA dashboard showing anonymized 30-day fleet safety trends"
+        }
+      ]
     },
     links: []
   },
@@ -124,12 +139,22 @@ const projects = [
       type: "gallery",
       background: "#e9e5dc",
       fit: "cover",
-      hardCut: true,
-      cycleStep: 2.4,
       frames: [
-        { src: "/images/project-media/crewmultiplier-overview.webp" },
-        { src: "/images/project-media/crewmultiplier-workforce.webp" },
-        { src: "/images/project-media/crewmultiplier-dispatch.webp" }
+        {
+          src: "/images/project-media/crewmultiplier-overview.webp",
+          label: "Operations overview",
+          alt: "CrewMultiplier operations overview dashboard"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-workforce.webp",
+          label: "Workforce management",
+          alt: "CrewMultiplier workforce management dashboard"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-dispatch.webp",
+          label: "Dispatch planning",
+          alt: "CrewMultiplier dispatch planning dashboard"
+        }
       ]
     },
     links: [{ label: "Website", url: "https://crewmultiplier.com", icon: "external" }]
@@ -178,7 +203,7 @@ const projects = [
     category: "ai-systems",
     year: 2026,
     title: "Age Safety Assessment",
-    label: "Renamed client work",
+    label: "Safety-focused computer vision",
     summary:
       "Safety-first age moderation proof of concept that combines face detection, aligned crops, a MiVOLO-style age estimator, an auxiliary DINOv2 path, calibration, and a policy engine that only returns safe when adult evidence is strong.",
     industries: ["media", "safety"],
@@ -236,7 +261,7 @@ const projects = [
     category: "ai-systems",
     year: 2026,
     title: "Creator Search 10M",
-    label: "Whalar creator-brand retrieval system",
+    label: "Large-scale creator-brand retrieval",
     summary:
       "Hybrid recommendation engine and design paper for matching brands with the top-K creators from a 10M profile universe using BM25 plus HNSW candidate generation, cross-encoder reranking, hard constraint parsing, and offline evaluation tooling.",
     industries: ["media", "advertising"],
@@ -341,7 +366,7 @@ const projects = [
     category: "product-builds",
     year: 2026,
     title: "ED Triage Support Assistant",
-    label: "Renamed client work",
+    label: "Clinical decision-support prototype",
     summary:
       "React plus FastAPI triage console for overloaded emergency departments that ranks synthetic patients into explainable priority bands, simulates incoming vitals and notes, and layers optional AI assistance on top of deterministic safety logic.",
     industries: ["healthcare"],
@@ -415,7 +440,6 @@ const projects = [
       background: "#eff2f4",
       fit: "contain",
       framePadding: "18px",
-      cycleStep: 1.65,
       frames: [
         {
           src: "/images/project-media/movie-recommender.png"
@@ -448,7 +472,6 @@ const projects = [
       background: "#eef3f7",
       fit: "contain",
       framePadding: "18px",
-      cycleStep: 1.65,
       frames: [
         {
           src: "/images/project-media/fuzzy-matching.jpg"
@@ -658,22 +681,62 @@ function renderObjectStyle(options = {}) {
   return styles.length ? ` style="${escapeHtml(styles.join(";"))}"` : "";
 }
 
-function renderGalleryFrame(frame, index, frameCount, media = {}) {
-  const cycleStep = media.cycleStep || 2.2;
-  const duration = Math.max(frameCount * cycleStep, 6.6);
+function renderGalleryFrame(frame, index, title, media = {}) {
+  const isActive = index === 0;
   const frameStyle = [
-    `animation-duration:${duration}s`,
-    `animation-delay:${index * -cycleStep}s`,
-    `--frame-animation-name:${media.hardCut ? "projectGalleryCycleHard" : "projectGalleryCycle"}`,
     `--frame-fit:${frame.fit || media.fit || "cover"}`,
     `--frame-position:${frame.position || media.position || "center center"}`,
     `--frame-padding:${frame.padding || media.framePadding || "0px"}`
   ];
+  const frameLabel = frame.label || `Image ${index + 1}`;
+  const frameAlt = frame.alt || `${title} — ${frameLabel}`;
 
   return `
-    <span class="project-card__gallery-frame" style="${escapeHtml(frameStyle.join(";"))}">
-      <img src="${escapeHtml(frame.src)}" alt="" loading="lazy">
+    <span
+      class="project-card__gallery-frame${isActive ? " is-active" : ""}"
+      data-gallery-frame="${index}"
+      data-gallery-label="${escapeHtml(frameLabel)}"
+      aria-hidden="${String(!isActive)}"
+      style="${escapeHtml(frameStyle.join(";"))}"
+    >
+      <img src="${escapeHtml(frame.src)}" alt="${escapeHtml(frameAlt)}" loading="${isActive ? "eager" : "lazy"}" decoding="async">
     </span>
+  `;
+}
+
+function renderGalleryControls(frames, title) {
+  if (frames.length < 2) {
+    return "";
+  }
+
+  return `
+    <div class="project-card__gallery-controls">
+      <button class="project-card__gallery-arrow" type="button" data-gallery-action="previous" aria-label="Previous image in ${escapeHtml(title)} gallery">
+        <span aria-hidden="true">←</span>
+      </button>
+      <div class="project-card__gallery-status" aria-live="polite">
+        <span data-gallery-status-label>${escapeHtml(frames[0].label || "Image 1")}</span>
+        <span class="project-card__gallery-count" data-gallery-status-count>1 / ${frames.length}</span>
+      </div>
+      <div class="project-card__gallery-dots" aria-label="Choose an image">
+        ${frames
+          .map(
+            (frame, index) => `
+              <button
+                class="project-card__gallery-dot${index === 0 ? " is-active" : ""}"
+                type="button"
+                data-gallery-dot="${index}"
+                aria-label="Show ${escapeHtml(frame.label || `image ${index + 1}`)}"
+                aria-pressed="${String(index === 0)}"
+              ></button>
+            `
+          )
+          .join("")}
+      </div>
+      <button class="project-card__gallery-arrow" type="button" data-gallery-action="next" aria-label="Next image in ${escapeHtml(title)} gallery">
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
   `;
 }
 
@@ -754,8 +817,16 @@ function renderMedia(media, title) {
     const frames = media.frames || [];
 
     return `
-      <div class="${classes.join(" ")}"${shellStyle}>
-        ${frames.map((frame, index) => renderGalleryFrame(frame, index, frames.length, media)).join("")}
+      <div
+        class="${classes.join(" ")}"
+        data-project-gallery
+        data-gallery-index="0"
+        tabindex="0"
+        aria-label="${escapeHtml(title)} image gallery"
+        ${shellStyle}
+      >
+        ${frames.map((frame, index) => renderGalleryFrame(frame, index, title, media)).join("")}
+        ${renderGalleryControls(frames, title)}
       </div>
     `;
   }
@@ -1003,6 +1074,39 @@ document.addEventListener("DOMContentLoaded", () => {
       : `<div class="portfolio-empty">No projects match that combination yet. Try another industry or capability.</div>`;
   }
 
+  function setGalleryIndex(gallery, requestedIndex) {
+    const frames = [...gallery.querySelectorAll("[data-gallery-frame]")];
+    if (!frames.length) {
+      return;
+    }
+
+    const nextIndex = ((requestedIndex % frames.length) + frames.length) % frames.length;
+    gallery.setAttribute("data-gallery-index", String(nextIndex));
+
+    frames.forEach((frame, index) => {
+      const isActive = index === nextIndex;
+      frame.classList.toggle("is-active", isActive);
+      frame.setAttribute("aria-hidden", String(!isActive));
+    });
+
+    gallery.querySelectorAll("[data-gallery-dot]").forEach((dot, index) => {
+      const isActive = index === nextIndex;
+      dot.classList.toggle("is-active", isActive);
+      dot.setAttribute("aria-pressed", String(isActive));
+    });
+
+    const statusLabel = gallery.querySelector("[data-gallery-status-label]");
+    const statusCount = gallery.querySelector("[data-gallery-status-count]");
+
+    if (statusLabel) {
+      statusLabel.textContent = frames[nextIndex].getAttribute("data-gallery-label") || `Image ${nextIndex + 1}`;
+    }
+
+    if (statusCount) {
+      statusCount.textContent = `${nextIndex + 1} / ${frames.length}`;
+    }
+  }
+
   controls.addEventListener("click", (event) => {
     const button = event.target.closest("[data-category]");
     if (!button) {
@@ -1032,6 +1136,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderSubfilters();
     renderCategory();
+  });
+
+  grid.addEventListener("click", (event) => {
+    const gallery = event.target.closest("[data-project-gallery]");
+    const actionButton = event.target.closest("[data-gallery-action]");
+    const dotButton = event.target.closest("[data-gallery-dot]");
+
+    if (!gallery || (!actionButton && !dotButton)) {
+      return;
+    }
+
+    const currentIndex = Number(gallery.getAttribute("data-gallery-index")) || 0;
+
+    if (dotButton) {
+      setGalleryIndex(gallery, Number(dotButton.getAttribute("data-gallery-dot")) || 0);
+      return;
+    }
+
+    const direction = actionButton.getAttribute("data-gallery-action") === "previous" ? -1 : 1;
+    setGalleryIndex(gallery, currentIndex + direction);
+  });
+
+  grid.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") {
+      return;
+    }
+
+    const gallery = event.target.closest("[data-project-gallery]");
+    if (!gallery) {
+      return;
+    }
+
+    event.preventDefault();
+    const currentIndex = Number(gallery.getAttribute("data-gallery-index")) || 0;
+    setGalleryIndex(gallery, currentIndex + (event.key === "ArrowLeft" ? -1 : 1));
   });
 
   if (statsToggle && statsPanel) {
