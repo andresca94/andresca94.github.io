@@ -174,16 +174,22 @@ const projects = [
           alt: "High-resolution CrewMultiplier workforce directory with readiness KPIs and worker profiles"
         },
         {
+          src: "/images/project-media/crewmultiplier-hierarchy-2026.webp",
+          label: "Workforce hierarchy",
+          description: "A visual responsibility map connects project leadership, shifts, teams, and individual assignments across the synthetic workforce.",
+          alt: "High-resolution CrewMultiplier workforce hierarchy with teams, reporting lines, and assignments"
+        },
+        {
           src: "/images/project-media/crewmultiplier-attendance-2026.webp",
           label: "Attendance intelligence",
           description: "Live attendance explains each shift before it affects margin, surfacing scheduled, on-site, late, absent, and off-shift workers with traceable exceptions.",
           alt: "High-resolution CrewMultiplier attendance intelligence dashboard with shift and exception KPIs"
         },
         {
-          src: "/images/project-media/crewmultiplier-requests-2026.webp",
-          label: "Request center",
-          description: "A single approval queue keeps staffing, equipment, transport, and access requests attributable, visible, and tied to the operating record.",
-          alt: "High-resolution CrewMultiplier request center with approval and exception metrics"
+          src: "/images/project-media/crewmultiplier-requests-live-2026.webp",
+          label: "Live request queue",
+          description: "The loaded approval queue exposes 25 open requests, 13 awaiting supervisor review, escalation signals, and worker context without opening individual records.",
+          alt: "High-resolution CrewMultiplier request center with loaded approval queue and operational metrics"
         },
         {
           src: "/images/project-media/crewmultiplier-reports-2026.webp",
@@ -222,10 +228,10 @@ const projects = [
           alt: "High-resolution CrewMultiplier production control dashboard with stage and unit progress"
         },
         {
-          src: "/images/project-media/crewmultiplier-ai-operations-2026.webp",
-          label: "AI operations",
-          description: "The AI workspace combines assistant workflows, data-quality review, and evidence-backed operating decisions without leaving the control center.",
-          alt: "High-resolution CrewMultiplier AI operations workspace"
+          src: "/images/project-media/crewmultiplier-ai-summary-2026.webp",
+          label: "AI data-quality evidence",
+          description: "The loaded AI workspace explains credential gaps, missing supervision, and affected workers with project-scoped evidence ready for human review.",
+          alt: "High-resolution CrewMultiplier AI data-quality analysis with evidence and affected workers"
         },
         {
           src: "/images/project-media/crewmultiplier-ai-proposals-2026.webp",
@@ -238,12 +244,6 @@ const projects = [
           label: "Enterprise controls",
           description: "Permissions, devices, audit history, integrations, and security policies make the operating environment traceable and governable.",
           alt: "High-resolution CrewMultiplier enterprise controls and audit dashboard"
-        },
-        {
-          src: "/images/project-media/crewmultiplier-demo-control-2026.webp",
-          label: "Demo control",
-          description: "Scenario controls expose the synthetic operational state, signal generation, and recovery tools used to demonstrate the platform safely.",
-          alt: "High-resolution CrewMultiplier demo control view with synthetic scenario controls"
         }
       ]
     },
