@@ -107,34 +107,40 @@ const projects = [
       fit: "cover",
       frames: [
         {
-          src: "/images/project-media/cotaba-dashboard-24h.png",
-          label: "24-hour alert feed",
-          description: "Live safety episodes grouped by severity, recurring pattern, vehicle, and time of day.",
-          alt: "COTABA dashboard showing an anonymized 24-hour fleet safety alert feed"
+          src: "/images/project-media/cotaba-alerts-2026.webp",
+          label: "Live alert evidence",
+          description: "The production feed pairs each safety episode with severity, timing, fleet context, and road or cabin evidence; operational identifiers and driver imagery are redacted here.",
+          alt: "Current COTABA production alert feed with anonymized identifiers and privacy-safe evidence previews"
         },
         {
-          src: "/images/project-media/cotaba-dashboard-week.png",
-          label: "Weekly analytics",
-          description: "Seven-day event volume across the anonymized fleet, with category and vehicle comparisons for operational follow-up.",
-          alt: "COTABA dashboard showing anonymized weekly fleet safety analytics"
+          src: "/images/project-media/cotaba-weekly-2026.webp",
+          label: "Seven-day fleet analytics",
+          description: "Current production telemetry compares weekly event volume, alert categories, active vehicles, and daily movement while keeping vehicle identifiers private.",
+          alt: "Current COTABA production dashboard showing anonymized seven-day fleet safety analytics"
         },
         {
-          src: "/images/project-media/cotaba-dashboard-month-2026.webp",
-          label: "Production 30-day trends",
-          description: "A current production snapshot connects 4,174 safety events with severity, 51,872.9 km of coverage, alert rate, and nocturnal exposure.",
-          alt: "COTABA production dashboard showing anonymized 30-day fleet safety KPIs and daily trends"
+          src: "/images/project-media/cotaba-monthly-2026.webp",
+          label: "Thirty-day trends",
+          description: "The monthly view connects fleet exposure, event severity, alert rate, nocturnal activity, and day-by-day operating trends.",
+          alt: "Current COTABA production dashboard showing thirty-day fleet safety KPIs and daily trends"
         },
         {
-          src: "/images/project-media/cotaba-dashboard-vehicles.png",
+          src: "/images/project-media/cotaba-comparison-2026.webp",
           label: "Vehicle comparison",
-          description: "A normalized vehicle ranking combines alert counts, mileage, risk, baseline, and category mix.",
-          alt: "COTABA dashboard showing an anonymized comparison of fleet vehicles"
+          description: "A privacy-safe production ranking normalizes event counts by distance and combines risk, baseline, night driving, and category mix for fairer comparisons.",
+          alt: "Current COTABA production dashboard showing an anonymized comparison of fleet vehicles"
         },
         {
-          src: "/images/project-media/cotaba-dashboard-patterns-2026.webp",
-          label: "Production behavior patterns",
-          description: "Current production telemetry reveals the hours when fatigue, distraction, closed-eye, phone-use, and collision-risk signals concentrate.",
-          alt: "COTABA production dashboard showing anonymized hourly fleet behavior patterns"
+          src: "/images/project-media/cotaba-patterns-2026.webp",
+          label: "Behavior patterns",
+          description: "Hourly production patterns reveal when fatigue, distraction, phone use, closed-eye events, and collision-risk signals concentrate across the fleet.",
+          alt: "Current COTABA production dashboard showing anonymized hourly fleet behavior patterns"
+        },
+        {
+          src: "/images/project-media/cotaba-reports-2026.webp",
+          label: "Monthly reporting archive",
+          description: "Closed monthly reports remain available as traceable operating artifacts for review, distribution, and longitudinal analysis.",
+          alt: "Current COTABA production dashboard showing the monthly reporting archive"
         }
       ]
     },
@@ -156,46 +162,88 @@ const projects = [
       fit: "cover",
       frames: [
         {
-          src: "/images/project-media/crewmultiplier-overview-prod.webp",
+          src: "/images/project-media/crewmultiplier-overview-2026.webp",
           label: "Live operations overview",
           description: "The published control center combines workforce readiness, field activity, labor risk, production progress, and a project map in one executive view.",
-          alt: "Published CrewMultiplier operations overview with workforce KPIs and project map"
+          alt: "High-resolution CrewMultiplier production overview with workforce KPIs and project map"
         },
         {
-          src: "/images/project-media/crewmultiplier-workforce-prod.webp",
+          src: "/images/project-media/crewmultiplier-workforce-2026.webp",
           label: "Workforce readiness",
           description: "A connected workforce directory brings assignments, trades, availability, compliance status, and mobilization readiness into one operating view.",
-          alt: "Published CrewMultiplier workforce directory with readiness KPIs and worker profiles"
+          alt: "High-resolution CrewMultiplier workforce directory with readiness KPIs and worker profiles"
         },
         {
-          src: "/images/project-media/crewmultiplier-attendance-prod.webp",
+          src: "/images/project-media/crewmultiplier-attendance-2026.webp",
           label: "Attendance intelligence",
           description: "Live attendance explains each shift before it affects margin, surfacing scheduled, on-site, late, absent, and off-shift workers with traceable exceptions.",
-          alt: "Published CrewMultiplier attendance intelligence dashboard with shift and exception KPIs"
+          alt: "High-resolution CrewMultiplier attendance intelligence dashboard with shift and exception KPIs"
         },
         {
-          src: "/images/project-media/crewmultiplier-reports-prod.webp",
+          src: "/images/project-media/crewmultiplier-requests-2026.webp",
+          label: "Request center",
+          description: "A single approval queue keeps staffing, equipment, transport, and access requests attributable, visible, and tied to the operating record.",
+          alt: "High-resolution CrewMultiplier request center with approval and exception metrics"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-reports-2026.webp",
           label: "Reconciled reporting",
           description: "Operational and financial reporting reconciles workforce, production, payroll, attendance, and export-ready metrics from the same connected record.",
-          alt: "Published CrewMultiplier reporting dashboard with reconciled operational and financial metrics"
+          alt: "High-resolution CrewMultiplier reporting dashboard with reconciled operational and financial metrics"
         },
         {
-          src: "/images/project-media/crewmultiplier-worker-experience-prod.webp",
+          src: "/images/project-media/crewmultiplier-worker-experience-2026.webp",
           label: "Worker mobile experience",
           description: "The production preview validates worker sign-in and field workflows against assigned profiles while keeping the administrative context visible.",
-          alt: "Published CrewMultiplier worker mobile experience preview"
+          alt: "High-resolution CrewMultiplier worker mobile experience preview"
         },
         {
-          src: "/images/project-media/crewmultiplier-dispatch-prod.webp",
+          src: "/images/project-media/crewmultiplier-compliance-safety-2026.webp",
+          label: "Compliance and safety",
+          description: "Credential coverage, blocked workers, policy gaps, and readiness exceptions are summarized before crews are mobilized.",
+          alt: "High-resolution CrewMultiplier compliance and safety dashboard"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-dispatch-2026.webp",
           label: "Live dispatch coordination",
           description: "A geospatial dispatch workspace coordinates crews, routes, vehicles, active trips, and logistics across projects in real time.",
-          alt: "Published CrewMultiplier dispatch workspace with national operations map"
+          alt: "High-resolution CrewMultiplier dispatch workspace with national operations map"
         },
         {
-          src: "/images/project-media/crewmultiplier-ai-operations-prod.webp",
+          src: "/images/project-media/crewmultiplier-housing-logistics-2026.webp",
+          label: "Housing and logistics",
+          description: "Arrival schedules, bed capacity, housing assignments, and geographic context share one planning surface for field mobilization.",
+          alt: "High-resolution CrewMultiplier housing and logistics dashboard with capacity KPIs and map"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-production-2026.webp",
+          label: "Production control",
+          description: "Stage, unit, quantity, labor, and plan-versus-actual signals make production progress reviewable from the same operational system.",
+          alt: "High-resolution CrewMultiplier production control dashboard with stage and unit progress"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-ai-operations-2026.webp",
+          label: "AI operations",
+          description: "The AI workspace combines assistant workflows, data-quality review, and evidence-backed operating decisions without leaving the control center.",
+          alt: "High-resolution CrewMultiplier AI operations workspace"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-ai-proposals-2026.webp",
           label: "Evidence-based personnel proposals",
           description: "The AI operations workspace turns connected workforce evidence into reviewable personnel proposals while preserving the assignment history behind every decision.",
-          alt: "Published CrewMultiplier AI operations workspace with evidence-based personnel proposals"
+          alt: "High-resolution CrewMultiplier AI operations workspace with evidence-based personnel proposals"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-enterprise-2026.webp",
+          label: "Enterprise controls",
+          description: "Permissions, devices, audit history, integrations, and security policies make the operating environment traceable and governable.",
+          alt: "High-resolution CrewMultiplier enterprise controls and audit dashboard"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-demo-control-2026.webp",
+          label: "Demo control",
+          description: "Scenario controls expose the synthetic operational state, signal generation, and recovery tools used to demonstrate the platform safely.",
+          alt: "High-resolution CrewMultiplier demo control view with synthetic scenario controls"
         }
       ]
     },
