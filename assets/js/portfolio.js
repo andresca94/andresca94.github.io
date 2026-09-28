@@ -115,14 +115,14 @@ const projects = [
         {
           src: "/images/project-media/cotaba-dashboard-week.png",
           label: "Weekly analytics",
-          description: "Seven-day event volume across the full anonymized fleet, with category and vehicle comparisons.",
+          description: "Seven-day event volume across the anonymized fleet, with category and vehicle comparisons for operational follow-up.",
           alt: "COTABA dashboard showing anonymized weekly fleet safety analytics"
         },
         {
-          src: "/images/project-media/cotaba-dashboard-month.png",
-          label: "30-day trends",
-          description: "Thirty-day KPIs connect event severity, mileage coverage, and nocturnal exposure.",
-          alt: "COTABA dashboard showing anonymized 30-day fleet safety trends"
+          src: "/images/project-media/cotaba-dashboard-month-2026.webp",
+          label: "Production 30-day trends",
+          description: "A current production snapshot connects 4,174 safety events with severity, 51,872.9 km of coverage, alert rate, and nocturnal exposure.",
+          alt: "COTABA production dashboard showing anonymized 30-day fleet safety KPIs and daily trends"
         },
         {
           src: "/images/project-media/cotaba-dashboard-vehicles.png",
@@ -131,10 +131,10 @@ const projects = [
           alt: "COTABA dashboard showing an anonymized comparison of fleet vehicles"
         },
         {
-          src: "/images/project-media/cotaba-dashboard-patterns.png",
-          label: "Behavior patterns",
-          description: "Hourly patterns reveal when fatigue, distraction, and collision-risk signals concentrate.",
-          alt: "COTABA dashboard showing anonymized hourly fleet behavior patterns"
+          src: "/images/project-media/cotaba-dashboard-patterns-2026.webp",
+          label: "Production behavior patterns",
+          description: "Current production telemetry reveals the hours when fatigue, distraction, closed-eye, phone-use, and collision-risk signals concentrate.",
+          alt: "COTABA production dashboard showing anonymized hourly fleet behavior patterns"
         }
       ]
     },
@@ -156,46 +156,46 @@ const projects = [
       fit: "cover",
       frames: [
         {
-          src: "/images/project-media/crewmultiplier-overview.webp",
-          label: "Operations overview",
-          description: "Executive view of workforce readiness, field activity, labor cost, and operational risk.",
-          alt: "CrewMultiplier operations overview dashboard"
+          src: "/images/project-media/crewmultiplier-overview-prod.webp",
+          label: "Live operations overview",
+          description: "The published control center combines workforce readiness, field activity, labor risk, production progress, and a project map in one executive view.",
+          alt: "Published CrewMultiplier operations overview with workforce KPIs and project map"
         },
         {
-          src: "/images/project-media/crewmultiplier-workforce.webp",
-          label: "Workforce management",
-          description: "Worker records, assignments, compliance status, and availability in one operating view.",
-          alt: "CrewMultiplier workforce management dashboard"
+          src: "/images/project-media/crewmultiplier-workforce-prod.webp",
+          label: "Workforce readiness",
+          description: "A connected workforce directory brings assignments, trades, availability, compliance status, and mobilization readiness into one operating view.",
+          alt: "Published CrewMultiplier workforce directory with readiness KPIs and worker profiles"
         },
         {
-          src: "/images/project-media/crewmultiplier-dispatch.webp",
-          label: "Dispatch planning",
-          description: "Crew-to-project planning with dispatch, transport, housing, and schedule context.",
-          alt: "CrewMultiplier dispatch planning dashboard"
-        },
-        {
-          src: "/images/project-media/crewmultiplier-attendance.webp",
+          src: "/images/project-media/crewmultiplier-attendance-prod.webp",
           label: "Attendance intelligence",
-          description: "Synthetic live rosters surface on-site, late, scheduled, absent, and off-shift workers before exceptions affect margin.",
-          alt: "CrewMultiplier attendance intelligence dashboard with synthetic workers"
+          description: "Live attendance explains each shift before it affects margin, surfacing scheduled, on-site, late, absent, and off-shift workers with traceable exceptions.",
+          alt: "Published CrewMultiplier attendance intelligence dashboard with shift and exception KPIs"
         },
         {
-          src: "/images/project-media/crewmultiplier-worker-experience.webp",
+          src: "/images/project-media/crewmultiplier-reports-prod.webp",
+          label: "Reconciled reporting",
+          description: "Operational and financial reporting reconciles workforce, production, payroll, attendance, and export-ready metrics from the same connected record.",
+          alt: "Published CrewMultiplier reporting dashboard with reconciled operational and financial metrics"
+        },
+        {
+          src: "/images/project-media/crewmultiplier-worker-experience-prod.webp",
           label: "Worker mobile experience",
-          description: "An admin preview validates worker sign-in and field workflows against assigned synthetic profiles.",
-          alt: "CrewMultiplier worker mobile experience preview with synthetic profiles"
+          description: "The production preview validates worker sign-in and field workflows against assigned profiles while keeping the administrative context visible.",
+          alt: "Published CrewMultiplier worker mobile experience preview"
         },
         {
-          src: "/images/project-media/crewmultiplier-ai-operations.webp",
-          label: "Evidence-grounded operations assistant",
-          description: "A deterministic assistant answers operational questions from the isolated data record without external model calls.",
-          alt: "CrewMultiplier evidence-grounded AI operations assistant"
+          src: "/images/project-media/crewmultiplier-dispatch-prod.webp",
+          label: "Live dispatch coordination",
+          description: "A geospatial dispatch workspace coordinates crews, routes, vehicles, active trips, and logistics across projects in real time.",
+          alt: "Published CrewMultiplier dispatch workspace with national operations map"
         },
         {
-          src: "/images/project-media/crewmultiplier-demo-control.webp",
-          label: "Safe simulation controls",
-          description: "Presenter controls pause, reset, or inject synthetic events without touching real operations.",
-          alt: "CrewMultiplier presenter controls for a synthetic operations simulation"
+          src: "/images/project-media/crewmultiplier-ai-operations-prod.webp",
+          label: "Evidence-based personnel proposals",
+          description: "The AI operations workspace turns connected workforce evidence into reviewable personnel proposals while preserving the assignment history behind every decision.",
+          alt: "Published CrewMultiplier AI operations workspace with evidence-based personnel proposals"
         }
       ]
     },
