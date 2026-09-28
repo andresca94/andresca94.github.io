@@ -319,14 +319,71 @@ const projects = [
     focuses: ["vision", "automation"],
     tags: ["Python", "FastAPI", "NestJS", "InsightFace", "DINOv2", "Calibration"],
     media: {
-      type: "image",
-      src: "/images/project-media/age-safety-architecture.png",
-      alt: "Architecture diagram for the age safety assessment system",
-      caption: "Safety architecture",
-      description: "Detection, aligned crops, calibrated age evidence, and policy logic remain separated for reviewable decisions.",
-      aspect: "16 / 9",
-      background: "linear-gradient(180deg, #e9eef1, #dfe8ec)",
-      classes: ["flush"]
+      type: "gallery",
+      fit: "contain",
+      background: "linear-gradient(180deg, #eef2f5, #e1e8ed)",
+      frames: [
+        {
+          src: "/images/project-media/age-safety-system-architecture.webp",
+          label: "Auditable inference architecture",
+          description: "InsightFace detection feeds separate age-risk and domain-uncertainty paths before calibration and an explicit safe, uncertain, or flagged policy gate.",
+          alt: "Age Safety Assessment inference architecture from perception through dual-model scoring to policy decision"
+        },
+        {
+          src: "/images/project-media/age-safety-training-dynamics.webp",
+          label: "Training dynamics",
+          description: "Recovered epoch histories show optimization loss, validation precision, and recall, with the exported checkpoint selected for safety-first recall performance.",
+          alt: "Main model training loss and validation precision and recall across ten epochs"
+        },
+        {
+          src: "/images/project-media/age-safety-test-pr-curve.webp",
+          label: "Precision-recall performance",
+          description: "The held-out test curve supports a PR AUC of 0.9855 while keeping minor detection recall at 0.9737 under the shipped decision setup.",
+          alt: "Age Safety Assessment test precision-recall curve"
+        },
+        {
+          src: "/images/project-media/age-safety-test-confusion-matrix.webp",
+          label: "Held-out error analysis",
+          description: "Across 8,722 test rows, the model identifies 1,331 minors and misses 36, making the remaining safety errors explicit rather than hiding them behind accuracy.",
+          alt: "Test confusion matrix showing adult and minor predictions"
+        },
+        {
+          src: "/images/project-media/age-safety-test-reliability.webp",
+          label: "Calibration reliability",
+          description: "Reliability analysis compares predicted minor-risk confidence with observed frequency and motivates the temperature-scaled, policy-gated output.",
+          alt: "Reliability diagram comparing predicted confidence and observed frequency"
+        },
+        {
+          src: "/images/project-media/age-safety-robustness-verdicts.webp",
+          label: "Robustness verdicts",
+          description: "On shifted and non-real inputs, the policy returns 125,647 uncertain and 4,407 flagged verdicts—and zero safe approvals—favoring abstention over overclaiming.",
+          alt: "Robustness split verdict counts dominated by uncertain decisions"
+        },
+        {
+          src: "/images/project-media/age-safety-policy-reasons.webp",
+          label: "Why the policy abstains",
+          description: "Boundary or quality cases and model conflict dominate the robustness explanations, exposing the reason behind a cautious decision.",
+          alt: "Top robustness policy reasons including boundary or quality cases and model conflict"
+        },
+        {
+          src: "/images/project-media/age-safety-subgroup-fnr.webp",
+          label: "Subgroup safety monitoring",
+          description: "False-negative rates are broken out by race so uneven safety performance remains visible and can guide validation and threshold review.",
+          alt: "Minor false negative rate by race on the test split"
+        },
+        {
+          src: "/images/project-media/age-safety-domain-gallery.webp",
+          label: "Deployment input regimes",
+          description: "Reviewer examples span real adults and minors, AI-generated faces, cartoons, anime, multiple faces, and no-face cases used to test detection and abstention behavior.",
+          alt: "Representative real, synthetic, stylized, multi-face, and no-face deployment inputs"
+        },
+        {
+          src: "/images/project-media/age-safety-split-summary.webp",
+          label: "Dataset split audit",
+          description: "The shipped manifest separates 69,849 training rows and held-out real-photo validation and test sets from 130,054 robustness-only rows.",
+          alt: "Merged manifest split summary for training validation test and robustness data"
+        }
+      ]
     },
     links: [{ label: "GitHub", url: "https://github.com/andresca94/hygo-assessment", icon: "github" }]
   },
@@ -388,11 +445,11 @@ const projects = [
     tags: ["n8n automation", "ElevenLabs", "HeyGen", "Supabase", "AI concept design", "Compliance workflows"],
     media: {
       type: "video",
-      src: "/assets/media/ovidius-ai-avatar.mp4",
-      poster: "/images/project-media/ovidius-ai-avatar-poster.jpg",
+      src: "/assets/media/ovidius-ai-avatar-redacted.mp4",
+      poster: "/images/project-media/ovidius-ai-avatar-redacted-poster.jpg",
       title: "AI avatar training video",
       caption: "Automated training-content workflow",
-      description: "The walkthrough shows multilingual avatar content moving through generation, review, and compliance-safe delivery.",
+      description: "The rights-safe walkthrough shows multilingual avatar content moving through generation, review, and compliance-safe delivery; client marks are intentionally blurred.",
       aspect: "16 / 9"
     },
     links: []
