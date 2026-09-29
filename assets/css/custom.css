@@ -320,18 +320,20 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .portfolio-subfilters {
   display: grid;
-  gap: 14px;
-  margin-bottom: 20px;
+  gap: 10px;
+  margin-bottom: 14px;
 }
 
 .portfolio-subfilter-group {
   display: grid;
   gap: 7px;
+  margin: 0;
+  padding-bottom: 0;
 }
 
 .portfolio-subfilter-label {
@@ -346,7 +348,7 @@ footer {
 }
 
 .portfolio-subfilter-surface {
-  padding: 16px 18px;
+  padding: 12px 16px;
   border: 1px solid var(--category-border);
   border-radius: 24px;
   background:

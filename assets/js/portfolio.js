@@ -445,8 +445,8 @@ const projects = [
     tags: ["n8n automation", "ElevenLabs", "HeyGen", "Supabase", "AI concept design", "Compliance workflows"],
     media: {
       type: "video",
-      src: "/assets/media/ovidius-ai-avatar-redacted.mp4?v=3",
-      poster: "/images/project-media/ovidius-ai-avatar-redacted-poster.jpg?v=3",
+      src: "/assets/media/ovidius-ai-avatar-redacted.mp4?v=4",
+      poster: "/images/project-media/ovidius-ai-avatar-redacted-poster.jpg?v=4",
       title: "AI avatar training video",
       caption: "Automated training-content workflow",
       description: "The rights-safe walkthrough shows multilingual avatar content moving through generation, review, and compliance-safe delivery; client marks are intentionally blurred.",
